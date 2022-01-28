@@ -15,7 +15,7 @@
 
 | Student Name | Student Email | GitHub Username |
 |    :---:     |     :---:     |     :---:       |
-| member1      |               |                 |
+| member1      |  Allison Adad |   adadallison   |
 | member2      |               |                 |
 | member3      |               |                 |
 | member4      |               |                 |
