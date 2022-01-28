@@ -16,7 +16,7 @@
 | Student Name | Student Email      | GitHub Username |
 |    :---:     |     :---:          |     :---:       |
 | Allison Adad | aadad@mail.sfsu.edu|   adadallison   |
-| member2      |                    |                 |
+| member2      |tlayug@mail.sfsu.edu|   awzum         |
 | member3      |                    |                 |
 | member4      |                    |                 |
 | member5      |                    |                 |
