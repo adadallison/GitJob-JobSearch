@@ -18,7 +18,7 @@
 | Allison Adad     |  aadad@mail.sfsu.edu   |   adadallison   |
 | Tj Layug         |  tlayug@mail.sfsu.edu  |   awzum         |
 | Sedric Conneally | sconneally@mail.sfsu.edu| sedricconneally |
-| member4          |                        |                 |
+| Thien Pham       | tpham29@mail.sfsu.edu  | ThienTheCreator |
 | member5          |                        |                 |
 | member6          |                        |                 |
 
