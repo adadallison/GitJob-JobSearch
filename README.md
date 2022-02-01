@@ -17,9 +17,9 @@
 |    :---:         |     :---:              |     :---:       |
 | Allison Adad     |  aadad@mail.sfsu.edu   |   adadallison   |
 | Tj Layug         |  tlayug@mail.sfsu.edu  |   awzum         |
-| Sedric Conneally | sconneally@mail.sfsu.edu| sedricconneally |
+| Sedric Conneally | sconneally@mail.sfsu.edu| sedricconneally|
 | Thien Pham       | tpham29@mail.sfsu.edu  | ThienTheCreator |
-| member5          |                        |                 |
+| Joshua Alfaro    | jalfaro3@mail.sfsu.edu | joshalpha      |
 | member6          |                        |                 |
 
 ## NO code needs to be stored in the root of your repository. You may rename the application folder if you like to your team's application name. But all source code related to your team's application should be stored inside the application folder.
