@@ -1,0 +1,20 @@
+
+.bg {
+    position:fixed;
+    background-size: 100px ;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+  }
+
+
+.container {
+    position: relative;
+    text-align: center;
+  }
+
+.p {
+    color:black;
+    background-color: powderblue;
+}
