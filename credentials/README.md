@@ -22,3 +22,15 @@
 ## These values need to kept update to date throughout the semester. <br>
 ## <strong>Failure to do so will result it points be deducted from milestone submissions.</strong><br>
 ## You may store the most of the above in this README.md file. DO NOT Store the SSH key or any keys in this README.md file.
+
+
+
+
+1. Server URL or IP: ec2-54-176-75-190.us-west-1.compute.amazonaws.com or 54.176.75.190
+2. SSH username: ubuntu
+3. SSH password or key: DevKey.pem
+4. 
+5. Database username: databaseUser
+6. Database password: password
+7. 
+8. 
