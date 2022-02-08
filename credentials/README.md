@@ -29,7 +29,7 @@
 1. Server URL or IP: ec2-54-176-75-190.us-west-1.compute.amazonaws.com or 54.176.75.190
 2. SSH username: ubuntu
 3. SSH password or key: DevKey.pem
-4. 
+4. Database IP and port: 127.0.0.1 and 3306
 5. Database username: databaseUser
 6. Database password: password
 7. 
