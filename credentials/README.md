@@ -33,4 +33,5 @@
 5. Database username: databaseUser
 6. Database password: password
 7. team6dev
-8. 
+8. ![CSC648-teaM6-credentials](https://user-images.githubusercontent.com/42702624/153128171-6eb5b617-881c-4372-9465-6ef93299418d.png)
+
