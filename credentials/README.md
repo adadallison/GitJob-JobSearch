@@ -32,5 +32,5 @@
 4. Database IP and port: 127.0.0.1 and 3306
 5. Database username: databaseUser
 6. Database password: password
-7. 
+7. team6dev
 8. 
