@@ -1,5 +1,6 @@
 import './App.css';
 import axios from "axios"
+import { useEffect } from 'react';
 
 function App() {
   useEffect(() => {
@@ -7,7 +8,7 @@ function App() {
       console.log(response);
     })
   }, []);
-  
+
   return (
     <div className="App"></div>
   );
