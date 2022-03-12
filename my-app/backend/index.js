@@ -1,15 +1,24 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
-app.get('/', (request, response) => {
-  response.send('<h1>Hello World!</h1>')
-})
+const mysql = require('mysql');
+const database = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'mysql'
+});
 
-app.get('/api/notes', (request, response) => {
-  response.json(notes)
-})
+database.connect((err) => {
+    if(err) throw err;
+    console.log('Connected!');
+    database.query('USE Example');
+});
 
-const PORT = 3001
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`)
-})
+router.get("/", (req, res) => {
+    res.json("Hello World");
+});
+
+router.post("/", (req, res) => {
+    const post = req.body;
+});
