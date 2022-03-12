@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 function App() {
   useEffect(() => {
-    axios.get("localhost:3001/posts").then((response) => {
+    axios.get("localhost:3000/posts").then((response) => {
       console.log(response);
     })
   }, []);
