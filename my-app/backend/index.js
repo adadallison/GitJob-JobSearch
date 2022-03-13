@@ -1,24 +1,29 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 
-const mysql = require('mysql');
-const database = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'mysql'
-});
+app.use(cors());
 
-database.connect((err) => {
-    if(err) throw err;
-    console.log('Connected!');
-    database.query('USE Example');
-});
+// const mysql = require('mysql');
+// const database = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: 'password',
+//     database: 'mysql'
+// });
 
-router.get("/", (req, res) => {
+// database.connect((err) => {
+//     if(err) throw err;
+//     console.log('Connected!');
+//     database.query('USE Example');
+// });
+
+app.get("/search", (req, res) => {
     res.json("Hello World");
 });
 
-router.post("/", (req, res) => {
-    const post = req.body;
-});
+// app.post("/", (req, res) => {
+//     const post = req.body;
+// });
+
+app.listen(5000);
