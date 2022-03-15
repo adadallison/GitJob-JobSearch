@@ -10,21 +10,21 @@ const database = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'password',
-    database: 'database1'
+    database: 'team6dev'
 });
 
 database.connect((err) => {
     if(err) throw err;
     console.log('Connected!');
-    database.query("SELECT * FROM `job posts`",  (err,result) => {
-        if (err) throw err;
-        console.log(result);
-    });
 });
 
 app.post("/search", (req, res) => {
     console.log(req.body);
-    res.json({job: 'software engineer'});
+    database.query("SELECT * FROM `job posts`",  (err,result) => {
+        if (err) throw err;
+        console.log(result);
+        res.json({result});
+    });
 });
 
 app.listen(3001);

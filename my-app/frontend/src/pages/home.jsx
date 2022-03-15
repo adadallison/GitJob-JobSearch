@@ -1,22 +1,24 @@
 import axios from 'axios';
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Home = () => {
 
     const [title, setTitle] = useState("");
     const [field, setField] = useState("");
-    const [temp, setTemp] = useState("");
+    const [resData, setResData] = useState([]);
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(title," ", field);
         axios.post("http://localhost:3001/search", { title })
             .then(res => {
-                console.log(res);
-                console.log(res.data);
+                console.log(res.data.result);
+                setResData(res.data.result);
             });
     };
+
+    useEffect(() => {
+    }, []);
 
     return (
         <div>
@@ -65,6 +67,16 @@ const Home = () => {
                         <a href="#about" className="btn btn-primary btn-xl">First Last</a>
                     </div></li>
             </ul>
+            {resData.map(post => (
+            <div>
+                <div>Job Name: {post["job name"]}</div>
+                <div>Job Field: {post["job field"]}</div>
+                <div>Date Posted: {post["date posted"]}</div>
+                <div>Job Description: {post["job desc."]}</div>
+                <div>Job Salary: {post["job salary"]}</div>
+                <br/>
+            </div>
+            ))}
         </div>
     );
 };
