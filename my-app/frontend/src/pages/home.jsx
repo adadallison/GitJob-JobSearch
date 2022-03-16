@@ -7,10 +7,11 @@ const Home = () => {
     const [title, setTitle] = useState("");
     const [field, setField] = useState("");
     const [resData, setResData] = useState([]);
+    const ip = "13.52.76.208";
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post("http://localhost:3001/search", { title })
+        axios.post("http://" + ip + ":3001/search", { title, field })
             .then(res => {
                 console.log(res.data.result);
                 setResData(res.data.result);
