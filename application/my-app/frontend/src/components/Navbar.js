@@ -6,8 +6,8 @@ import * as BsIcons from 'react-icons/bs';
 import * as BiIcons from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import {SidebarData} from './SidebarData'
-import './Navbar.css';
 import {IconContext} from 'react-icons';
+import "../css/Navbar.css";
 
 function NavBar(){
     const [sidebar, setSidebar] = useState(false);
