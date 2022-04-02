@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import "../css/login.css";
 
 function Login(){
 
@@ -7,18 +7,13 @@ function Login(){
     const [password, setPassword] = useState("")
 
 
-    const formStyle = {
-        margin: 25,
-        marginLeft: 0,
-        display: "grid",
-        gridTemplateColumns: "150px 200px",
-        gridGap: "15px"
-    }
 
 
     return (
         <div>
-            <form style={formStyle}>
+            <div id="login" >GitJob</div>
+            <form id ="form">
+                
                 <label name="username">Username: </label>
                 <input type="text" required name="username" ></input>
                 <label name="password">Password: </label>
