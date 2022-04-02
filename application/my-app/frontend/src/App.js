@@ -9,9 +9,6 @@ const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
-        <nav>
-          <Link to="/">Home</Link>
-        </nav>
         <Routes>
           <Route path="/" element={<Home/>}/>
         </Routes>
