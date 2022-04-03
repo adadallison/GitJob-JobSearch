@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import "../css/register.css";
 
-function Login(){
+function Register(){
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("")
@@ -47,4 +46,4 @@ function Login(){
 }
 
 
-export default Login
+export default Register
