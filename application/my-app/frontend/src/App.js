@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import Home from "./pages/home";
 import Login from "./components/Login";
+import Register from "./pages/Register";
 import NavBar from './components/Navbar';
 
 const App = () => {
@@ -13,6 +14,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/login" element={<Login/>}/>
+          <Route path="/register" element={<Register/>}/>
+
         </Routes>
       </BrowserRouter>
     </div>
