@@ -32,12 +32,6 @@ export const SidebarData = [
     cName: 'nav-text'
 },
 {
-    title : 'Salaries',
-    path: '/salaries',
-    icon: <BiIcons.BiMoney/>,
-    cName: 'nav-text'
-},
-{
     title : 'Login',
     path: '/login',
     icon: <AiIcons.AiOutlineUser/>,
@@ -45,7 +39,7 @@ export const SidebarData = [
 },
 {
     title : 'Signup',
-    path: '/signup',
+    path: '/register',
     icon: <AiIcons.AiOutlineUsergroupAdd/>,
     cName: 'nav-text'
 },
