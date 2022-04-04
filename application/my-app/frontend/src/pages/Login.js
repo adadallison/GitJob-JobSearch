@@ -17,8 +17,8 @@ function Login(){
             <div id="login" >GitJob</div>
             <form onSubmit={handleSubmit}>
                 <div id ="form">
-                    <div><label name="username">Username</label> </div>
-                    <input className="input" type="text" required name="username" ></input>
+                    <div><label name="email">Email</label> </div>
+                    <input className="input" type="text" required name="email" ></input>
                 </div>
                 <div>
                     <div><label name="password">Password</label> </div>
