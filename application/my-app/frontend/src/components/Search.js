@@ -27,7 +27,7 @@ const Search = () => {
                 <div>
                     <div className="search-container">
                         <form onSubmit={handleSubmit}>
-                            <input type="text" placeholder="title" onChange={e => setTitle(e.target.value)} />
+                            <input className="input" type="text" placeholder="title" onChange={e => setTitle(e.target.value)} />
                             <select id="field" name="field" onChange={e => setField(e.target.value)}>
                                 <option value=""></option>
                                 <option value="Artificial Intelligence and Machine Learning">AI and ML</option>
@@ -44,9 +44,9 @@ const Search = () => {
                         </form>
                     </div>
 
-                    <li className="dropdown">
+                    {/* <li className="dropdown">
                         <div className="dropdown-content"> </div>
-                    </li>
+                    </li> */}
                 </div>
 
 
