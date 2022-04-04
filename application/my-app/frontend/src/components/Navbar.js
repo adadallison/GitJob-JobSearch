@@ -15,36 +15,32 @@ function NavBar(){
     const [sidebar, setSidebar] = useState(true);
     //const showSidebar = () => setSidebar(!sidebar);
 
-
     return (
         <>
     <IconContext.Provider value ={{color:'fff'}}> 
 
+        <div className='navbar'>Gitjob<Search/> </div>
 
-        <div className='navbar'>Gitjob <Search/> </div>
 
+            {/* <nav className="nav-menu">
+                <div className='nav-menu-items' >
 
-        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+                    {SidebarData.map((item, index)=> {
+                    return (
+                        <li key = {index} className = {item.cName}>
+                        <Link to = {item.path}>
+                            {item.icon}   
+                            <span>{item.title}</span>
+                        </Link>
+                        </li>
+                    );
+                    })}
+                </div>  
+            </nav> */}
 
-        <ul className='nav-menu-items' >
-
-        {/* <Search/> */}
-
-            
-            {SidebarData.map((item, index)=> {
-            return (
-                <li key = {index} className = {item.cName}>
-                   <Link to = {item.path}>
-                    {item.icon}   
-                    <span>{item.title}</span>
-                   </Link>
-                </li>
-            );
-            })}
 
             
-        </ul>  
-        </nav>
+
         </IconContext.Provider>
         </>
 

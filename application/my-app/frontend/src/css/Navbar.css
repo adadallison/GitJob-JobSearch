@@ -2,7 +2,6 @@
     background-color: #4E91F4;
     height: 80px;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
     color: white;
@@ -11,20 +10,15 @@
     font-weight: bold;
 }
 
-
 .nav-menu{
-background-color: #4E91F4;
-width: 235px;
-height: 100vh;
-display: flex;
-justify-content: center;
-top: 0;
-left: -100%;
+    background-color: #4E91F4;
+    width: 235px;
+    height: 100vh;
+    display: flex;
+    top: 0;
 }
-.nav-menu.active{
-left: 0;
-transition:350ms;
-}
+
+
 .nav-text{
     display:flex;
     justify-content: start;
@@ -53,7 +47,6 @@ transition:350ms;
 
 .nav-menu-items{
     width: 100;
-    padding-right: 60px;
 }
 
 span{
