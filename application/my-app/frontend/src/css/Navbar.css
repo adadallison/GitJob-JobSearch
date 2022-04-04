@@ -4,6 +4,11 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-indent: 41px;
+    font-size: 45px;
+    font-weight: bold;
 }
 
 
