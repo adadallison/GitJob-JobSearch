@@ -28,8 +28,8 @@ function Register(){
                     <input input className="input" type="password" required name="password" ></input>
                 </div>
                 <div id ="form" required>
-                    <input type="radio" value="Job-Hunter" name='accountType'></input>Job-Hunter
-                    <input type="radio" value="Recruiter" name='accountType'></input>Recruiter
+                    <input type="radio" value="Student" name='accountType'></input>Student
+                    {/* <input type="radio" value="Recruiter" name='accountType'></input>Recruiter */}
                     <input type="radio" value="Company" name='accountType'></input>Company
                 </div>
                 <div>
