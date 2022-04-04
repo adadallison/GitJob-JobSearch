@@ -27,7 +27,7 @@ const Search = () => {
                 <div>
                     <div className="search-container">
                         <form onSubmit={handleSubmit}>
-                            <input className="input" type="text" placeholder="title" onChange={e => setTitle(e.target.value)} />
+                            <input className="input-search" type="text" placeholder="Search" onChange={e => setTitle(e.target.value)} />
                             <select id="field" name="field" onChange={e => setField(e.target.value)}>
                                 <option value=""></option>
                                 <option value="Artificial Intelligence and Machine Learning">AI and ML</option>
