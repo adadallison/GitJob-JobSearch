@@ -34,21 +34,49 @@ const Home = () => {
                 </div>
 
 
-                <div class="item-center" >
-                    <div class="item-center1"></div>
-                    <div class="item-center1"></div>
-                    <div class="item-center1"></div>
-                    <div class="item-center1">HI</div>
-                    <div class="item-center1">HI</div>
-                    <div class="item-center1">HI</div>
-                    <div class="item-center1">HI</div>
-                    <div class="item-center1">HI</div>
-                    <div class="item-center1">HI</div>
-                    <div class="item-center1">HI</div>
-                    <div class="item-center1">HI</div>
+                <div class="item-center" >TWO
+                    <div class="item-center1">1</div>
+                    <div class="item-center1">2</div>
+                    <div class="item-center1">3</div>
+                    <div class="item-center1">1</div>
+                    <div class="item-center1">2</div>
+                    <div class="item-center1">3</div>
+                    <div class="item-center1">1</div>
+                    <div class="item-center1">2</div>
+                    <div class="item-center1">3</div>
+                    <div class="item-center1">1</div>
+                    <div class="item-center1">2</div>
+                    <div class="item-center1">3</div>
+                    <div class="item-center1">1</div>
+                    <div class="item-center1">2</div>
+                    <div class="item-center1">3</div>
+                    <div class="item-center1">1</div>
+                    <div class="item-center1">2</div>
+                    <div class="item-center1">3</div>
+                    <div class="item-center1">1</div>
+                    <div class="item-center1">2</div>
+                    <div class="item-center1">3</div>
+                    <div class="item-center1">1</div>
+                    <div class="item-center1">2</div>
+                    <div class="item-center1">3</div>
+                    <div class="item-center1">1</div>
+                    <div class="item-center1">2</div>
+                    <div class="item-center1">3</div>
+                    <div class="item-center1">1</div>
+                    <div class="item-center1">2</div>
+                    <div class="item-center1">3</div>
+                    <div class="item-center1">1</div>
+                    <div class="item-center1">2</div>
+                    <div class="item-center1">3</div>
+                    <div class="item-center1">1</div>
+                    <div class="item-center1">2</div>
+                    <div class="item-center1">3</div>
+                    <div class="item-center1">1</div>
+
+
                 </div>
 
-                <div class="item2">three
+                <div class="item2">THREE
                 </div>
 
             </div>

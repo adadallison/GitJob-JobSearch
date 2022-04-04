@@ -10,25 +10,27 @@
   }
   /* make the center item scrollable somehow like twitter, and the side nav is just sticky */
   
+
   .item-center { 
-    /* height: 100vh;
-    flex-grow: 1; 
-    justify-content: space-between;
-    flex-direction: column; */
+    margin-left: 20%;
+    flex-direction: column;
     display: flex;
+    justify-content: center safe;
     flex-wrap: nowrap;
     white-space: nowrap;
     overflow-y: auto;
+    height: 100vh;
   }
 
   .item-center1 {
-    flex: 0 22%;
-    height: 1000px;
+    justify-content: space-between;
     background-color: pink;
+    height: 40px;
+    margin-bottom: 10px;
     
   }
   
   .item2 { 
-    margin-left: 2%; 
+    margin-left: 20%; 
   }
 
