@@ -5,10 +5,26 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: 90px;
     color: white;
-    border: 100px
 }
 
 #form{
-    margin-top: 50px;
-    display: "grid";
+    margin: 40px;
+}
+
+input{
+    border-radius: 20px;
+    border-width: 1.5px;
+    height: 20px;
+    width: 170px;
+}
+
+label{
+    color: rgba(0,0,0,0.6);
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+button{
+    margin-top: 20px;
+    
 }
