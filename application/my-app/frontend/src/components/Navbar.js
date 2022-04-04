@@ -21,9 +21,7 @@ function NavBar(){
     <IconContext.Provider value ={{color:'fff'}}> 
 
 
-        <div className='navbar'>
-                
-        </div>
+        <div className='navbar'>Gitjob</div>
 
 
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
