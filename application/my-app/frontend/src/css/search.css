@@ -16,7 +16,8 @@
 
   .input-search{
     border-radius: 20px;
-    border-width: 3px;
+    border-width: 2px;
+    border-color: transparent;
     height: 29px;
     width: 200px;
   }
