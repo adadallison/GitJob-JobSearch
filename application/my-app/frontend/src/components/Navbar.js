@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import {SidebarData} from './SidebarData'
 import {IconContext} from 'react-icons';
 import "../css/Navbar.css";
-import Search from '../components/Search';
+// import Search from '../components/Search';
 
 
 function NavBar(){
@@ -28,13 +28,12 @@ function NavBar(){
                 
         </div>
 
-    
 
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
 
         <ul className='nav-menu-items' >
 
-        <Search/>
+        {/* <Search/> */}
 
             
             {SidebarData.map((item, index)=> {
