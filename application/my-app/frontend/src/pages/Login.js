@@ -18,11 +18,11 @@ function Login(){
             <form onSubmit={handleSubmit}>
                 <div id ="form">
                     <div><label name="username">Username</label> </div>
-                    <input type="text" required name="username" ></input>
+                    <input className="input" type="text" required name="username" ></input>
                 </div>
-                <div id="labels">
+                <div>
                     <div><label name="password">Password</label> </div>
-                    <input type="password" required name="password" ></input>
+                    <input input className="input" type="password" required name="password" ></input>
                 </div>
     
                 <button type="submit">Submit</button>
