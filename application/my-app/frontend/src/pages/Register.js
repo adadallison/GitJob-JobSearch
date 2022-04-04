@@ -12,25 +12,25 @@ function Register(){
             <div id="login" >GitJob</div>
             <form>
                 <div id ="form">
-                    <div><label name="name">Name  </label></div>
+                    <div><label name="name" required>Name  </label></div>
                     <input input className="input" type="text" required name="name" ></input>
                 </div>
                 <div id ="form">
-                    <div><label name="email">Email  </label></div>
+                    <div><label name="email" required>Email  </label></div>
                     <input input className="input" type="text" required name="email" ></input>
                 </div>
                 <div id ="form">
-                    <div><label name="password">Password</label></div>
+                    <div><label name="password" required>Password</label></div>
                     <input input className="input" type="password" required name="password" ></input>
                 </div>
                 <div id ="form">
-                    <div><label name="password">Confirm Password</label></div>
+                    <div><label name="password" required>Confirm Password</label></div>
                     <input input className="input" type="password" required name="password" ></input>
                 </div>
-                <div id ="form">
-                    <input type="radio" value="Job-Hunter"></input>Job-Hunter
-                    <input type="radio" value="Recruiter"></input>Recruiter
-                    <input type="radio" value="Company"></input>Company
+                <div id ="form" required>
+                    <input type="radio" value="Job-Hunter" name='accountType'></input>Job-Hunter
+                    <input type="radio" value="Recruiter" name='accountType'></input>Recruiter
+                    <input type="radio" value="Company" name='accountType'></input>Company
                 </div>
                 <div>
                     <button type="submit">Register</button>
