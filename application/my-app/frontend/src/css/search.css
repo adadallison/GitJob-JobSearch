@@ -14,16 +14,16 @@
     display: inline-block;
   } */
 
-  .input{
+  .input-search{
     border-radius: 20px;
     border-width: 3px;
-    height: 80px;
-    width: 10px;
+    height: 29px;
+    width: 200px;
   }
 
   .search-container{
-    margin-top: 10px;
     margin-left: 300px;
+    margin-bottom: 13px;
 
   }
   
