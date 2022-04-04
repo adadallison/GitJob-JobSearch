@@ -5,25 +5,29 @@
     text-decoration: none;
   }
   
-  li a.active {
-    background-color: #04AA6D;
-    color: blue;
-  }
-  
   li a:hover:not(.active) {
     background-color: #555;
     color: white;
   }
-  
+/*   
   li.dropdown {
     display: inline-block;
+  } */
+
+  .input{
+    border-radius: 20px;
+    border-width: 3px;
+    height: 80px;
+    width: 10px;
   }
 
   .search-container{
-    margin-top: 1000px;
+    margin-top: 10px;
+    margin-left: 300px;
 
   }
   
+
   .dropdown-content {
     display: none;
     position: absolute;
