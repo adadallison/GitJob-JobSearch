@@ -13,7 +13,7 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
-input{
+.input{
     border-radius: 20px;
     border-width: 1.5px;
     height: 20px;
@@ -29,4 +29,5 @@ label{
 
 button{
     margin-top: 20px;
+
 }
