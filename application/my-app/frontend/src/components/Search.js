@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { useState, useEffect } from 'react';
+import "../css/home.css";
 
 const Search = () => {
 
@@ -23,13 +24,7 @@ const Search = () => {
 
     return (
         <div>
-            <title>
-                Gitjob Website
-            </title>
-            <meta charSet="UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link rel="stylesheet" href="css\home.css" />
-                
+            
                 <div>
                     <div className="search-container">
                         <form onSubmit={handleSubmit}>
@@ -50,10 +45,13 @@ const Search = () => {
                             <button type="submit">Search<i className="search" /></button>
                         </form>
                     </div>
+
                     <li className="dropdown">
-                        <div className="dropdown-content">
-                            <a href="#">1</a></div></li>
+                        <div className="dropdown-content"> </div>
+                    </li>
                 </div>
+
+
             {resData.map(post => (
             <div>
                 <div>Job Name: {post["job name"]}</div>
