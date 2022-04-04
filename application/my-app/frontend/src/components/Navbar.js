@@ -22,9 +22,6 @@ function NavBar(){
 
 
         <div className='navbar'>
-            <Link to='#' className = 'menu-bars'>
-                <FaIcons.FaBars/>
-                </Link>
                 
         </div>
 
