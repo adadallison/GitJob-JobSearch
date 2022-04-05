@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 import { SidebarData } from '../components/SidebarData';
-import "../css/careers.css";
+import "../css/forum.css";
 import NavBar from '../components/Navbar';
 import ForumPost from './ForumPost';
 const Forum = () => {
@@ -16,7 +16,7 @@ const Forum = () => {
 
             <div className="container">
 
-                <div className="sidenav-careers">
+                <div className="sidenav-forum">
                     <div className='nav-text'>
                         {SidebarData.map((item, index) => {
                             return (
@@ -31,7 +31,7 @@ const Forum = () => {
                     </div>
                 </div>
 
-                <div class="career-fields-container" >
+                <div class="forum-container" >
                     <a href="./ForumPost" class="fields">Post 1: </a>
                     <a href="./ForumPost" class="fields">Post 2:</a>
                     <a href="./ForumPost" class="fields">Post 3:</a>
