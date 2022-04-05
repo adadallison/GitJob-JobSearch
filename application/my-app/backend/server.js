@@ -66,5 +66,5 @@ app.post("/register", async (req, res) => {
 
     res.status(201).send();
 });
-n
+
 app.listen(3001);
