@@ -15,7 +15,7 @@ export const SidebarData = [
 },
 {
     title : 'Forums',
-    path: '/forums',
+    path: '/forum',
     icon: <AiIcons.AiFillContainer/>,
     cName: 'nav-text'
 },
@@ -41,6 +41,11 @@ export const SidebarData = [
     title : 'Signup',
     path: '/register',
     icon: <AiIcons.AiOutlineUsergroupAdd/>,
+    cName: 'nav-text'
+},{
+    title : 'Profile',
+    path: '/user',
+    icon: <AiIcons.AiFillProfile/>,
     cName: 'nav-text'
 },
 
