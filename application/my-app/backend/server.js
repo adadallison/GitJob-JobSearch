@@ -54,9 +54,9 @@ app.post("/search", (req, res) => {
     });
 });
 
-app.post("/register", (req, res) => {
-    var salt = bcrypt.genSalt(10);
-    var password = bcrypt.hash("hello", salt);
+app.post("/register", async (req, res) => {
+    var salt = await bcrypt.genSalt(10);
+    var password = await bcrypt.hash("hello", salt);
     
     var query = "INSERT INTO accounts (type, email, password) VALUES ('student','test@gmail.com','" + password + "')";
 
