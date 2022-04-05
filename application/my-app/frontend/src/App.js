@@ -11,6 +11,8 @@ import AI from './pages/AI';
 import FiveG from './pages/FiveG';
 import Jobs from './pages/Jobs';
 import JobPosting from './pages/JobPosting';
+import User from "./pages/User";
+import Forum from './pages/Forum';
 
 const App = () => {
   return (
@@ -21,6 +23,8 @@ const App = () => {
           <Route path="/careers" element={<Careers/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
+          <Route path="/user" element={<User/>}/>
+          <Route path="/forum" element={<Forum/>}/>
           <Route path="/AI" element={<AI/>}/>
           <Route path="/FiveG" element={<FiveG/>}/>
           <Route path="/jobs" element={<Jobs/>}/>
