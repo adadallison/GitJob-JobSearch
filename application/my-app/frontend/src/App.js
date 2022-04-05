@@ -6,6 +6,7 @@ import Home from "./pages/home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NavBar from './components/Navbar';
+import Careers from './pages/Careers';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home/>}/>
+          <Route path="/careers" element={<Careers/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
 
