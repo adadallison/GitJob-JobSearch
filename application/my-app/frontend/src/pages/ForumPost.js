@@ -6,8 +6,8 @@ import { IconContext } from 'react-icons';
 import { SidebarData } from '../components/SidebarData';
 import "../css/careers.css";
 import NavBar from '../components/Navbar';
-import ForumPost from './ForumPost';
-const Forum = () => {
+
+const ForumPost = () => {
 
     return (
         <div>
@@ -31,18 +31,18 @@ const Forum = () => {
                     </div>
                 </div>
 
-                <div class="career-fields-container" >
-                    <a href="./ForumPost" class="fields">Post 1: </a>
-                    <a href="./ForumPost" class="fields">Post 2:</a>
-                    <a href="./ForumPost" class="fields">Post 3:</a>
-                    <a href="./ForumPost" class="fields">Post 4:</a>
-                    <a href="./ForumPost" class="fields">Post 5:</a>
-                    <a href="./ForumPost" class="fields">Post 6:</a>
-                    <a href="./ForumPost" class="fields">Post 7:</a>
-                    <a href="./ForumPost" class="fields">Post 8:</a>
-                    <a href="./ForumPost" class="fields">Post 9:</a>
-
-
+                <div class="center-info" >
+                    <h1>Forum description:</h1>
+                    
+                    <div class="about">
+                        This is the forum description. It will be decently long and contain all the ins and outs of
+                        the position to be applied for. It will also explain the qualifications to the applicant.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
                 </div>
 
             </div>
@@ -52,5 +52,5 @@ const Forum = () => {
     );
 };
 
-export default Forum;
+export default ForumPost;
 
