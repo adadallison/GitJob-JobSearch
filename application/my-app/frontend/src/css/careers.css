@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+  }
+  
+  .sidenav {
+    height: 100vh;
+    width: 300px; /* A fixed width as the default */
+    background-color: #4E91F4;
+  }
+  /* make the center item scrollable somehow like twitter, and the side nav is just sticky */
+  
+
+  .career-fields-container { 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 15px;
+  }
+
+  .fields {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+    border-radius: 30px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    flex: 0 32%;
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    margin-bottom: 7px;
+  }
+  
+  .item-3 { 
+    margin-left: 0%; 
+  }
+

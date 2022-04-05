@@ -25,7 +25,8 @@
 .nav-text{
     display:flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 9px;
+    margin-bottom: 29px;
     list-style: none;
     height: 60px;
 }
