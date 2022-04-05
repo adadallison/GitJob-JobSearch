@@ -43,22 +43,29 @@ app.post("/search", (req, res) => {
         query = "SELECT * FROM `job posts` WHERE (`job field` LIKE ";
         query += "'%" + mysql.escape(req.body["field"]) + "%')";
     }
-
-    pool.query(query,  (err,result) => {
-        if (err) throw err;
-        res.json({result});
-    });
     
+    pool.getConnection((err, connection) => {
+        if (err) throw err;
+        
+        connection.query(query,  (err,result) => {
+            if (err) throw err;
+            res.json({result});
+        });
+    });
 });
 
-app.post("/register", async (req, res) => {
-    var salt = await bcrypt.genSalt(10);
-    var password = await bcrypt.hash("hello", salt);
+app.post("/register", (req, res) => {
+    var salt = bcrypt.genSalt(10);
+    var password = bcrypt.hash("hello", salt);
     
     var query = "INSERT INTO accounts (type, email, password) VALUES ('student','test@gmail.com','" + password + "')";
 
-    pool.query(query,  (err,result) => {
+    pool.getConnection((err, connection) => {
         if (err) throw err;
+        
+        connection.query(query,  (err,result) => {
+            if (err) throw err;
+        });
     });
 
     res.status(201).send();
