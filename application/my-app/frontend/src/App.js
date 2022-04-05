@@ -13,7 +13,7 @@ import Jobs from './pages/Jobs';
 import JobPosting from './pages/JobPosting';
 import User from "./pages/User";
 import Forum from './pages/Forum';
-
+import ForumPost from './pages/ForumPost';
 const App = () => {
   return (
     <div className="App">
@@ -25,6 +25,7 @@ const App = () => {
           <Route path="/register" element={<Register/>}/>
           <Route path="/user" element={<User/>}/>
           <Route path="/forum" element={<Forum/>}/>
+          <Route path="/ForumPost" element={<ForumPost/>}/>
           <Route path="/AI" element={<AI/>}/>
           <Route path="/FiveG" element={<FiveG/>}/>
           <Route path="/jobs" element={<Jobs/>}/>

@@ -4,11 +4,10 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 import { SidebarData } from '../components/SidebarData';
-import "../css/jobposting.css";
+import "../css/careers.css";
 import NavBar from '../components/Navbar';
-import Register from './Register';
 
-const JobPosting = () => {
+const ForumPost = () => {
 
     return (
         <div>
@@ -17,7 +16,7 @@ const JobPosting = () => {
 
             <div className="container">
 
-                <div className="sidenav-jobs">
+                <div className="sidenav-careers">
                     <div className='nav-text'>
                         {SidebarData.map((item, index) => {
                             return (
@@ -33,11 +32,10 @@ const JobPosting = () => {
                 </div>
 
                 <div class="center-info" >
-                    <h1>Job Position @ Company</h1>
-                    <button class="apply-button"><a href="./Register">Apply</a></button>
-                    <button class="bookmark-button"><a href="./Register">Bookmark</a></button>
+                    <h1>Forum description:</h1>
+                    
                     <div class="about">
-                        This is the job description. It will be decently long and contain all the ins and outs of
+                        This is the forum description. It will be decently long and contain all the ins and outs of
                         the position to be applied for. It will also explain the qualifications to the applicant.
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                         ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -54,5 +52,5 @@ const JobPosting = () => {
     );
 };
 
-export default JobPosting;
+export default ForumPost;
 
