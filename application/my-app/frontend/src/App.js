@@ -9,6 +9,8 @@ import NavBar from './components/Navbar';
 import Careers from './pages/Careers';
 import AI from './pages/AI';
 import FiveG from './pages/FiveG';
+import Jobs from './pages/Jobs';
+import JobPosting from './pages/JobPosting';
 
 const App = () => {
   return (
@@ -21,7 +23,8 @@ const App = () => {
           <Route path="/register" element={<Register/>}/>
           <Route path="/AI" element={<AI/>}/>
           <Route path="/FiveG" element={<FiveG/>}/>
-
+          <Route path="/jobs" element={<Jobs/>}/>
+          <Route path="/JobPosting" element={<JobPosting/>}/>
         </Routes>
       </BrowserRouter>
     </div>
