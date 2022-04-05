@@ -32,7 +32,7 @@ const Careers = () => {
                 </div>
 
                 <div class="career-fields-container" >
-                    <div class="fields">AI and ML</div>
+                    <div class="fields">AI and ML </div>
                     <div class="fields">Robotics Process Automation</div>
                     <div class="fields">Internet of Things</div>
                     <div class="fields">5G</div>

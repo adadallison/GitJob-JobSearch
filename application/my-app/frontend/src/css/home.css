@@ -10,7 +10,6 @@
   /* make the center item scrollable somehow like twitter, and the side nav is just sticky */
   
    .center-scroll { 
-    background-color: whitesmoke;
     flex-direction: column;
     display: flex;
     justify-content: center safe;
@@ -24,11 +23,13 @@
 
   #center-items {
     background-color: white;
-    border-width: 2px;
+    border-width: 1px;
     border-style: solid;
     height: 3in;
+    border-color: grey;
+    border-radius: 20px;
     min-height: 3in;
-    margin: 20px;
+    margin: 19px;
 
   } 
 
