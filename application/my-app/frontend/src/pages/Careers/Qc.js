@@ -3,14 +3,14 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {IconContext} from 'react-icons';
-import {SidebarData} from '../components/SidebarData';
-import "../css/home.css";
+import {SidebarData} from '../../components/SidebarData';
+import "../../css/home.css";
 import * as BsIcons from 'react-icons/bs';
-import "../css/career-fields.css";
-import NavBar from '../components/Navbar';
-import salary from "../images/salary.png"
+import "../../css/career-fields.css";
+import NavBar from '../../components/Navbar';
+import salary from "../../images/salary.png"
 
-const AI = () => {
+const Qc = () => {
 
     return (
         <div>
@@ -35,18 +35,17 @@ const AI = () => {
                 </div>
 
                 <div class="center-info"> 
-                    <h1>Artificial Intelligence and Machine Learning Overview</h1>
+                    <h1>Quantum Computing</h1>
                     
                     <div className="about">
-                    Machine learning engineers are the designers of self-running software that brings machines the ability to automate models that are predictive. They work with data scientists to take information and feed curated data into the models that they've uncovered or discovered. They use theoretical models within the data science sphere and build them out to scale as functioning and productive units or models that handle terabytes of real-time data.
-                    Machine learning engineers also function as a bridge or intersection for software engineering and data science. They use the available big data tools to improve programming frameworks and to gather raw data from pipelines. They redefine raw data into data science models that are ready to scale. Some machine learning engineers design the software programs that control technological tools, including computers or robots. They can develop algorithms that allow machines to identify trends or patterns in their programming data and as a self-contained unit, and a machine can then teach itself to understand commands, or even to think for itself. Machine learning engineers need a minimum of a bachelor’s degree in computer science or related fields.
+                    Quantum computing is a type of computation that harnesses the collective properties of quantum states, such as superposition, interference, and entanglement, to perform calculations. The devices that perform quantum computations are known as quantum computers. 
                     </div>
 
                     <div className='salaryNjob'>
                         <div className='salary'>
                             <h3>Average Salary  <img src={salary} align="center" width="30" height="30" alt="salary" ></img>
                             </h3> 
-                            <h2>$80,000-$120,000</h2>
+                            <h2>$41,000-$150,000</h2>
                         </div>
 
                         <div className='salary'>
@@ -64,7 +63,7 @@ const AI = () => {
                 </div>
 
                 <div class="more-fields">
-                    <div><a href="./FiveG" >5G</a></div>
+                    <div><a href="./Qc" >Qc</a></div>
                 </div>
 
             </div>
@@ -74,5 +73,5 @@ const AI = () => {
     );
 };
 
-export default AI
+export default Qc
 

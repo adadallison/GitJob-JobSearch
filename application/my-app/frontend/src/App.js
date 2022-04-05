@@ -7,13 +7,15 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NavBar from './components/Navbar';
 import Careers from './pages/Careers';
-import AI from './pages/AI';
-import FiveG from './pages/FiveG';
+import AI from './pages/Careers/AI';
+import FiveG from './pages/Careers/FiveG';
 import Jobs from './pages/Jobs';
 import JobPosting from './pages/JobPosting';
 import User from "./pages/User";
 import Forum from './pages/Forum';
 import ForumPost from './pages/ForumPost';
+import Qc from './pages/Careers/Qc';
+import Ec from './pages/Careers/Ec';
 const App = () => {
   return (
     <div className="App">
@@ -27,6 +29,8 @@ const App = () => {
           <Route path="/forum" element={<Forum/>}/>
           <Route path="/ForumPost" element={<ForumPost/>}/>
           <Route path="/AI" element={<AI/>}/>
+          <Route path="/Qc" element={<Qc/>}/>
+          <Route path="/Ec" element={<Ec/>}/>
           <Route path="/FiveG" element={<FiveG/>}/>
           <Route path="/jobs" element={<Jobs/>}/>
           <Route path="/JobPosting" element={<JobPosting/>}/>

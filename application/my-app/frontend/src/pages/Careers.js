@@ -38,8 +38,8 @@ const Careers = () => {
                     <a href="./FiveG" class="fields">5G</a>
                     <a href="" class="fields">Virtual and Augmented Reality</a>
                     <a href="" class="fields">Blockchain</a>
-                    <a href="" class="fields">Quantum Computing</a>
-                    <a href="" class="fields">Edge Computing</a>
+                    <a href="./Qc" class="fields">Quantum Computing</a>
+                    <a href="./Ec" class="fields">Edge Computing</a>
                     <a href="" class="fields">Cyber Security</a>
                     
 
