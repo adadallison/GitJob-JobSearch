@@ -1,24 +1,22 @@
 import axios from 'axios';
 import React from 'react';
 import { useState, useEffect } from 'react';
-import NavBar from '../components/Navbar';
 import { Link } from 'react-router-dom';
 import {IconContext} from 'react-icons';
 import {SidebarData} from '../components/SidebarData';
 import "../css/careers.css";
-import "../css/Navbar.css";
+import NavBar from '../components/Navbar';
 
 const Careers = () => {
 
     return (
         <div>
             <NavBar>
-
             </NavBar>
 
-            <div class="container">
+            <div className="container">
 
-                <div class="sidenav">
+                <div className="sidenav-careers">
                     <div className='nav-text'>
                         {SidebarData.map((item, index)=> {
                         return (
