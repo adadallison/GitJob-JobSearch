@@ -46,5 +46,9 @@
     flex: 0 30%;
     background-color: white;
   }
-  
 
+.map {
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+}
