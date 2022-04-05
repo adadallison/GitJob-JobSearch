@@ -7,16 +7,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const database = mysql.createConnection({
+const pool = mysql.createPool({
+    connectionLimit: 10,
     host: 'localhost',
     user: 'root',
     password: 'password',
     database: 'team6dev'
-});
-
-database.connect((err) => {
-    if(err) throw err;
-    console.log('Connected!');
 });
 
 app.post("/search", (req, res) => {
@@ -48,19 +44,20 @@ app.post("/search", (req, res) => {
         query += "'%" + mysql.escape(req.body["field"]) + "%')";
     }
 
-    database.query(query,  (err,result) => {
+    pool.query(query,  (err,result) => {
         if (err) throw err;
         res.json({result});
     });
+    
 });
 
 app.post("/register", async (req, res) => {
     var salt = await bcrypt.genSalt(10);
     var password = await bcrypt.hash("hello", salt);
     
-    var query = "INSERT INTO accounts (student_id, company_id, email, password) VALUES ('1', '0','test@gmail.com','" + password + "')";
+    var query = "INSERT INTO accounts (type, email, password) VALUES ('student','test@gmail.com','" + password + "')";
 
-    database.query(query,  (err,result) => {
+    pool.query(query,  (err,result) => {
         if (err) throw err;
     });
 
