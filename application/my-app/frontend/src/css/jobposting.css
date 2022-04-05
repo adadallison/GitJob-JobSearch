@@ -1,4 +1,9 @@
 .apply-button {
     position: absolute;
-    left: 8000px;
+    left: 90%;
+    top: 9%;
+}
+.bookmark-button {
+    position: absolute;
+    left: 95%;
 }
