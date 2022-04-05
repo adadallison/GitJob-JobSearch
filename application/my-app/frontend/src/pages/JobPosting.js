@@ -18,7 +18,7 @@ const JobPosting = () => {
 
             <div className="container">
 
-                <div className="sidenav-careers">
+                <div className="sidenav-jobs">
                     <div className='nav-text'>
                         {SidebarData.map((item, index) => {
                             return (
