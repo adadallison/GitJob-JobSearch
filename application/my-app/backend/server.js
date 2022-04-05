@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2');
+const bcrypt = require('bcrypt');
 const app = express();
 
 app.use(cors());
@@ -31,27 +32,39 @@ app.post("/search", (req, res) => {
         // when title and field are both not empty
         
         query = "SELECT * FROM `job posts` WHERE ";
-        query += "(`job name` LIKE '%" + req.body["title"] + "%' and"; 
-        query += "`job field` LIKE '%" + req.body["field"] + "%')";
+        query += "(`job name` LIKE '%" + mysql.escape(req.body["title"]) + "%' and"; 
+        query += "`job field` LIKE '%" + mysql.escape(req.body["field"]) + "%')";
     
     }else if(req.body["title"] != ""){    
         // when title has a value but not field
         
         query = "SELECT * FROM `job posts` WHERE (`job name` LIKE ";
-        query += "'%" + req.body["title"] + "%')";
+        query += "'%" + mysql.escape(req.body["title"]) + "%')";
 
     }else{
         // when field has a value but not title
         
         query = "SELECT * FROM `job posts` WHERE (`job field` LIKE ";
-        query += "'%" + req.body["field"] + "%')";
+        query += "'%" + mysql.escape(req.body["field"]) + "%')";
     }
 
     database.query(query,  (err,result) => {
         if (err) throw err;
-        console.log(result);
         res.json({result});
     });
+});
+
+app.post("/register", async (req, res) => {
+    var salt = await bcrypt.genSalt(10);
+    var password = await bcrypt.hash("hello", salt);
+    
+    var query = "INSERT INTO accounts (student_id, company_id, email, password) VALUES ('1', '0','test@gmail.com','" + password + "')";
+
+    database.query(query,  (err,result) => {
+        if (err) throw err;
+    });
+
+    res.status(201).send();
 });
 
 app.listen(3001);
