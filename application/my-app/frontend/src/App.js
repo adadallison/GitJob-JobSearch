@@ -7,6 +7,8 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NavBar from './components/Navbar';
 import Careers from './pages/Careers';
+import AI from './pages/AI';
+import FiveG from './pages/FiveG';
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
           <Route path="/careers" element={<Careers/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
+          <Route path="/AI" element={<AI/>}/>
+          <Route path="/FiveG" element={<FiveG/>}/>
 
         </Routes>
       </BrowserRouter>

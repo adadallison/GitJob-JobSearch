@@ -4,10 +4,11 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {IconContext} from 'react-icons';
 import {SidebarData} from '../components/SidebarData';
-import "../css/careers.css";
+import "../css/home.css";
+import "../css/career-fields.css";
 import NavBar from '../components/Navbar';
 
-const Careers = () => {
+const FiveG = () => {
 
     return (
         <div>
@@ -16,7 +17,7 @@ const Careers = () => {
 
             <div className="container">
 
-                <div className="sidenav-careers">
+                <div className="sidenav-home">
                     <div className='nav-text'>
                         {SidebarData.map((item, index)=> {
                         return (
@@ -31,18 +32,18 @@ const Careers = () => {
                     </div>  
                 </div>
 
-                <div class="career-fields-container" >
-                    <a href="./AI" class="fields">Artificial Intelligence and Machine Learning</a>
-                    <a href="" class="fields">Robotics Process Automation</a>
-                    <a href="" class="fields">Internet of Things</a>
-                    <a href="./FiveG" class="fields">5G</a>
-                    <a href="" class="fields">Virtual and Augmented Reality</a>
-                    <a href="" class="fields">Blockchain</a>
-                    <a href="" class="fields">Quantum Computing</a>
-                    <a href="" class="fields">Edge Computing</a>
-                    <a href="" class="fields">Cyber Security</a>
+                <div class="center-scroll"> 
+                    <h1>5G Overview</h1>
                     
+                    <div id="center-items">AI Post 1</div>
+                    <div id="center-items">Example Post 2</div>
+                    <div id="center-items">Example Post 1</div>
 
+                    
+                </div>
+
+                <div class="item-3">
+                    <h2>Other</h2>
                 </div>
 
             </div>
@@ -52,5 +53,5 @@ const Careers = () => {
     );
 };
 
-export default Careers;
+export default FiveG
 

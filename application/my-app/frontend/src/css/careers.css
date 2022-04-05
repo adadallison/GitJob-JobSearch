@@ -4,7 +4,7 @@
   
   .sidenav-careers {
     height: 100vh;
-    width: 335px; /* A fixed width as the default */
+    width: 420px; /* A fixed width as the default */
     background-color: #4E91F4;
   }
   /* make the center item scrollable somehow like twitter, and the side nav is just sticky */
@@ -14,7 +14,8 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin:27px;
+    margin:20px;
+    
   }
 
   .fields {
@@ -22,7 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: sans-serif;
+    font-family: TwitterChirpExtendedHeavy, Verdana, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-weight: bold;
     color: #276ace;
     font-size: 20px;
