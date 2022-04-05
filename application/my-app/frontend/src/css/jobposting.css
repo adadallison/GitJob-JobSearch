@@ -1,4 +1,5 @@
 .apply-button {
     position: absolute;
     left: 8000px;
+    text-decoration: none;
 }
