@@ -33,28 +33,23 @@ const Home = () => {
                     </div>  
                 </div>
 
-
                 <div class="item-center" >TWO
-                    <div class="item-center1">1</div>
-                    <div class="item-center1">2</div>
-                    <div class="item-center1">3</div>
-                    <div class="item-center1">1</div>
-                    <div class="item-center1">2</div>
-                    <div class="item-center1">3</div>
-                    <div class="item-center1">1</div>
-                    <div class="item-center1">2</div>
-                    <div class="item-center1">3</div>
-                    <div class="item-center1">1</div>
-                    <div class="item-center1">2</div>
-                    <div class="item-center1">3</div>
-                    <div class="item-center1">1</div>
-                    <div class="item-center1">3</div>
-                    <div class="item-center1">1</div>
-                    <div class="item-center1">2</div>
-                    <div class="item-center1">3</div>
-                    <div class="item-center1">1</div>
-                    <div class="item-center1">2</div>
-                    <div class="item-center1">3</div>
+                    <div class="item-center1">Example Post 1</div>
+                    <div class="item-center1">Example Post 2</div>
+                    <div class="item-center1">Example Post 3</div>
+                    <div class="item-center1">Example Post 4</div>
+                    <div class="item-center1">Example Post 5</div>
+                    <div class="item-center1">Example Post 6</div>             
+                    <div class="item-center1">Example Post 7</div>
+                    <div class="item-center1">Example Post</div>
+                    <div class="item-center1">Example Post</div>
+                    <div class="item-center1">Example Post</div>
+                    <div class="item-center1">Example Post</div>
+                    <div class="item-center1">Example Post</div>
+                    <div class="item-center1">Example Post</div>
+                    <div class="item-center1">Example Post</div>
+                    <div class="item-center1">Example Post</div>
+                    <div class="item-center1">Example Post</div>
                     <div class="item-center1">1</div>
                     <div class="item-center1">3</div>
                     <div class="item-center1">1</div>
