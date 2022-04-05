@@ -2,11 +2,10 @@
     display: flex;
   }
   
-  .item1 {
+  .sidenav {
     height: 100vh;
-    width: 240px; /* A fixed width as the default */
+    width: 250px; /* A fixed width as the default */
     background-color: #4E91F4;
-    
   }
   /* make the center item scrollable somehow like twitter, and the side nav is just sticky */
   
@@ -19,18 +18,18 @@
     white-space: nowrap;
     overflow-y: auto;
     height: 100vh;
-    width: 1000vh;
+    width: 65vw;
   }
 
   .item-center1 {
     justify-content: space-between;
     background-color: pink;
     height: 200px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     
   }
   
-  .item2 { 
-    margin-left: 10%; 
+  .item-3 { 
+    margin-left: 0%; 
   }
 

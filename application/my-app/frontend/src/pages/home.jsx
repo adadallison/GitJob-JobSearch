@@ -18,8 +18,8 @@ const Home = () => {
 
             <div class="container">
 
-                <div class="item1">
-                    <div className='nav-menu-items'>
+                <div class="sidenav">
+                    <div className='nav-text'>
                         {SidebarData.map((item, index)=> {
                         return (
                             <li key = {index} className = {item.cName}>
@@ -48,7 +48,6 @@ const Home = () => {
                     <div class="item-center1">2</div>
                     <div class="item-center1">3</div>
                     <div class="item-center1">1</div>
-                    <div class="item-center1">2</div>
                     <div class="item-center1">3</div>
                     <div class="item-center1">1</div>
                     <div class="item-center1">2</div>
@@ -57,7 +56,6 @@ const Home = () => {
                     <div class="item-center1">2</div>
                     <div class="item-center1">3</div>
                     <div class="item-center1">1</div>
-                    <div class="item-center1">2</div>
                     <div class="item-center1">3</div>
                     <div class="item-center1">1</div>
                     <div class="item-center1">2</div>
@@ -66,17 +64,11 @@ const Home = () => {
                     <div class="item-center1">2</div>
                     <div class="item-center1">3</div>
                     <div class="item-center1">1</div>
-                    <div class="item-center1">2</div>
-                    <div class="item-center1">3</div>
-                    <div class="item-center1">1</div>
-                    <div class="item-center1">2</div>
-                    <div class="item-center1">3</div>
-                    <div class="item-center1">1</div>
-
+                    
 
                 </div>
 
-                <div class="item2">THREE
+                <div class="item-3">THREE
                 </div>
 
             </div>
