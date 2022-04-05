@@ -35,7 +35,8 @@ const JobPosting = () => {
 
                 <div class="center-info" >
                     <h1>Job Position @ Company</h1>
-                    <button class="apply-button"><a href="./Register">Button</a></button>
+                    <button class="apply-button"><a href="./Register">Apply</a></button>
+                    <button class="bookmark-button"><a href="./Register">Bookmark</a></button>
                     <div class="about">
                         This is the job description. It will be decently long and contain all the ins and outs of
                         the position to be applied for. It will also explain the qualifications to the applicant.
