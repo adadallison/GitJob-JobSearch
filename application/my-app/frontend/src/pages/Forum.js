@@ -32,15 +32,15 @@ const Forum = () => {
                 </div>
 
                 <div class="forum-container" >
-                    <a href="./ForumPost" class="fields">Post 1: </a>
-                    <a href="./ForumPost" class="fields">Post 2:</a>
-                    <a href="./ForumPost" class="fields">Post 3:</a>
-                    <a href="./ForumPost" class="fields">Post 4:</a>
-                    <a href="./ForumPost" class="fields">Post 5:</a>
-                    <a href="./ForumPost" class="fields">Post 6:</a>
-                    <a href="./ForumPost" class="fields">Post 7:</a>
-                    <a href="./ForumPost" class="fields">Post 8:</a>
-                    <a href="./ForumPost" class="fields">Post 9:</a>
+                    <a href="./ForumPost" class="fields">Finding Jobs</a>
+                    <a href="./ForumPost" class="fields">Interview Prep</a>
+                    <a href="./ForumPost" class="fields">Exploring Careers</a>
+                    <a href="./ForumPost" class="fields">Resume Advice</a>
+                    <a href="./ForumPost" class="fields">Networking</a>
+                    <a href="./ForumPost" class="fields">Testimonies</a>
+                    <a href="./ForumPost" class="fields">Resources</a>
+                    <a href="./ForumPost" class="fields">Education</a>
+                    <a href="./ForumPost" class="fields">Open Forum</a>
 
 
                 </div>
