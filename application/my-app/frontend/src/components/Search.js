@@ -51,7 +51,7 @@ const Search = () => {
 
 
             {resData.map(post => (
-            <div>
+            <div className='search-results-container'>
                 <div>Job Name: {post["job name"]}</div>
                 <div>Job Field: {post["job field"]}</div>
                 <div>Date Posted: {post["date posted"]}</div>

@@ -60,6 +60,13 @@
     bottom: 10px;
     position: absolute;
   }
+
+  .search-results-container{
+    display: block;
+    background-color: pink;
+    font-size: 10px;
+    text-align: left;
+  }
   
   
   
