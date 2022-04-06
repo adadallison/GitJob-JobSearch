@@ -51,6 +51,8 @@ app.post("/search", (req, res) => {
             if (err) throw err;
             res.json({result});
         });
+        
+        connection.release();
     });
 });
 
@@ -66,6 +68,8 @@ app.post("/register", async (req, res) => {
         connection.query(query,  (err,result) => {
             if (err) throw err;
         });
+        
+        connection.release();
     });
 
     res.status(201).send();
