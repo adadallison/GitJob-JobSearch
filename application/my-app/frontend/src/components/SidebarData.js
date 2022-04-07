@@ -14,8 +14,8 @@ export const SidebarData = [
     cName: 'nav-text'
 },
 {
-    title : 'Forums',
-    path: '/forum',
+    title : 'Post a Job',
+    path: '/JobPosting2',
     icon: <AiIcons.AiFillContainer/>,
     cName: 'nav-text'
 },

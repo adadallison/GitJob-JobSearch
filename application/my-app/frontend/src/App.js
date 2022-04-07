@@ -16,6 +16,7 @@ import Forum from './pages/Forum';
 import ForumPost from './pages/ForumPost';
 import Qc from './pages/Careers/Qc';
 import Ec from './pages/Careers/Ec';
+import Form from './components/Form';
 const App = () => {
   return (
     <div className="App">
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="/FiveG" element={<FiveG/>}/>
           <Route path="/jobs" element={<Jobs/>}/>
           <Route path="/JobPosting" element={<JobPosting/>}/>
+          <Route path="/JobPosting2" element={<Form/>}/>
         </Routes>
       </BrowserRouter>
     </div>
