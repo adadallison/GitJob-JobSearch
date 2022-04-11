@@ -10,13 +10,20 @@ const Search = () => {
     const [resData, setResData] = useState([]);
     const ip = "13.52.76.208";
 
+    
+
     const handleSubmit = (event) => {
-        window.location.href="../pages/Results"
+       //window.location.href="/results";
         event.preventDefault();
         axios.post("http://" + ip + ":3001/search", { title, field })
             .then(res => {
                 console.log(res.data.result);
                 setResData(res.data.result);
+                this.props.history.push({
+                    pathname: '/results',
+                      state: resData // your data array of objects
+                  })
+            
             });
     };
 
@@ -50,6 +57,9 @@ const Search = () => {
                     </li> */}
                 </div>
 
+                
+
+
 
             {resData.map(post => (
             <div className='search-results-container'>
@@ -61,6 +71,8 @@ const Search = () => {
                 <br/>
             </div>
             ))}
+
+
         </div>
     );
 };

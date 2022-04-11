@@ -10,6 +10,8 @@ import Register from './Register';
 
 const Results = () => {
 
+    
+
     return (
         <div>
             <NavBar>
