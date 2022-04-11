@@ -19,27 +19,9 @@ function NavBar(){
         <>
     <IconContext.Provider value ={{color:'fff'}}> 
 
-        <div className='navbar'>Gitjob<Search/> </div>
+        <div className='navbar'>Gitjob </div>
 
 
-            {/* <nav className="nav-menu">
-                <div className='nav-menu-items' >
-
-                    {SidebarData.map((item, index)=> {
-                    return (
-                        <li key = {index} className = {item.cName}>
-                        <Link to = {item.path}>
-                            {item.icon}   
-                            <span>{item.title}</span>
-                        </Link>
-                        </li>
-                    );
-                    })}
-                </div>  
-            </nav> */}
-
-
-            
 
         </IconContext.Provider>
         </>
