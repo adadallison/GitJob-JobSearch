@@ -58,22 +58,54 @@ app.post("/search", (req, res) => {
 });
 
 app.post("/register", async (req, res) => {
-    var salt = await bcrypt.genSalt(10);
-    var password = await bcrypt.hash("hello", salt);
+    var type = req.body["type"];
+    var name = req.body["name"]; 
+    var password = req.body["password"];
+    var repassword = req.body["repassword"];
+
+    console.log(req.body);
+    console.log()
+    console.log()
+    console.log()
+
+    var resultStatus = true;
     
-    var query = "INSERT INTO accounts (type, email, password) VALUES ('student','test@gmail.com','" + password + "')";
+    // Validate username and password
+    if (type.length != 0 && type.length > 7){
+        resultStatus = false;
+    }else if(name.length != 0 && name.length > 30){
+        resultStatus = false;
+    }else if(password.length != 0 && password.length > 30){
+        resultStatus = false;
+    }else if(password.normalize() !== repassword.normalize()){
+        resultStatus = false;
+    }
+    
+    if(resultStatus){
+        var salt = await bcrypt.genSalt(10);
+        var encryptPassword = await bcrypt.hash("hello", salt);
+    
+        var query = "INSERT INTO accounts (email, type, name, password) VALUES ( ? , ? , ? , ?)";
 
-    pool.getConnection((err, connection) => {
-        if (err) throw err;
-        
-        connection.query(query,  (err,result) => {
+        pool.getConnection((err, connection) => {
             if (err) throw err;
-        });
         
-        connection.release();
-    });
+            connection.query(query, [
+                name,
+                type,
+                name,
+                encryptPassword
+            ],(err,result) => {
+                if (err) throw err;
+            });
+        
+            connection.release();
+        });
 
-    res.status(201).send();
+        res.status(201).send();
+    }else{
+        res.status(400).send();
+    }
 });
 
 app.listen(3001);
