@@ -11,6 +11,7 @@ const Search = () => {
     const ip = "13.52.76.208";
 
     const handleSubmit = (event) => {
+        window.location.href="../pages/Results"
         event.preventDefault();
         axios.post("http://" + ip + ":3001/search", { title, field })
             .then(res => {

@@ -17,6 +17,7 @@ import ForumPost from './pages/ForumPost';
 import Qc from './pages/Careers/Qc';
 import Ec from './pages/Careers/Ec';
 import Form from './components/Form';
+import Results from './pages/Results';
 const App = () => {
   return (
     <div className="App">
@@ -36,6 +37,7 @@ const App = () => {
           <Route path="/jobs" element={<Jobs/>}/>
           <Route path="/JobPosting" element={<JobPosting/>}/>
           <Route path="/JobPosting2" element={<Form/>}/>
+          <Route path="/results" element={<Results/>}/>
         </Routes>
       </BrowserRouter>
     </div>
