@@ -80,9 +80,61 @@ const Home = () => {
                             </form>
                         </div>
 
-                        {/* <li className="dropdown">
-                            <div className="dropdown-content"> </div>
-                        </li> */}
+                        <div class="center-scroll">
+                    <div>
+                        <div className="search-container">
+                            <form onSubmit={handleSubmit}>
+                                <input className="input-search" type="text" placeholder="Search" onChange={e => setTitle(e.target.value)} />
+                                <select id="field" name="field" onChange={e => setField(e.target.value)}>
+                                    <option value=""></option>
+                                    <option value="California">California</option>
+                                    <option value="Seattle">Seattle</option>
+                                    <option value="Texas">Texas</option>
+                                    <option value="New York">New York</option>  
+                                    <option value="Florida">Texas</option>
+                                    <option value="Virginia">New York</option>    
+                                    <option value="Washington State">Washington State</option>
+                                      
+                                                                       
+                                </select>
+                                <button type="submit">Search<i className="search" /></button>
+                            </form>
+                        </div>
+
+
+
+
+                        
+
+                        
+                    </div>
+
+                    <div class="center-scroll">
+                    <div>
+                        <div className="search-container">
+                            <form onSubmit={handleSubmit}>
+                                <input className="input-search" type="text" placeholder="Search" onChange={e => setTitle(e.target.value)} />
+                                <select id="field" name="field" onChange={e => setField(e.target.value)}>
+                                    <option value=""></option>
+                                    <option value="C++">C++</option>
+                                    <option value="Java">Java</option>
+                                    <option value="Excel">Excel</option>
+                                    <option value="Python">Python</option>  
+                                    <option value="JavaScript">Java Script</option>
+                                    
+                                      
+                                                                       
+                                </select>
+                                <button type="submit">Search<i className="search" /></button>
+                            </form>
+                        </div>
+
+
+
+
+                        
+
+                        
                     </div>
 
                     {resData.map(post => (
@@ -99,9 +151,9 @@ const Home = () => {
 
 
                 </div>
+                </div></div>
 
-
-            </div>
+            </div> </div>
           
            
         </div>

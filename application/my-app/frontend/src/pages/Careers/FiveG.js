@@ -9,7 +9,7 @@ import "../../css/career-fields.css";
 import NavBar from '../../components/Navbar';
 import salary from "../../images/salary.png"
 
-const FiveG = () => {
+const FiveGs = () => {
 
     return (
         <div>
@@ -54,5 +54,5 @@ const FiveG = () => {
     );
 };
 
-export default FiveG
+export default FiveGs
 

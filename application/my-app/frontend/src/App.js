@@ -18,6 +18,7 @@ import Qc from './pages/Careers/Qc';
 import Ec from './pages/Careers/Ec';
 import Form from './components/Form';
 import Results from './pages/Results';
+import FiveGs from './pages/Careers/FiveG';
 const App = () => {
   return (
     <div className="App">
@@ -33,7 +34,7 @@ const App = () => {
           <Route path="/AI" element={<AI/>}/>
           <Route path="/Qc" element={<Qc/>}/>
           <Route path="/Ec" element={<Ec/>}/>
-          <Route path="/FiveG" element={<FiveG/>}/>
+          <Route path="/FiveGs" element={<FiveGs/>}/>
           <Route path="/jobs" element={<Jobs/>}/>
           <Route path="/JobPosting" element={<JobPosting/>}/>
           <Route path="/JobPosting2" element={<Form/>}/>

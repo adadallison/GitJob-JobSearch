@@ -38,7 +38,7 @@ const Ec = () => {
                     <h1>Edge Computing</h1>
                     
                     <div className="about">
-                    Edge computing is a distributed computing paradigm that brings computation and data storage closer to the sources of data. This is expected to improve response times and save bandwidth. "A common misconception is that edge and IoT are synonymous 
+                    Edge computing is a distributed computing paradigm that brings computation and data storage closer to the sources of data. This is expected to improve response times and save bandwidth. "A common misconception is that edge and IoT are synonymous.In simpler terms, edge computing means running fewer processes in the cloud and moving those processes to local places, such as on a user's computer, an IoT device, or an edge server.
                     </div>
 
                     <div className='salaryNjob'>
