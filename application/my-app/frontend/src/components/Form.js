@@ -91,7 +91,7 @@ const handleChange = event => {
                           <p>Last Name</p>
                           <input name="lastname"onChange={handleChange}value={formData.lastname || ''} />
                       </label>
-                      <label>
+                      <label>   
                           <p>Job Title</p>
                           <input name="jobtitle"onChange={handleChange}value={formData.jobtitle || ''} />
                       </label>
@@ -104,7 +104,8 @@ const handleChange = event => {
                           <input name="pay"onChange={handleChange}value={formData.pay || ''} />
                       </label>
                       <label>
-                          <p>Job Description</p>
+                          <p>                Job Description
+                              </p>
                           <input name="jobdescription"onChange={handleChange}value={formData.jobdescription || ''} />
                       </label>
                       <label>
@@ -156,9 +157,11 @@ const handleChange = event => {
                <option value="Washington State">Washington State</option>
            </select>
          </label>
+         <label>
+         <button type="submit">Submit</button></label>
                   </fieldset>
 
-                  <button type="submit">Submit</button>
+                  
 
               </form>
           </div></>
