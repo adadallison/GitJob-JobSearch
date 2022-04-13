@@ -84,8 +84,7 @@ const handleChange = event => {
               
                   <fieldset>
                       <label>
-                          
-                          <p>First Name</p>
+                        <p>First Name</p>
                           <input name="firstname"onChange={handleChange}value={formData.firstname || ''} />
                       </label>
                       <label>
@@ -113,14 +112,6 @@ const handleChange = event => {
                           <input name="company"onChange={handleChange}value={formData.company || ''} />
                       </label>
                       <label>
-                          <p>Skills</p>
-                          <input name="skills" onChange={handleChange}value={formData.skills || ''}/>
-                      </label>
-                      <label>
-                          <p>Location</p>
-                          <input name="location" onChange={handleChange}value={formData.location || ''}/>
-                      </label>
-                      <label>
                           <p>Phone Number</p>
                           <input name="phonenumber"onChange={handleChange}value={formData.phonenumber|| ''}/>
                       </label>
@@ -138,6 +129,31 @@ const handleChange = event => {
                <option value="Qc">Quantum Computing</option>
                <option value="Ec">Edge Computing</option>
                <option value="Cyber Security">Cyber Security</option>
+           </select>
+         </label>
+         <label>       
+           <p>Location</p>
+           <select name="location" onChange={handleChange}value={formData.location|| ''}>
+               <option value="">--Please choose a location--</option>
+               <option value="California">California</option>
+               <option value="Seattle">Seattle</option>
+               <option value="Texas">Texas</option>
+               <option value="New York">New York</option>
+               <option value="Florida">Florida</option>
+               <option value="Virginia">Virginia</option>
+           </select>
+         </label>
+
+         <label>       
+           <p>Skills</p>
+           <select name="skill" onChange={handleChange}value={formData.skill|| ''}>
+               <option value="">--Please choose a skill--</option>
+               <option value="C++">C++</option>
+               <option value="Java">Java</option>
+               <option value="Excel">Excel</option>
+               <option value="Python">Python</option>
+               <option value="JavaScript">Java Script</option>
+               <option value="Washington State">Washington State</option>
            </select>
          </label>
                   </fieldset>
