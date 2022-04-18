@@ -2,7 +2,6 @@ import axios from 'axios';
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { IconContext } from 'react-icons';
 import { SidebarData } from '../components/SidebarData';
 import "../css/home.css";
 import NavBar from '../components/Navbar';

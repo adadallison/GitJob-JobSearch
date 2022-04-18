@@ -1,13 +1,10 @@
-import axios from 'axios';
 import React from 'react';
-import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import {IconContext} from 'react-icons';
 import {SidebarData} from '../../components/SidebarData';
 import * as BsIcons from 'react-icons/bs';
 import "../../css/career-fields.css";
 import NavBar from '../../components/Navbar';
-import salary from "../../images/salary.png"
+import salary from "../../images/salary.png";
 
 const AI = () => {
 
