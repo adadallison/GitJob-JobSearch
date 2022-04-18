@@ -2,10 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2');
 const bcrypt = require('bcrypt');
+const session = require('express-session');
 const app = express();
-
-app.use(cors());
-app.use(express.json());
 
 const pool = mysql.createPool({
     connectionLimit: 10,
@@ -14,6 +12,17 @@ const pool = mysql.createPool({
     password: 'password',
     database: 'team6dev'
 });
+
+var sessionStore = new session.MemoryStore();
+
+app.use(cors({origin: 'http://localhost:3000', methods: ["GET", "POST"], credentials:true }));
+app.use(express.json());
+app.use(session({
+    secret: 'key that will sign cookie',
+    resave: false,
+    saveUninitialized: false,
+    store: sessionStore
+}))
 
 app.post("/search", (req, res) => {
     console.log(req.body);
@@ -64,18 +73,15 @@ app.post("/register", async (req, res) => {
     var repassword = req.body["repassword"];
 
     console.log(req.body);
-    console.log()
-    console.log()
-    console.log()
 
     var resultStatus = true;
     
     // Validate username and password
-    if (type.length != 0 && type.length > 7){
+    if (type.length != 0 || type.length > 7){
         resultStatus = false;
-    }else if(name.length != 0 && name.length > 30){
+    }else if(name.length != 0 || name.length > 30){
         resultStatus = false;
-    }else if(password.length != 0 && password.length > 30){
+    }else if(password.length != 0 || password.length > 30){
         resultStatus = false;
     }else if(password.normalize() !== repassword.normalize()){
         resultStatus = false;
@@ -106,6 +112,34 @@ app.post("/register", async (req, res) => {
     }else{
         res.status(400).send();
     }
+});
+
+app.get("/login", (req, res) => {
+    console.log(req.sessionID);
+    if (req.session.page_views) {
+        req.session.page_views++;
+        console.log("You visited this page " + req.session.page_views + " times");
+    } else {
+        req.session.page_views = 1;
+        console.log("Welcome to this page for the first time!");
+    }
+    console.log(req.session);
+    res.send(true)
+});
+
+app.post("/login", (req, res) => {
+    console.log(req.body);
+    console.log(req.session.username);
+    if(!req.session.username)
+        req.session.username = 'fahad';
+    sessionStore.get(req.sessionID, function(err, data) {
+        res.send({err: err, data:data});
+    });
+});
+
+
+app.post("jobPosting", (req, res) => {
+    console.log(req.body);
 });
 
 app.listen(3001);

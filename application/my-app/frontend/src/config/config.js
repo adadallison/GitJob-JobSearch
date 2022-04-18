@@ -1,3 +1,3 @@
-const ip = "localhost";
+const baseUrl = "http://13.52.76.208";
 
-module.exports = { ip };
+module.exports = { baseUrl };

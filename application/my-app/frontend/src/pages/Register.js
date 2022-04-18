@@ -9,15 +9,14 @@ function Register(){
     const [repassword, setRepassword] = useState("");
     const [type, setType] = useState("");
 
-    const {ip} = require("../config/config.js");
+    const {baseUrl} = require("../config/config.js");
 
     const handleSubmit = (event) => {
         console.log("In submit");
         event.preventDefault();
-        axios.post("http://" + ip + ":3001/register", { name, email, password, repassword, type })
+        axios.post(baseUrl + ":3001/register", { name, email, password, repassword, type })
             .then(res => {
                 console.log(res.data.result);
-                setResData(res.data.result);
             });
     };
 
