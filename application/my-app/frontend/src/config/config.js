@@ -1,3 +1,3 @@
-const baseUrl = "http://13.52.76.208";
+const baseUrl = "http://localhost";
 
 module.exports = { baseUrl };

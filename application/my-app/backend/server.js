@@ -77,11 +77,11 @@ app.post("/register", async (req, res) => {
     var resultStatus = true;
     
     // Validate username and password
-    if (type.length != 0 || type.length > 7){
+    if (type.length == 0 || type.length > 7){
         resultStatus = false;
-    }else if(name.length != 0 || name.length > 30){
+    }else if(name.length == 0 || name.length > 30){
         resultStatus = false;
-    }else if(password.length != 0 || password.length > 30){
+    }else if(password.length == 0 || password.length > 30){
         resultStatus = false;
     }else if(password.normalize() !== repassword.normalize()){
         resultStatus = false;
@@ -89,6 +89,7 @@ app.post("/register", async (req, res) => {
     
     if(resultStatus){
         var salt = await bcrypt.genSalt(10);
+        // Todo
         var encryptPassword = await bcrypt.hash("hello", salt);
     
         var query = "INSERT INTO accounts (email, type, name, password) VALUES ( ? , ? , ? , ?)";
@@ -138,8 +139,29 @@ app.post("/login", (req, res) => {
 });
 
 
-app.post("jobPosting", (req, res) => {
+app.post("/jobPost", (req, res) => {
     console.log(req.body);
+    const jobDesc = req.body.formData.jobdescription;
+    const jobTitle = req.body.formData.jobtitle;
+    const jobField = req.body.formData.jobs;
+
+    console.log(jobDesc, " ", jobTitle, " ", jobField);
+    
+    var query = "INSERT INTO `job posts` (`job desc.`, `job name`, `job field`) VALUES ( ? , ? , ?)";
+
+    pool.getConnection((err, connection) => {
+        if (err) throw err;
+
+        connection.query(query, [
+            jobDesc,
+            jobTitle,
+            jobField
+        ], (err, result) => {
+            if (err) throw err;
+        });
+
+        connection.release();
+    });
 });
 
 app.listen(3001);
