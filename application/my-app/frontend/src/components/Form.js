@@ -39,7 +39,6 @@ const formReducer = (state, event) => {
 }
 
 function Form() {
-<<<<<<< HEAD
 
 
   const [formData, setFormData] = useReducer(formReducer, {});
@@ -63,24 +62,6 @@ function Form() {
 
   }
   
-=======
-  const [formData, setFormData] = useReducer(formReducer, {});
-  const [submitting, setSubmitting] = useState(false);
-
-
-  const handleSubmit = event => {
-    event.preventDefault();
-    setSubmitting(true);
-
-    setTimeout(() => {
-      setSubmitting(false);
-      setFormData({
-        reset: true
-      })
-    }, 3000)
-
-  }
->>>>>>> 2df60d10d455732c81229627fe623228f8b30359
   const handleChange = event => {
     setFormData({
       name: event.target.name,
