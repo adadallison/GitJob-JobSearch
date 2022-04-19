@@ -1,14 +1,10 @@
 import './App.css';
-import axios from "axios"
-import { useEffect } from 'react';
-import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './pages/home';
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import NavBar from './components/Navbar';
 import Careers from './pages/Careers';
 import AI from './pages/Careers/AI';
-import FiveG from './pages/Careers/FiveG';
 import Jobs from './pages/Jobs';
 import JobPosting from './pages/JobPosting';
 import User from "./pages/User";

@@ -1,13 +1,8 @@
-import axios from 'axios';
 import React from 'react';
-import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { IconContext } from 'react-icons';
 import { SidebarData } from '../components/SidebarData';
 import "../css/jobposting.css";
 import NavBar from '../components/Navbar';
-import Register from './Register';
-import { IframeHTMLAttributes } from 'react';
 
 const JobPosting = () => {
 
