@@ -15,7 +15,7 @@ const pool = mysql.createPool({
 
 var sessionStore = new session.MemoryStore();
 
-app.use(cors({origin: 'http://localhost:3000', methods: ["GET", "POST"], credentials:true }));
+app.use(cors({ credentials:true }));
 app.use(express.json());
 app.use(session({
     secret: 'key that will sign cookie',
