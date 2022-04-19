@@ -40,7 +40,6 @@ const formReducer = (state, event) => {
 
 function Form() {
 
-
   const [formData, setFormData] = useReducer(formReducer, {});
   const [submitting, setSubmitting] = useState(false);
 
