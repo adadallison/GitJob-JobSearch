@@ -12,14 +12,13 @@ const Home = () => {
     const [title, setTitle] = useState("");
     const [field, setField] = useState("");
     const [resData, setResData] = useState([]);
-    const ip = "13.52.76.208";
-
-
+    
+    const { baseUrl } = require("../config/config.js");
 
     const handleSubmit = (event) => {
         //window.location.href="/results";
         event.preventDefault();
-        axios.post("http://" + ip + ":3001/search", { title, field })
+        axios.post(baseUrl + ":3001/search", { title, field })
             .then(res => {
                 console.log(res.data.result);
                 setResData(res.data.result);

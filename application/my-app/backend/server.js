@@ -30,39 +30,38 @@ app.post("/search", (req, res) => {
     pool.getConnection((err, connection) => {
         if (err) throw err;
         
-        var query;
-    
-        if(req.body["title"] == "" && req.body["field"] == ""){
-            // when title and field are empty
-        
-            query = "SELECT * FROM `job posts`";
-    
-        }else if(req.body["title"] != "" && req.body["field"] != ""){
-            // when title and field are both not empty
-        
-            query = "SELECT * FROM `job posts` WHERE ";
-            query += "(`job name` LIKE " + connection.escape('%' + req.body["title"] + '%'); 
-            query += "AND `job field` LIKE " + connection.escape('%' + req.body["field"] + '%') + ")";
-    
-        }else if(req.body["title"] != ""){    
-            // when title has a value but not field
-        
-            query = "SELECT * FROM `job posts` WHERE (`job name` LIKE ";
-            query += connection.escape('%' + req.body["title"] + '%') + ")";
+        var query = "SELECT * FROM `job posts`";
+        var param = [];
 
-        }else{
-            // when field has a value but not title
-        
-            query = "SELECT * FROM `job posts` WHERE (`job field` LIKE ";
-            query += connection.escape('%' + req.body["field"] + '%') + ")";
+        const title = req.body["title"];
+        const field = req.body["field"];
+    
+        if(title != ""){
+            query += "WHERE `job name` LIKE concat('%', ?, '%')";
+            param += title;
         }
-        
-        connection.query(query,  (err,result) => {
-            if (err) throw err;
-            res.json({result});
-        });
-        
-        connection.release();
+
+        if(field != ""){
+            query += "WHERE `job field` LIKE concat('%', ?, '%')";
+            param += field;
+        }
+
+        validateStatus = true;
+        if(title.length > 40){
+            validateStatus = false;
+        }else if(field.length > 40){
+            validateStatus = false;
+        }
+
+        if(validateStatus){
+            connection.query(query, param, (err,result) => {
+                if (err) throw err;
+                res.json({result});
+            });
+            
+            connection.release();
+        }
+    
     });
 });
 
@@ -89,8 +88,8 @@ app.post("/register", async (req, res) => {
     
     if(resultStatus){
         var salt = await bcrypt.genSalt(10);
-        // Todo
-        var encryptPassword = await bcrypt.hash("hello", salt);
+        
+        var encryptPassword = await bcrypt.hash(password, salt);
     
         var query = "INSERT INTO accounts (email, type, name, password) VALUES ( ? , ? , ? , ?)";
 

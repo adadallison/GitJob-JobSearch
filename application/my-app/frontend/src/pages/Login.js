@@ -21,11 +21,11 @@ function Login(){
         });
     }
 
-    useEffect(() => {
-        axios.get('http://localhost:3001/login').then(({data}) => {
-          setLoginStatus(data);
-        })
-      }, [])
+    // useEffect(() => {
+    //     axios.get('http://localhost:3001/login').then(({data}) => {
+    //       setLoginStatus(data);
+    //     })
+    //   }, [])
 
     return (
         
