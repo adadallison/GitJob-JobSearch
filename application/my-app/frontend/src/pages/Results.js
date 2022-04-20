@@ -6,7 +6,7 @@ import NavBar from '../components/Navbar';
 
 const Results = () => {
 
-    
+
 
     return (
         <div>
@@ -33,7 +33,7 @@ const Results = () => {
                 <div class="center-info" >
                     Results go here
                 </div>
-                
+
             </div>
 
 

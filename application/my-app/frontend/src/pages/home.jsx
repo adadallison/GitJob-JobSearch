@@ -4,32 +4,30 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { SidebarData } from '../components/SidebarData';
 import "../css/home.css";
+import "../css/form.css";
 import NavBar from '../components/Navbar';
 
 const Home = () => {
 
 
-    const [title, setTitle] = useState("");
-    const [field, setField] = useState("");
+    const [title, setTitle] = useState(""); //state variable for job title 
+    const [field, setField] = useState(""); //state variable for job field 
     const [resData, setResData] = useState([]);
-    
-    const { baseUrl } = require("../config/config.js");
 
+    const { baseUrl } = require("../config/config.js"); // retrieves site url where POST request is sent
+
+    // event handler "handleSubmit" handles 'submit' button event
     const handleSubmit = (event) => {
-        //window.location.href="/results";
         event.preventDefault();
-        axios.post(baseUrl + ":3001/search", { title, field })
+        axios.post(baseUrl + ":3001/search", { title, field }) //created POST request to send data to URL
             .then(res => {
                 console.log(res.data.result);
-                setResData(res.data.result);
-                this.props.history.push({
-                    pathname: '/results',
-                    state: resData // your data array of objects
-                })
+                setResData(res.data.result); // sets value
 
             });
     };
 
+    //generates search results
     useEffect(() => {
     }, []);
 
@@ -42,8 +40,11 @@ const Home = () => {
 
             <div className="container">
 
+                {/* side navbar */}
                 <div className="sidenav-home">
                     <div className='nav-text'>
+
+
                         {SidebarData.map((item, index) => {
                             return (
                                 <li key={index} className={item.cName}>
@@ -62,8 +63,10 @@ const Home = () => {
                         <div className="search-container">
                             <form onSubmit={handleSubmit}>
                                 <input className="input-search" type="text" placeholder="Search" onChange={e => setTitle(e.target.value)} />
+
+                                {/* field drown down */}
                                 <select id="field" name="field" onChange={e => setField(e.target.value)}>
-                                    <option value="" disabled selected hidden>Job Field</option>
+                                    <option value="">Job Field</option>
                                     <option value="Artificial Intelligence and Machine Learning">AI and ML</option>
                                     <option value="Robotic Process Automation">Robotic Process Automation</option>
                                     <option value="Edge Computing">Edge Computing</option>
@@ -75,19 +78,21 @@ const Home = () => {
                                     <option value="Cyber Security">Cyber Security</option>
                                 </select>
 
-                                <select id="field" name="field" onChange={e => setField(e.target.value)}>
-                                    <option value="" diabled selected hidden>Location</option>
+                                {/* location drown down */}
+                                <select id="locations" name="field" onChange={e => setField(e.target.value)}>
+                                    <option value="">Location</option>
                                     <option value="California">California</option>
                                     <option value="Seattle">Seattle</option>
                                     <option value="Texas">Texas</option>
                                     <option value="New York">New York</option>
                                     <option value="Florida">Texas</option>
-                                    <option value="Virginia">New York</option>
+                                    <option value="Virginia">Virginia</option>
                                     <option value="Washington State">Washington State</option>
                                 </select>
 
-                                <select id="field" name="field" onChange={e => setField(e.target.value)}>
-                                    <option value="" disabled selected hidden>Skill</option>
+                                {/* skills drown down */}
+                                <select id="skills" name="field" onChange={e => setField(e.target.value)}>
+                                    <option value="">Skill</option>
                                     <option value="C++">C++</option>
                                     <option value="Java">Java</option>
                                     <option value="Excel">Excel</option>
@@ -98,9 +103,10 @@ const Home = () => {
                                 <button type="submit">Search<i className="search" /></button>
                             </form>
                         </div>
-
                     </div>
 
+
+                    {/* map function that loads results with the same format */}
                     {resData.map(post => (
                         <div className='search-results-container'>
                             <div>Job Name: {post["job name"]}</div>

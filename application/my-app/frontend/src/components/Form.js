@@ -1,14 +1,4 @@
 import React, { useReducer, useState } from 'react';
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
-import * as IoIcons from 'react-icons/io';
-import * as BsIcons from 'react-icons/bs';
-import * as BiIcons from 'react-icons/bi';
-import { Link } from 'react-router-dom';
-import { SidebarData } from './SidebarData'
-import { IconContext } from 'react-icons';
-import "../css/form.css";
-import Search from '../components/Search';
 import axios from 'axios';
 
 const {baseUrl} = require("../config/config.js");
@@ -16,7 +6,6 @@ const {baseUrl} = require("../config/config.js");
 const formReducer = (state, event) => {
   if (event.reset) {
     return {
-
 
       firstname: '',
       lastname: '',
@@ -112,8 +101,7 @@ function Form() {
               <input name="pay" onChange={handleChange} value={formData.pay || ''} />
             </label>
             <label>
-              <p>                Job Description
-              </p>
+              <p>Job Description </p>
               <input name="jobdescription" onChange={handleChange} value={formData.jobdescription || ''} />
             </label>
             <label>
@@ -128,8 +116,8 @@ function Form() {
 
               <p>Jobs</p>
               <select name="jobs" onChange={handleChange} value={formData.jobs || ''}>
-                <option value="">--Please choose a job--</option>
-                <option value="Aii">Artificial Intelligence and Machine Learning</option>
+                <option value=" ">--Please choose a job--</option>
+                <option value="Ai">Artificial Intelligence and Machine Learning</option>
                 <option value="Rpa">Robotics Process Automation</option>
                 <option value="IoT">Internet of things</option>
                 <option value="5g">5g</option>
@@ -150,6 +138,7 @@ function Form() {
                 <option value="New York">New York</option>
                 <option value="Florida">Florida</option>
                 <option value="Virginia">Virginia</option>
+                <option value="Washington State">Washington State</option>
               </select>
             </label>
 
@@ -162,13 +151,11 @@ function Form() {
                 <option value="Excel">Excel</option>
                 <option value="Python">Python</option>
                 <option value="JavaScript">Java Script</option>
-                <option value="Washington State">Washington State</option>
               </select>
             </label>
             <label>
               <button type="submit">Submit</button></label>
           </fieldset>
-
 
 
         </form>
