@@ -30,7 +30,6 @@ function Login(){
     return (
         
         <div>
-            <div>{loginStatus}</div>
             <div id="login" >GitJob</div>
             <form onSubmit={handleSubmit}>
                 <div id ="form">
