@@ -81,12 +81,8 @@ function Form() {
 
           <fieldset>
             <label>
-              <p>First Name</p>
-              <input name="firstname" onChange={handleChange} value={formData.firstname || ''} />
-            </label>
-            <label>
-              <p>Last Name</p>
-              <input name="lastname" onChange={handleChange} value={formData.lastname || ''} />
+              <p>Company</p>
+              <input name="company" onChange={handleChange} value={formData.company || ''} />
             </label>
             <label>
               <p>Job Title</p>
@@ -98,11 +94,7 @@ function Form() {
             </label>
             <label>
               <p>Job Description </p>
-              <input name="jobdescription" onChange={handleChange} value={formData.jobdescription || ''} />
-            </label>
-            <label>
-              <p>Company</p>
-              <input name="company" onChange={handleChange} value={formData.company || ''} />
+              <textarea name="jobdescription" onChange={handleChange} value={formData.jobdescription || ''} />
             </label>
             <label>
 
