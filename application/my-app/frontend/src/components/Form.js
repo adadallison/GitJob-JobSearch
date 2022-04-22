@@ -93,10 +93,6 @@ function Form() {
               <input name="jobtitle" onChange={handleChange} value={formData.jobtitle || ''} />
             </label>
             <label>
-              <p>Passion</p>
-              <input name="passion" onChange={handleChange} value={formData.passion || ''} />
-            </label>
-            <label>
               <p>Pay</p>
               <input name="pay" onChange={handleChange} value={formData.pay || ''} />
             </label>
@@ -107,10 +103,6 @@ function Form() {
             <label>
               <p>Company</p>
               <input name="company" onChange={handleChange} value={formData.company || ''} />
-            </label>
-            <label>
-              <p>Phone Number</p>
-              <input name="phonenumber" onChange={handleChange} value={formData.phonenumber || ''} />
             </label>
             <label>
 
