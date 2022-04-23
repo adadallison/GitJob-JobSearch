@@ -59,7 +59,6 @@
 
 
 
-
 //             {resData.map(post => (
 //                 <div className='search-results-container'>
 //                     <div>Job Name: {post["job name"]}</div>
