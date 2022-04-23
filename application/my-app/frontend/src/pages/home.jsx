@@ -113,7 +113,7 @@ const Home = () => {
                             <div>{post["job field"]}</div>
                             <div>{post["date posted"]}</div>
                             <div>{post["job desc."]}</div>
-                            <div>{post["job salary"]}</div>
+                            <div>${post["job salary"]}</div>
                             <br />
                         </div>
                     ))}
