@@ -128,7 +128,7 @@ function Form() {
 
             <label>
               <p>Skills</p>
-              <select name="skill" onChange={handleChange} value={formData.skill || ''}>
+              <select name="skill" onChange={handleChange} value={formData.skill || ''} >
                 <option value="">--Please choose a skill--</option>
                 <option value="C++">C++</option>
                 <option value="Java">Java</option>
