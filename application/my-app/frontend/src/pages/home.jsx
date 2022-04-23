@@ -109,11 +109,11 @@ const Home = () => {
                     {/* map function that loads results with the same format */}
                     {resData.map(post => (
                         <div className='search-results-container'>
-                            <div>Job Name: {post["job name"]}</div>
-                            <div>Job Field: {post["job field"]}</div>
-                            <div>Date Posted: {post["date posted"]}</div>
-                            <div>Job Description: {post["job desc."]}</div>
-                            <div>Job Salary: {post["job salary"]}</div>
+                            <div>{post["job name"]}</div> 
+                            <div>{post["job field"]}</div>
+                            <div>{post["date posted"]}</div>
+                            <div>{post["job desc."]}</div>
+                            <div>{post["job salary"]}</div>
                             <br />
                         </div>
                     ))}
