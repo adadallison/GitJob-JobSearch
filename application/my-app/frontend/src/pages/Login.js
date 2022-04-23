@@ -4,21 +4,18 @@ import { useEffect } from 'react';
 import "../css/login.css";
 
 function Login() {
-    axios.defaults.withCredentials = true;
-
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("")
 
     const { baseUrl } = require("../config/config.js");
 
     const handleSubmit = (event) => {
+        event.preventDefault();
+        
         axios.post("http://localhost:3001/login", {
-            username: username,
-            password: password,
-        }, { withCredentials: true })
-            .then((response) => {
-
-            });
+            username,
+            password
+        });
     }
 xw
     // useEffect(() => {

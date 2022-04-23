@@ -1,8 +1,10 @@
+require('dotenv').config()
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2');
+const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-const session = require('express-session');
+const buffer = require('buffer');
 const app = express();
 
 const pool = mysql.createPool({
@@ -13,16 +15,8 @@ const pool = mysql.createPool({
     database: 'team6dev'
 });
 
-var sessionStore = new session.MemoryStore();
-
-app.use(cors({ credentials:true }));
+app.use(cors({origin: "*"}));
 app.use(express.json());
-app.use(session({
-    secret: 'key that will sign cookie',
-    resave: false,
-    saveUninitialized: false,
-    store: sessionStore
-}))
 
 app.post("/search", (req, res) => {
     console.log(req.body);
@@ -56,6 +50,11 @@ app.post("/search", (req, res) => {
         if(validateStatus){
             connection.query(query, param, (err,result) => {
                 if (err) throw err;
+                result.map(e => {
+                    e['job photo'] = "data:image;base64," + Buffer.from(e['job photo']).toString('base64');
+                    console.log(e);
+                    return e;
+                });
                 res.json({result});
             });
             
@@ -115,28 +114,14 @@ app.post("/register", async (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-    console.log(req.sessionID);
-    if (req.session.page_views) {
-        req.session.page_views++;
-        console.log("You visited this page " + req.session.page_views + " times");
-    } else {
-        req.session.page_views = 1;
-        console.log("Welcome to this page for the first time!");
-    }
-    console.log(req.session);
-    res.send(true)
 });
 
 app.post("/login", (req, res) => {
-    console.log(req.body);
-    console.log(req.session.username);
-    if(!req.session.username)
-        req.session.username = 'fahad';
-    sessionStore.get(req.sessionID, function(err, data) {
-        res.send({err: err, data:data});
-    });
+    const {username, password} = req.body;
+    // const token = jwt.sign(userForToken, process.env.SECRET);
+    console.log(process.env.SECRET);
+    res.send("Success");
 });
-
 
 app.post("/jobPost", (req, res) => {
     console.log(req.body);
@@ -163,4 +148,4 @@ app.post("/jobPost", (req, res) => {
     });
 });
 
-app.listen(3001);
+app.listen(process.env.PORT);
