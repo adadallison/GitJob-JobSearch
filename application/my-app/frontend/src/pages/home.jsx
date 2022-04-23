@@ -66,7 +66,7 @@ const Home = () => {
 
                                 {/* field drown down */}
                                 <select id="field" name="field" onChange={e => setField(e.target.value)}>
-                                    <option value="">Job Field</option>
+                                    <option value="">Select Field</option>
                                     <option value="Artificial Intelligence and Machine Learning">AI and ML</option>
                                     <option value="Robotic Process Automation">Robotic Process Automation</option>
                                     <option value="Edge Computing">Edge Computing</option>
@@ -80,7 +80,7 @@ const Home = () => {
 
                                 {/* location drown down */}
                                 <select id="locations" name="field" onChange={e => setField(e.target.value)}>
-                                    <option value="">Location</option>
+                                    <option value="">Select Location</option>
                                     <option value="California">California</option>
                                     <option value="Seattle">Seattle</option>
                                     <option value="Texas">Texas</option>
@@ -92,7 +92,7 @@ const Home = () => {
 
                                 {/* skills drown down */}
                                 <select id="skills" name="field" onChange={e => setField(e.target.value)}>
-                                    <option value="">Skill</option>
+                                    <option value="">Select Skill</option>
                                     <option value="C++">C++</option>
                                     <option value="Java">Java</option>
                                     <option value="Excel">Excel</option>
