@@ -1,5 +1,6 @@
 .container {
     display: flex;
+    position: fixed;
   }
   
   .sidenav-home {
@@ -16,7 +17,7 @@
     flex-wrap: nowrap;
     white-space: nowrap;
     overflow-y: auto;
-    width: 80vw;
+    width: 100vw;
     height: 100vh;
   }
 
@@ -33,15 +34,6 @@
 
   } 
 
-  .item-3 { 
-    width: 300px;
-    border-left: grey;
-    border-width: 1px;
-    border-style: solid;
-    border-right: transparent;
-    border-top: transparent;
-    border-bottom: transparent;
-  }
 
 .search-results-container{
   display: flex;
@@ -58,5 +50,28 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  
+}
+
+.jobArrow{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 30px;
+
+}
+ .jobInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 300px;
+ }
+
+.jobImage{
+  display: flex;
+  width: 50px;
+  align-content: center;
   
 }

@@ -46,7 +46,6 @@ const Home = () => {
                 <div className="sidenav-home">
                     <div className='nav-text'>
 
-
                         {SidebarData.map((item, index) => {
                             return (
                                 <li key={index} className={item.cName}>
@@ -111,12 +110,13 @@ const Home = () => {
                     {/* map function that loads results with the same format */}
                     {resData.map(post => (
                         <div className='search-results-container'>
-                            <div>
+                            
+                            <div className='jobImage'>
                                 <AiIcons.AiFillFileImage />
                            
                             </div>
 
-                            <div>
+                            <div className='jobInfo'>
                                 <div>{post["job name"]}</div> 
                                 <div>{post["job field"]}</div>
                                 <div>{post["date posted"]}</div>
@@ -124,8 +124,8 @@ const Home = () => {
                                 <div>${post["job salary"]}</div>
                             </div>
 
-                            <div>
-                                <AiIcons.AiOutlineArrowRight />
+                            <div className='jobArrow'>
+                                <AiIcons.AiOutlineSearch />
                             </div>
                             
                         </div>
