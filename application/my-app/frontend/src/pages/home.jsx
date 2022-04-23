@@ -6,6 +6,7 @@ import { SidebarData } from '../components/SidebarData';
 import "../css/home.css";
 import "../css/form.css";
 import NavBar from '../components/Navbar';
+import * as AiIcons from 'react-icons/ai';
 
 const Home = () => {
 
@@ -41,6 +42,7 @@ const Home = () => {
             <div className="container">
 
                 {/* side navbar */}
+
                 <div className="sidenav-home">
                     <div className='nav-text'>
 
@@ -109,12 +111,23 @@ const Home = () => {
                     {/* map function that loads results with the same format */}
                     {resData.map(post => (
                         <div className='search-results-container'>
-                            <div>{post["job name"]}</div> 
-                            <div>{post["job field"]}</div>
-                            <div>{post["date posted"]}</div>
-                            <div>{post["job desc."]}</div>
-                            <div>${post["job salary"]}</div>
-                            <br />
+                            <div>
+                                <AiIcons.AiFillFileImage />
+                           
+                            </div>
+
+                            <div>
+                                <div>{post["job name"]}</div> 
+                                <div>{post["job field"]}</div>
+                                <div>{post["date posted"]}</div>
+                                <div>{post["job desc."]}</div>
+                                <div>${post["job salary"]}</div>
+                            </div>
+
+                            <div>
+                                <AiIcons.AiOutlineArrowRight />
+                            </div>
+                            
                         </div>
                     ))}
 
