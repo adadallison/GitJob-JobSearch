@@ -5,15 +5,10 @@ const mysql = require('mysql2');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const buffer = require('buffer');
+const { response } = require('express');
 const app = express();
 
-const pool = mysql.createPool({
-    connectionLimit: 10,
-    host: 'localhost',
-    user: 'root',
-    password: 'password',
-    database: 'team6dev'
-});
+const {pool} = require('./models/pool.js');
 
 app.use(cors({origin: "*"}));
 app.use(express.json());
@@ -86,25 +81,20 @@ app.post("/register", async (req, res) => {
     }
     
     if(resultStatus){
-        var salt = await bcrypt.genSalt(10);
-        
-        var encryptPassword = await bcrypt.hash(password, salt);
-    
         var query = "INSERT INTO accounts (email, type, name, password) VALUES ( ? , ? , ? , ?)";
-
-        pool.getConnection((err, connection) => {
-            if (err) throw err;
         
-            connection.query(query, [
+        bcrypt.hash(password, 10, (err, hash) => {
+            if (err) throw err;
+
+            pool.query(query, [
                 name,
                 type,
                 name,
-                encryptPassword
+                hash
             ],(err,result) => {
                 if (err) throw err;
             });
-        
-            connection.release();
+
         });
 
         res.status(201).send();
@@ -113,14 +103,60 @@ app.post("/register", async (req, res) => {
     }
 });
 
-app.get("/login", (req, res) => {
-});
+// function to get jwt if it exists from client
+const getTokenFrom = (request) => {
+    const authorization = request.get('authorization');
+    if(authorization && authorization.toLowerCase().startsWith('')){
+        return authorization.substring(7);
+    }
+    return null;
+};
 
-app.post("/login", (req, res) => {
-    const {username, password} = req.body;
-    // const token = jwt.sign(userForToken, process.env.SECRET);
-    console.log(process.env.SECRET);
-    res.send("Success");
+app.post("/login", async (req, res) => {
+    const {email, password} = req.body;
+
+    // check to see if user name and password matches with one in db
+    const findUser = (pool, email) => {
+        return new Promise((resolve, reject) => {
+            const query = "SELECT * FROM `accounts` WHERE email = ?";
+            pool.query(query, [email], (err, result) => {
+                if (err) reject(err);
+                resolve(result[0]);
+            });
+        })
+    }
+
+    var user = await findUser(pool, 'a');
+    
+    console.log("Here4 " + JSON.stringify(user));
+
+    console.log(await bcrypt.compare(password, user.password));
+
+    console.log("password " + password);
+    console.log("user password " + user.password);
+
+    const passwordResult = await user === undefined 
+        ? false 
+        : await bcrypt.compare(password, user.password);
+
+    // if username or password doesn't match send error to client
+    if(!(user && passwordResult)){
+        console.log("bad request");
+        return res.status(400).send("Invalid username or password");
+    }
+
+    const infoForToken = {
+        email: email
+    };
+
+    // creates jwt token
+    const token = jwt.sign(
+        infoForToken,
+        process.env.SECRET, 
+        { expiresIn: 60 * 60 }
+    );
+
+    res.send({ token, email: email });
 });
 
 app.post("/jobPost", (req, res) => {

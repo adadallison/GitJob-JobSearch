@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import "../css/login.css";
 
 function Login() {
-    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("")
 
     const { baseUrl } = require("../config/config.js");
@@ -13,11 +13,18 @@ function Login() {
         event.preventDefault();
         
         axios.post("http://localhost:3001/login", {
-            username,
+            email,
             password
+        }).then(response => {
+            console.log(response);
+
+            window.localStorage.setItem('data', response.data.token);
+            window.localStorage.setItem('email', response.data.email);
+        }).catch(error => {
+
         });
     }
-xw
+
     // useEffect(() => {
     //     axios.get('http://localhost:3001/login').then(({data}) => {
     //       setLoginStatus(data);
@@ -31,7 +38,7 @@ xw
             <form onSubmit={handleSubmit}>
                 <div id="form">
                     <div><label name="email">Email</label> </div>
-                    <input className="input" type="text" required name="email" onChange={e => setUsername(e.target.value)}></input>
+                    <input className="input" type="text" required name="email" onChange={e => setEmail(e.target.value)}></input>
                 </div>
                 <div>
                     <div><label name="password">Password</label> </div>
