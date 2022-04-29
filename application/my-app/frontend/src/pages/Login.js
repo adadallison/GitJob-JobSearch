@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import "../css/login.css";
 
 
-
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("")
@@ -18,16 +17,17 @@ function Login() {
             email,
             password
         }).then(response => {
-            window.localStorage.setItem('accessToken', response.data.token);
-            window.localStorage.setItem('name', response.data.name);
-            window.localStorage.setItem('type', response.data.type);
+            console.log(response);
+
+            window.localStorage.setItem('data', response.data.token);
+            window.localStorage.setItem('email', response.data.email);
         }).catch(error => {
 
         });
     }
 
     const login = () => {
-        Axios.post("http://localhost:3000/login", {
+        axios.post("http://localhost:3000/login", {
             email: email,
             password: password,
     
@@ -39,7 +39,7 @@ function Login() {
         });
     
     };
-    
+
 
     // useEffect(() => {
     //     axios.get('http://localhost:3001/login').then(({data}) => {
