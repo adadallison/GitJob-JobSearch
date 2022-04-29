@@ -21,6 +21,7 @@ function Login() {
 
             window.localStorage.setItem('data', response.data.token);
             window.localStorage.setItem('email', response.data.email);
+            window.location.replace("/")
         }).catch(error => {
 
         });
