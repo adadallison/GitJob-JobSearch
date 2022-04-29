@@ -4,17 +4,6 @@ import { useEffect } from 'react';
 import "../css/login.css";
 
 
-const login = () => {
-    Axios.post("http://localhost:3000/login", {
-        email: email,
-        password: password,
-
-    }).then((response)=>{
-        console.log(response.data);
-    });
-
-};
-
 
 function Login() {
     const [email, setEmail] = useState("");
@@ -37,6 +26,21 @@ function Login() {
 
         });
     }
+
+    const login = () => {
+        Axios.post("http://localhost:3000/login", {
+            email: email,
+            password: password,
+    
+        }).then((response)=>{
+            console.log(response.data);
+            if (response.status = 200){
+                window.location = "/home"
+            }
+        });
+    
+    };
+    
 
     // useEffect(() => {
     //     axios.get('http://localhost:3001/login').then(({data}) => {
