@@ -3,6 +3,19 @@ import axios, { Axios } from 'axios';
 import { useEffect } from 'react';
 import "../css/login.css";
 
+
+const login = () => {
+    Axios.post("http://localhost:3000/login", {
+        email: email,
+        password: password,
+
+    }).then((response)=>{
+        console.log(response.data);
+    });
+
+};
+
+
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("")
@@ -44,7 +57,8 @@ function Login() {
                     <input input className="input" type="password" required name="password" onChange={e => setPassword(e.target.value)}></input>
                 </div>
 
-                <button type="submit">Login</button>
+                <button onClick={login} type="submit">Login</button>
+
             </form>
         </div>
 
