@@ -16,10 +16,9 @@ function Login() {
             email,
             password
         }).then(response => {
-            console.log(response);
-
-            window.localStorage.setItem('data', response.data.token);
-            window.localStorage.setItem('email', response.data.email);
+            window.localStorage.setItem('accessToken', response.data.token);
+            window.localStorage.setItem('name', response.data.name);
+            window.localStorage.setItem('type', response.data.type);
         }).catch(error => {
 
         });
