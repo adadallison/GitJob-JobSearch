@@ -26,21 +26,6 @@ function Login() {
         });
     }
 
-    const login = () => {
-        axios.post("http://localhost:3000/login", {
-            email: email,
-            password: password,
-    
-        }).then((response)=>{
-            console.log(response.data);
-            if (response.status = 200){
-                window.location = "/home"
-            }
-        });
-    
-    };
-
-
     // useEffect(() => {
     //     axios.get('http://localhost:3001/login').then(({data}) => {
     //       setLoginStatus(data);
@@ -61,7 +46,7 @@ function Login() {
                     <input input className="input" type="password" required name="password" onChange={e => setPassword(e.target.value)}></input>
                 </div>
 
-                <button onClick={login} type="submit">Login</button>
+                <button type="submit">Login</button>
 
             </form>
         </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import * as AiIcons from 'react-icons/ai';
 import * as BsIcons from 'react-icons/bs';
+import Login from '../pages/Login';
 
 export const SidebarData = [
 
