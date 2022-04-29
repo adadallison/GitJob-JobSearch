@@ -46,7 +46,8 @@ app.post("/search", (req, res) => {
             connection.query(query, param, (err,result) => {
                 if (err) throw err;
                 result.map(e => {
-                    e['job photo'] = "data:image;base64," + Buffer.from(e['job photo']).toString('base64');
+                    if(e['job phot'] != null)
+                        e['job photo'] = "data:image;base64," + Buffer.from(e['job photo']).toString('base64');
                     console.log(e);
                     return e;
                 });
@@ -60,6 +61,7 @@ app.post("/search", (req, res) => {
 });
 
 app.post("/register", async (req, res) => {
+    var email = req.body["email"];
     var type = req.body["type"];
     var name = req.body["name"]; 
     var password = req.body["password"];
@@ -87,7 +89,7 @@ app.post("/register", async (req, res) => {
             if (err) throw err;
 
             pool.query(query, [
-                name,
+                email,
                 type,
                 name,
                 hash
@@ -126,14 +128,14 @@ app.post("/login", async (req, res) => {
         })
     }
 
-    var user = await findUser(pool, 'a');
+    var user = await findUser(pool, email);
     
     console.log("Here4 " + JSON.stringify(user));
 
     console.log(await bcrypt.compare(password, user.password));
 
     console.log("password " + password);
-    console.log("user password " + user.password);
+    console.log("user password " + user.type);
 
     const passwordResult = await user === undefined 
         ? false 
@@ -146,7 +148,8 @@ app.post("/login", async (req, res) => {
     }
 
     const infoForToken = {
-        email: email
+        email: email,
+        type: user.type
     };
 
     // creates jwt token
@@ -156,7 +159,7 @@ app.post("/login", async (req, res) => {
         { expiresIn: 60 * 60 }
     );
 
-    res.send({ token, email: email });
+    res.send({ token, name: user.name , type: user.type});
 });
 
 app.post("/jobPost", (req, res) => {
