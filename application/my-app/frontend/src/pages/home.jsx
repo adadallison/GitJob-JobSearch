@@ -45,6 +45,7 @@ const Home = () => {
                 </Sidebar>
                 <div class="center-scroll">
                     <>{"Name: " + window.localStorage.getItem('name')}</>
+                    <>{"Type: " + window.localStorage.getItem('type')}</>
                     <div>
                         <div className="search-container">
                             <form onSubmit={handleSubmit}>

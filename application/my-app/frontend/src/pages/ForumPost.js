@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from '../components/SidebarData';
 import "../css/home.css";
 import NavBar from '../components/Navbar';
+import Sidebar from '../components/Sidebar';
+
 
 const ForumPost = () => {
 
@@ -14,7 +16,7 @@ const ForumPost = () => {
             <div className="container">
 
                 <div className="sidenav-home">
-                    <div className='nav-text'>
+                    {/* <div className='nav-text'>
                         {SidebarData.map((item, index) => {
                             return (
                                 <li key={index} className={item.cName}>
@@ -25,7 +27,9 @@ const ForumPost = () => {
                                 </li>
                             );
                         })}
-                    </div>
+                    </div> */}
+                    <Sidebar>
+                    </Sidebar>
                 </div>
 
                 <div class="center-scroll">

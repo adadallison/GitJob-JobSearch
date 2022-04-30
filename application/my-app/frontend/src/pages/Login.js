@@ -23,7 +23,16 @@ function Login() {
             window.localStorage.setItem('name', response.data.name);
             window.localStorage.setItem('type', response.data.type);
 
-            window.location.replace("/");
+
+            if (window.localStorage.getItem('type') === 'Student'){
+                window.location.replace("/");
+                console.log("HELLO")
+                
+            } else {
+                window.location.replace("/careers");
+            }
+
+            
         }).catch(error => {
 
         });

@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from '../components/SidebarData';
 import "../css/forum.css";
 import NavBar from '../components/Navbar';
+import Sidebar from '../components/Sidebar';
+
+
+
 const Forum = () => {
 
     return (
@@ -13,7 +17,7 @@ const Forum = () => {
             <div className="container">
 
                 <div className="sidenav-forum">
-                    <div className='nav-text'>
+                    {/* <div className='nav-text'>
                         {SidebarData.map((item, index) => {
                             return (
                                 <li key={index} className={item.cName}>
@@ -24,7 +28,9 @@ const Forum = () => {
                                 </li>
                             );
                         })}
-                    </div>
+                    </div> */}
+                       <Sidebar>
+                    </Sidebar>
                 </div>
 
                 <div class="forum-container" >

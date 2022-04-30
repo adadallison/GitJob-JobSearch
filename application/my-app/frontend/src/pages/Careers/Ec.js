@@ -5,6 +5,7 @@ import * as BsIcons from 'react-icons/bs';
 import "../../css/career-fields.css";
 import NavBar from '../../components/Navbar';
 import salary from "../../images/salary.png"
+import Sidebar from '../../components/Sidebar'; 
 
 
 const Ec = () => {
@@ -17,7 +18,7 @@ const Ec = () => {
             <div className="container">
 
                 <div className="sidenav-home">
-                    <div className='nav-text'>
+                    {/* <div className='nav-text'>
                         {SidebarData.map((item, index) => {
                             return (
                                 <li key={index} className={item.cName}>
@@ -28,7 +29,10 @@ const Ec = () => {
                                 </li>
                             );
                         })}
-                    </div>
+                    </div> */}
+                     <Sidebar>
+                    </Sidebar>
+                    
                 </div>
 
                 <div class="center-info">

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SidebarData } from '../components/SidebarData';
+import Sidebar from '../components/Sidebar';
 import "../css/careers.css";
 import NavBar from '../components/Navbar';
+
 
 const Careers = () => {
 
@@ -13,8 +14,11 @@ const Careers = () => {
 
             <div className="container">
 
+
                 <div className="sidenav-careers">
-                    <div className='nav-text'>
+                    <Sidebar>
+                    </Sidebar>
+                    {/* <div className='nav-text'>
                         {SidebarData.map((item, index) => {
                             return (
                                 <li key={index} className={item.cName}>
@@ -25,7 +29,7 @@ const Careers = () => {
                                 </li>
                             );
                         })}
-                    </div>
+                    </div> */}
                 </div>
 
                 <div class="career-fields-container" >

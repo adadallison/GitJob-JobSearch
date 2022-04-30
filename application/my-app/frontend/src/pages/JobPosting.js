@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from '../components/SidebarData';
 import "../css/jobposting.css";
 import NavBar from '../components/Navbar';
+import Sidebar from '../components/Sidebar';
 
 const JobPosting = () => {
 
@@ -14,7 +15,7 @@ const JobPosting = () => {
             <div className="container">
 
                 <div className="sidenav-jobs">
-                    <div className='nav-text'>
+                    {/* <div className='nav-text'>
                         {SidebarData.map((item, index) => {
                             return (
                                 <li key={index} className={item.cName}>
@@ -25,7 +26,10 @@ const JobPosting = () => {
                                 </li>
                             );
                         })}
-                    </div>
+                    </div> */}
+                    <Sidebar>
+                    </Sidebar>
+                    
                 </div>
 
                 <div class="center-info" >
