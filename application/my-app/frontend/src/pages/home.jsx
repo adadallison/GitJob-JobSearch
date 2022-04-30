@@ -3,6 +3,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { SidebarData } from '../components/SidebarData';
+import Sidebar from '../components/Sidebar'
 import "../css/home.css";
 import "../css/form.css";
 import NavBar from '../components/Navbar';
@@ -40,26 +41,10 @@ const Home = () => {
             </NavBar>
 
             <div className="container">
-
-                {/* side navbar */}
-
-                <div className="sidenav-home">
-                    <div className='nav-text'>
-
-                        {SidebarData.map((item, index) => {
-                            return (
-                                <li key={index} className={item.cName}>
-                                    <Link to={item.path}>
-                                        {item.icon}
-                                        <span>{item.title}</span>
-                                    </Link>
-                                </li>
-                            );
-                        })}
-                    </div>
-                </div>
-
+                <Sidebar>
+                </Sidebar>
                 <div class="center-scroll">
+                    <>{"Name: " + window.localStorage.getItem('name')}</>
                     <div>
                         <div className="search-container">
                             <form onSubmit={handleSubmit}>

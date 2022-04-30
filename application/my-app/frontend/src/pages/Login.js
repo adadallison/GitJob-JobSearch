@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useReducer, useState } from 'react';
 import axios, { Axios } from 'axios';
-import { useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 import "../css/login.css";
 
 
@@ -18,10 +18,12 @@ function Login() {
             password
         }).then(response => {
             console.log(response);
+            
+            window.localStorage.setItem('accessToken', response.data.token);
+            window.localStorage.setItem('name', response.data.name);
+            window.localStorage.setItem('type', response.data.type);
 
-            window.localStorage.setItem('data', response.data.token);
-            window.localStorage.setItem('email', response.data.email);
-            window.location.replace("/")
+            window.location.replace("/");
         }).catch(error => {
 
         });
