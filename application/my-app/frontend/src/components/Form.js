@@ -49,6 +49,7 @@ function Form() {
     }, 3000)
 
   }
+
   
   const handleChange = event => {
     setFormData({
@@ -57,13 +58,15 @@ function Form() {
     });
   }
 
-
-
+  const gitjob = () => {
+    window.location.replace("/");
+  }
+  
   return (
     <>
 
       <div>
-        <div id="login">GitJob</div>
+        <div id="login" onClick={gitjob}>GitJob</div>
       </div>
 
       <div className="JobPosting2">

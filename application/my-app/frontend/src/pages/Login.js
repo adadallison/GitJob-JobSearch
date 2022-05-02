@@ -19,17 +19,20 @@ function Login() {
         }).then(response => {
             console.log(response);
             
+            //accesses local storage variables from SQL data base
             window.localStorage.setItem('accessToken', response.data.token);
-            window.localStorage.setItem('name', response.data.name);
-            window.localStorage.setItem('type', response.data.type);
+            window.localStorage.setItem('name', response.data.name); //users email stored in SQL database
+            window.localStorage.setItem('type', response.data.type); //users password stored in SQL database
 
 
+            //login redirection of student to home page s
             if (window.localStorage.getItem('type') === 'Student'){
                 window.location.replace("/");
-                console.log("HELLO")
+                console.log("logged in as student")
                 
             } else {
-                window.location.replace("/careers");
+                window.location.replace("/");
+                console.log("logged in as company")
             }
 
             

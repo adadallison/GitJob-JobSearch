@@ -7,11 +7,15 @@ function NavBar() {
     const [navbar, setNavbar] = useState(true);
     //const showSidebar = () => setSidebar(!sidebar);
 
+    const gitjob = () => {
+        window.location.replace("/");
+      }
+
     return (
         <>
             <IconContext.Provider value={{ color: 'fff' }}>
 
-                <div className='navbar'>Gitjob </div>
+                <div onClick={gitjob} className='navbar'>Gitjob </div>
 
 
             </IconContext.Provider>
