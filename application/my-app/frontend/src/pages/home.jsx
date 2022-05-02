@@ -101,11 +101,11 @@ const Home = () => {
                                 </div>
 
                                 <div className='jobInfo'>
-                                    <div>Job Name:{post["job name"]}</div>
-                                    <div>Job Field:{post["job field"]}</div>
-                                    <div>Date Posted:{post["date posted"]}</div>
-                                    <div>Job Description:{post["job desc."]}</div>
-                                    <div>Job Salary:{post["job salary"]}</div>
+                                    <div>Job Name: {post["job name"]}</div>
+                                    <div>Job Field: {post["job field"]}</div>
+                                    <div>Date Posted: {post["date posted"]}</div>
+                                    <div>Job Description: {post["job desc."]}</div>
+                                    <div>Job Salary: {post["job salary"]}</div>
                                 </div>
 
                             </div>
