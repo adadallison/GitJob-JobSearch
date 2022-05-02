@@ -4,7 +4,7 @@ import "../css/Navbar.css";
 
 
 function NavBar() {
-    const [sidebar, setSidebar] = useState(true);
+    const [navbar, setNavbar] = useState(true);
     //const showSidebar = () => setSidebar(!sidebar);
 
     return (
@@ -12,7 +12,6 @@ function NavBar() {
             <IconContext.Provider value={{ color: 'fff' }}>
 
                 <div className='navbar'>Gitjob </div>
-
 
 
             </IconContext.Provider>

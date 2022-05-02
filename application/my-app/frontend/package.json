@@ -66,6 +66,9 @@
     "webpack": "^5.70.0",
     "webpack-sources": "^3.2.3"
   },
+  "devDependencies":{
+    "react-scripts": "5.0.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

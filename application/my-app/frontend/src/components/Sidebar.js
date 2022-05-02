@@ -5,10 +5,12 @@ import { adminSidebar } from './SidebarData';
 import { companySidebar } from './SidebarData';
 import { studentSidebar } from './SidebarData';
 import "../css/Navbar.css";
+import { BsWindowSidebar } from 'react-icons/bs';
 
 
 const Sidebar = () => {
     const [sidebar, setSidebar] = useState([]);
+    const [loginStatus, setLoginStatus] = useState(true)
     //const showSidebar = () => setSidebar(!sidebar);
 
 
@@ -30,7 +32,7 @@ const Sidebar = () => {
 
         } else {
             setSidebar(NotLoggedIn);
-
+            setLoginStatus(false);
         }
     }, [])
 
@@ -52,7 +54,14 @@ const Sidebar = () => {
                             </li>
                         );
                     })}
-                    <button onClick = {() => {window.localStorage.clear()}} >Logout</button>
+
+                    {loginStatus && 
+                    <button onClick={() => {
+                        window.localStorage.clear(); 
+                        window.location.replace("/")}
+                    }>
+                            logout
+                    </button>}
                 </div>
 
     

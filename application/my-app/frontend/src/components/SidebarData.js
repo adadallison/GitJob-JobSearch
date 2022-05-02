@@ -65,12 +65,6 @@ export const studentSidebar = [
         icon: <AiIcons.AiFillProfile />,
         cName: 'nav-text'
     },
-    {
-        title: 'Logout',
-        path: '/',
-        icon: <AiIcons.AiFillLock />,
-        cName: 'nav-text'
-    }
 
 ]
 
@@ -95,12 +89,7 @@ export const companySidebar = [
         icon: <AiIcons.AiFillDatabase />,
         cName: 'nav-text'
     }, 
-    {
-        title: 'Logout',
-        path: '/',
-        icon: <AiIcons.AiFillLock />,
-        cName: 'nav-text'
-    }
+
 ]
 
 export const adminSidebar = [
@@ -117,11 +106,5 @@ export const adminSidebar = [
         icon: <AiIcons.AiFillDatabase />,
         cName: 'nav-text'
     }, 
-    {
-        title: 'Logout',
-        path: '/user',
-        icon: <AiIcons.AiFillLock />,
-        cName: 'nav-text'
-    }
 
 ]
