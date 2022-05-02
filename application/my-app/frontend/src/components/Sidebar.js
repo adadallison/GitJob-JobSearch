@@ -39,7 +39,6 @@ const Sidebar = () => {
 
     return (
         <>
-            {/* side navbar */}
 
             <div className="sidenav-home">
                 <div className='nav-text'>

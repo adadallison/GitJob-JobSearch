@@ -118,7 +118,6 @@ const Home = () => {
                             <div>Date Posted: {post["date posted"]}</div>
                             <div>Job Description: {post["job desc."]}</div>
                             <div>Job Salary: {post["job salary"]}</div>
-                            <br />
                         </div>
                     ))}
 
