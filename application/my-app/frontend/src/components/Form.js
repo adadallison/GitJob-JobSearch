@@ -108,14 +108,14 @@ function Form() {
               <p>Jobs</p>
               <select name="jobs" onChange={handleChange} value={formData.jobs || ''}>
                 <option value=" ">--Please choose a job--</option>
-                <option value="Ai">Artificial Intelligence and Machine Learning</option>
-                <option value="Rpa">Robotics Process Automation</option>
-                <option value="IoT">Internet of things</option>
-                <option value="5g">5g</option>
-                <option value="Var">Virtual Augmented Reality</option>
-                <option value="Chain">Blockchain</option>
-                <option value="Qc">Quantum Computing</option>
-                <option value="Ec">Edge Computing</option>
+                <option value="Artificial Intelligence and Machine Learning">Artificial Intelligence and Machine Learning</option>
+                <option value="Robotic Process Automation">Robotic Process Automation</option>
+                <option value="IoT">Internet Of Things</option>
+                <option value="5G">5G</option>
+                <option value="Virtual Augmented Reality">Virtual Augmented Reality</option>
+                <option value="Blockchain">Blockchain</option>
+                <option value="Quantum Computing">Quantum Computing</option>
+                <option value="Edge Computing">Edge Computing</option>
                 <option value="Cyber Security">Cyber Security</option>
               </select>
             </label>
