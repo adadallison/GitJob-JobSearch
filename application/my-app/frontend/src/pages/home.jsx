@@ -1,12 +1,10 @@
 import axios from 'axios';
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { SidebarData } from '../components/SidebarData';
 import Sidebar from '../components/Sidebar'
 import "../css/home.css";
-import "../css/form.css";
 import NavBar from '../components/Navbar';
+import * as BsIcons from 'react-icons/bs';
 
 const Home = () => {
 
@@ -27,6 +25,8 @@ const Home = () => {
             });
     };
 
+
+  
     //generates search results
     useEffect(() => {
     }, []);
@@ -90,8 +90,6 @@ const Home = () => {
 
 
                     {/* map function that loads results with the same format */}
-
-
                         {resData.map(post => (
                             <div className='search-results-container'>
 
@@ -99,6 +97,7 @@ const Home = () => {
                                     <img className='actualImage' src={post["job photo"]} />
                                 </div>
 
+                                
                                 <div className='jobInfo'>
                                     <div className='jobName'>Job Name: {post["job name"]}</div>
                                     <div>Job Field: {post["job field"]}</div>
@@ -106,7 +105,11 @@ const Home = () => {
                                     <div>Job Location: {post["job location"]}</div>
                                     <div>Job Description: {post["job desc."]}</div>
                                     <div>Job Salary: {post["job salary"]}</div>
+                                    <div>Job Skills: {post["job skills"]}</div>
                                 </div>
+
+
+
 
                             </div>
                         ))}

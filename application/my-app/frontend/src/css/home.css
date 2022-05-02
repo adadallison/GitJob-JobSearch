@@ -75,6 +75,15 @@
   justify-content: left;
 }
 
+.jobClick{
+  display: flex;
+  width: 100px;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+
+}
+
 .actualImage{
   display:block;
   width: 100px;
@@ -86,4 +95,3 @@
 .jobName{
   font-weight: bolder;
 }
-

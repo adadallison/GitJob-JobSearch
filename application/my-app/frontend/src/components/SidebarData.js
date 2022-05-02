@@ -1,15 +1,11 @@
 import React from 'react'
 import * as AiIcons from 'react-icons/ai';
-
-
 import * as BsIcons from 'react-icons/bs';
 import Login from '../pages/Login';
 import Resume from '../pages/Resume';
 
 export const SidebarData = [
 
-    
-    
     ]
     
 export const NotLoggedIn = [
@@ -89,12 +85,6 @@ export const companySidebar = [
         title: 'Home',
         path: '/',
         icon: <AiIcons.AiFillHome />,
-        cName: 'nav-text'
-    },
-    {
-        title: 'Jobs',
-        path: '/jobs',
-        icon: <AiIcons.AiFillDatabase />,
         cName: 'nav-text'
     },
     {

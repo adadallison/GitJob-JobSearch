@@ -1,11 +1,39 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { SidebarData } from '../components/SidebarData';
 import "../css/jobposting.css";
+import { useState, useEffect } from 'react';
+import "../css/home.css";
 import NavBar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 
 const JobPosting = () => {
+    
+    const [title, setTitle] = useState(""); //state variable for job title 
+    const [field, setField] = useState(""); //state variable for job field 
+    const [resData, setResData] = useState([]);
+
+    const { baseUrl } = require("../config/config.js"); // retrieves site url where POST request is sent
+
+    // event handler "handleSubmit" handles 'submit' button event
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        axios.post(baseUrl + ":3001/search", { title, field }) //created POST request to send data to URL
+            .then(res => {
+                console.log(res.data.result);
+                setResData(res.data.result); // sets value
+
+            });
+    };
+
+    const more = (event) => {
+        
+    };
+
+  
+
+    //generates search results
+    useEffect(() => {
+    }, []);
+
 
     return (
         <div>
@@ -17,25 +45,17 @@ const JobPosting = () => {
                 <div className="sidenav-jobs">
                     <Sidebar>
                     </Sidebar>
-                    
                 </div>
 
                 <div class="center-info" >
-                    <h1>Job Position @ Company</h1>
                     <div class="buttons">
                         <button class="apply-button"><a href="./Register">Apply</a></button>
                         <button class="bookmark-button"><a href="./Register">Bookmark</a></button>
                     </div>
-                    <div class="about">
-                        This is the job description. It will be decently long and contain all the ins and outs of
-                        the position to be applied for. It will also explain the qualifications to the applicant.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
                 </div>
+
+
+
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3155.8094989878573!2d-122.48212918378363!3d37.72414917976872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7db005c0e281%3A0xa57a7c9f946a45d3!2sSan%20Francisco%20State%20University!5e0!3m2!1sen!2sus!4v1649197029614!5m2!1sen!2sus" width="600" height="450" class="map"></iframe>
             </div>
 

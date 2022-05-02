@@ -5,7 +5,6 @@ import { adminSidebar } from './SidebarData';
 import { companySidebar } from './SidebarData';
 import { studentSidebar } from './SidebarData';
 import "../css/Navbar.css";
-import { BsWindowSidebar } from 'react-icons/bs';
 
 
 const Sidebar = () => {
@@ -39,7 +38,6 @@ const Sidebar = () => {
 
     return (
         <>
-
             <div className="sidenav-home">
                 <div className='nav-text'>
 
