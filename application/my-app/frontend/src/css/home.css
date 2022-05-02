@@ -71,7 +71,8 @@
 
 .jobImage{
   display: flex;
-  width: 50px;
+  width: 45px;
+  height: 45px;
   align-content: center;
   
 }

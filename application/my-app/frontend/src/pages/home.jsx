@@ -11,7 +11,6 @@ import * as AiIcons from 'react-icons/ai';
 
 const Home = () => {
 
-
     const [title, setTitle] = useState(""); //state variable for job title 
     const [field, setField] = useState(""); //state variable for job field 
     const [resData, setResData] = useState([]);
@@ -44,8 +43,6 @@ const Home = () => {
                 <Sidebar>
                 </Sidebar>
                 <div class="center-scroll">
-                    <>{"Name: " + window.localStorage.getItem('name')}</>
-                    <>{"Type: " + window.localStorage.getItem('type')}</>
                     <div>
                         <div className="search-container">
                             <form onSubmit={handleSubmit}>
@@ -97,9 +94,11 @@ const Home = () => {
                     {resData.map(post => (
                         <div className='search-results-container'>
                             
+
+                            
                             <div className='jobImage'>
-                                <AiIcons.AiFillFileImage />
-                           
+                            <img src={post["job photo"]}/>
+
                             </div>
 
                             <div className='jobInfo'>
@@ -119,7 +118,6 @@ const Home = () => {
                             <div>Date Posted: {post["date posted"]}</div>
                             <div>Job Description: {post["job desc."]}</div>
                             <div>Job Salary: {post["job salary"]}</div>
-                            <img src={post["job photo"]}/>
                             <br />
                         </div>
                     ))}
