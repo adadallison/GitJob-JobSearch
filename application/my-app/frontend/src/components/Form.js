@@ -1,23 +1,20 @@
 import React, { useReducer, useState } from 'react';
 import axios from 'axios';
+import "../css/home.css";
+import Sidebar from './Sidebar';
+import NavBar from '../components/Navbar';
 
-const {baseUrl} = require("../config/config.js");
+const { baseUrl } = require("../config/config.js");
 
 const formReducer = (state, event) => {
   if (event.reset) {
     return {
-
-      firstname: '',
-      lastname: '',
       jobtitle: '',
-      passion: '',
       pay: '',
       jobdescription: '',
       company: '',
       skills: '',
       location: '',
-      phonenumber: '',
-
     }
   }
   return {
@@ -37,10 +34,10 @@ function Form() {
     setSubmitting(true);
 
     axios.post(baseUrl + ":3001/jobPost", { formData })
-            .then(res => {
-                console.log(res.data.result);
-            });
-    
+      .then(res => {
+        console.log(res.data.result);
+      });
+
     setTimeout(() => {
       setSubmitting(false);
       setFormData({
@@ -50,7 +47,7 @@ function Form() {
 
   }
 
-  
+
   const handleChange = event => {
     setFormData({
       name: event.target.name,
@@ -61,16 +58,18 @@ function Form() {
   const gitjob = () => {
     window.location.replace("/");
   }
-  
-  return (
-    <>
 
-      <div>
-        <div id="login" onClick={gitjob}>GitJob</div>
-      </div>
+  return (
+
+    <div>
+      <NavBar/>
+
+  
+    <div className='container'> 
+      <Sidebar/>
+
 
       <div className="JobPosting2">
-        <h1>Post a Job</h1>
         {submitting &&
           <div>You are submitting the following:
             <ul>
@@ -100,11 +99,10 @@ function Form() {
               <textarea name="jobdescription" onChange={handleChange} value={formData.jobdescription || ''} />
             </label>
             <label>
-                          <p>Logo</p>
-                          <input name="logo" type= "file" onChange={handleChange}value={formData.logo|| ''}/>
-                      </label>
+              <p>Logo</p>
+              <input name="logo" type="file" onChange={handleChange} value={formData.logo || ''} />
+            </label>
             <label>
-
               <p>Jobs</p>
               <select name="jobs" onChange={handleChange} value={formData.jobs || ''}>
                 <option value=" ">--Please choose a job--</option>
@@ -119,6 +117,8 @@ function Form() {
                 <option value="Cyber Security">Cyber Security</option>
               </select>
             </label>
+
+
             <label>
               <p>Location</p>
               <select name="location" onChange={handleChange} value={formData.location || ''}>
@@ -133,6 +133,7 @@ function Form() {
               </select>
             </label>
 
+
             <label>
               <p>Skills</p>
               <select name="skill" onChange={handleChange} value={formData.skill || ''} >
@@ -144,13 +145,19 @@ function Form() {
                 <option value="JavaScript">Java Script</option>
               </select>
             </label>
+
             <label>
-              <button type="submit">Submit</button></label>
+              <button type="submit">Submit</button>
+            </label>
+
           </fieldset>
 
 
         </form>
-      </div></>
+      </div>
+
+      </div>
+      </div>
   )
 }
 

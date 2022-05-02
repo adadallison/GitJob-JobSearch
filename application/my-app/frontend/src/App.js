@@ -5,15 +5,11 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Careers from './pages/Careers';
 import AI from './pages/Careers/AI';
-import Jobs from './pages/Jobs';
 import JobPosting from './pages/JobPosting';
 import Profile from "./pages/Profile";
-import Forum from './pages/Forum';
-import ForumPost from './pages/ForumPost';
 import Qc from './pages/Careers/Qc';
 import Ec from './pages/Careers/Ec';
 import Form from './components/Form';
-import Results from './pages/Results';
 import FiveGs from './pages/Careers/FiveG';
 import Form4resume from './components/Form4resume';
 import Resume from './pages/Resume';
@@ -28,20 +24,15 @@ const App = () => {
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
           <Route path="/profile" element={<Profile/>}/>
-          <Route path="/forum" element={<Forum/>}/>
-          <Route path="/ForumPost" element={<ForumPost/>}/>
           <Route path="/AI" element={<AI/>}/>
           <Route path="/Qc" element={<Qc/>}/>
           <Route path="/Ec" element={<Ec/>}/>
           <Route path="/FiveGs" element={<FiveGs/>}/>
-          <Route path="/jobs" element={<Jobs/>}/>
           <Route path="/JobPosting" element={<JobPosting/>}/>
           <Route path="/JobPosting2" element={<Form/>}/>
           <Route path="/Resume" element={<Resume/>}/>
           <Route path="/JobPosting3" element={<Form4resume/>}/>
           
-
-          <Route path="/results" element={<Results/>}/>
         </Routes>
       </BrowserRouter>
     </div>

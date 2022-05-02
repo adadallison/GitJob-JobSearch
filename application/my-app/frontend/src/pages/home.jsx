@@ -7,7 +7,6 @@ import Sidebar from '../components/Sidebar'
 import "../css/home.css";
 import "../css/form.css";
 import NavBar from '../components/Navbar';
-import * as AiIcons from 'react-icons/ai';
 
 const Home = () => {
 
@@ -101,9 +100,10 @@ const Home = () => {
                                 </div>
 
                                 <div className='jobInfo'>
-                                    <div>Job Name: {post["job name"]}</div>
+                                    <div className='jobName'>Job Name: {post["job name"]}</div>
                                     <div>Job Field: {post["job field"]}</div>
                                     <div>Date Posted: {post["date posted"]}</div>
+                                    <div>Job Location: {post["job location"]}</div>
                                     <div>Job Description: {post["job desc."]}</div>
                                     <div>Job Salary: {post["job salary"]}</div>
                                 </div>

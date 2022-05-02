@@ -15,18 +15,6 @@ const JobPosting = () => {
             <div className="container">
 
                 <div className="sidenav-jobs">
-                    {/* <div className='nav-text'>
-                        {SidebarData.map((item, index) => {
-                            return (
-                                <li key={index} className={item.cName}>
-                                    <Link to={item.path}>
-                                        {item.icon}
-                                        <span>{item.title}</span>
-                                    </Link>
-                                </li>
-                            );
-                        })}
-                    </div> */}
                     <Sidebar>
                     </Sidebar>
                     

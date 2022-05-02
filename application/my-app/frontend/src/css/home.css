@@ -84,41 +84,6 @@
 }
 
 .jobName{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 500px;
+  font-weight: bolder;
 }
 
-.jobField{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 400px;
-}
-
-.jobPosted{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 400px;
-}
-
-.jobDesc{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 300px;
-}
-
-.jobSalary{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 300px;
-}
