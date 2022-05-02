@@ -12,7 +12,13 @@ const Sidebar = () => {
     //const showSidebar = () => setSidebar(!sidebar);
 
 
+
     useEffect(() => {
+
+        // if (window.localStorage.getItem('type') === 'null') {
+        //     setSidebar();
+        // }
+
         if (window.localStorage.getItem('type') === 'Company') {
             setSidebar(companySidebar);
 
@@ -46,7 +52,11 @@ const Sidebar = () => {
                             </li>
                         );
                     })}
+                    <button onClick = {() => {window.localStorage.clear()}} >Logout</button>
                 </div>
+
+    
+
             </div>
         </>
     );
