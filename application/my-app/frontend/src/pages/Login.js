@@ -2,6 +2,7 @@ import React, { useReducer, useState } from 'react';
 import axios, { Axios } from 'axios';
 import { useNavigate } from "react-router-dom";
 import "../css/login.css";
+import NavBar from '../components/Navbar';
 
 
 function Login() {
@@ -50,7 +51,9 @@ function Login() {
     return (
 
         <div>
-            <div id="login" >GitJob</div>
+            {/* <div id="login" >GitJob</div> */}
+
+            <NavBar></NavBar>
             <form onSubmit={handleSubmit}>
                 <div id="form">
                     <div><label name="email">Email</label> </div>

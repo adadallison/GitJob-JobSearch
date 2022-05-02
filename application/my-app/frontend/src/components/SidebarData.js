@@ -61,7 +61,7 @@ export const studentSidebar = [
         cName: 'nav-text'
     }, {
         title: 'Profile',
-        path: '/user',
+        path: '/profile',
         icon: <AiIcons.AiFillProfile />,
         cName: 'nav-text'
     },

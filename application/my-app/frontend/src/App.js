@@ -7,7 +7,7 @@ import Careers from './pages/Careers';
 import AI from './pages/Careers/AI';
 import Jobs from './pages/Jobs';
 import JobPosting from './pages/JobPosting';
-import User from "./pages/User";
+import Profile from "./pages/Profile";
 import Forum from './pages/Forum';
 import ForumPost from './pages/ForumPost';
 import Qc from './pages/Careers/Qc';
@@ -25,7 +25,7 @@ const App = () => {
           <Route path="/careers" element={<Careers/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
-          <Route path="/user" element={<User/>}/>
+          <Route path="/profile" element={<Profile/>}/>
           <Route path="/forum" element={<Forum/>}/>
           <Route path="/ForumPost" element={<ForumPost/>}/>
           <Route path="/AI" element={<AI/>}/>

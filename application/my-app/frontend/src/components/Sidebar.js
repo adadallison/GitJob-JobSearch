@@ -60,7 +60,7 @@ const Sidebar = () => {
                         window.localStorage.clear(); 
                         window.location.replace("/")}
                     }>
-                            logout
+                            Logout
                     </button>}
                 </div>
 
