@@ -46,7 +46,7 @@ app.post("/search", (req, res) => {
             connection.query(query, param, (err,result) => {
                 if (err) throw err;
                 result.map(e => {
-                    if(e['job phot'] != null)
+                    if(e['job photo'] != null)
                         e['job photo'] = "data:image;base64," + Buffer.from(e['job photo']).toString('base64');
                     console.log(e);
                     return e;
