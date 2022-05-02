@@ -13,6 +13,7 @@ const Profile = () => {
     }, []);
 
 
+
     return (
         <div>
             <NavBar>
