@@ -15,6 +15,8 @@ import Ec from './pages/Careers/Ec';
 import Form from './components/Form';
 import Results from './pages/Results';
 import FiveGs from './pages/Careers/FiveG';
+import Form4resume from './components/Form4resume';
+import Resume from './pages/Resume';
 
 const App = () => {
   return (
@@ -35,6 +37,10 @@ const App = () => {
           <Route path="/jobs" element={<Jobs/>}/>
           <Route path="/JobPosting" element={<JobPosting/>}/>
           <Route path="/JobPosting2" element={<Form/>}/>
+          <Route path="/Resume" element={<Resume/>}/>
+          <Route path="/JobPosting3" element={<Form4resume/>}/>
+          
+
           <Route path="/results" element={<Results/>}/>
         </Routes>
       </BrowserRouter>

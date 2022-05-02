@@ -100,6 +100,10 @@ function Form() {
               <textarea name="jobdescription" onChange={handleChange} value={formData.jobdescription || ''} />
             </label>
             <label>
+                          <p>Logo</p>
+                          <input name="logo" type= "file" onChange={handleChange}value={formData.logo|| ''}/>
+                      </label>
+            <label>
 
               <p>Jobs</p>
               <select name="jobs" onChange={handleChange} value={formData.jobs || ''}>

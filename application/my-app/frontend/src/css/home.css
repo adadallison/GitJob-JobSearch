@@ -36,13 +36,19 @@
 
 
 .search-results-container{
+  border:1;
+  background-color: #dbe0db;
+  color: black;
+  font-size: 16px;
+  margin: 4px 2px;
+ 
   display: flex;
-  border: green;
+  border: rgb(10, 59, 165);
   border-radius: 30px;
   border-style: solid;
   border-width: 2px;
   margin-bottom: 10px;
-  width: 450px;
+  width: 750px;
   margin-left: 280px;
   text-align: left;
   padding: 32px 16px 32px 8px;
@@ -50,17 +56,9 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  
 }
 
-.jobArrow{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 30px;
 
-}
  .jobInfo{
     display: flex;
     align-items: center;
@@ -70,9 +68,51 @@
  }
 
 .jobImage{
+
   display: flex;
-  width: 45px;
-  height: 45px;
+  width: 10px;
+  height: 200px;
   align-content: center;
+
   
+}
+
+.jobName{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 500px;
+}
+
+.jobField{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 400px;
+}
+
+.jobPosted{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 400px;
+}
+
+.jobDesc{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 300px;
+}
+
+.jobSalary{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 300px;
 }

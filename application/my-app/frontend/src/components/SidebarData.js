@@ -1,9 +1,17 @@
 import React from 'react'
 import * as AiIcons from 'react-icons/ai';
+
+
 import * as BsIcons from 'react-icons/bs';
 import Login from '../pages/Login';
+import Resume from '../pages/Resume';
 
+export const SidebarData = [
 
+    
+    
+    ]
+    
 export const NotLoggedIn = [
     {
         title: 'Home',
@@ -65,6 +73,12 @@ export const studentSidebar = [
         icon: <AiIcons.AiFillProfile />,
         cName: 'nav-text'
     },
+    {
+        title: 'Post a Resume',
+        path: '/JobPosting3',
+        icon: <AiIcons.AiFillDatabase />,
+        cName: 'nav-text'
+    }, 
 
 ]
 
@@ -86,6 +100,12 @@ export const companySidebar = [
     {
         title: 'Post a Job',
         path: '/JobPosting2',
+        icon: <AiIcons.AiFillDatabase />,
+        cName: 'nav-text'
+    },
+    {
+        title: 'Resume',
+        path: '/Resume',
         icon: <AiIcons.AiFillDatabase />,
         cName: 'nav-text'
     }, 
