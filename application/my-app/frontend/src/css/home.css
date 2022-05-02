@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    position: fixed;
+    position: relative;
   }
   
   .sidenav-home {
@@ -37,20 +37,15 @@
 
 .search-results-container{
   border:1;
-  background-color: #dbe0db;
-  color: black;
-  font-size: 16px;
-  margin: 4px 2px;
- 
+  background-color: whitesmoke;
+  font-size: 20px;
   display: flex;
-  border: rgb(10, 59, 165);
   border-radius: 30px;
   border-style: solid;
   border-width: 2px;
   margin-bottom: 10px;
   width: 750px;
-  margin-left: 280px;
-  text-align: left;
+  margin-left: 190px;
   padding: 32px 16px 32px 8px;
   flex-wrap: wrap;
   flex-direction: row;
@@ -59,22 +54,33 @@
 }
 
 
- .jobInfo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 300px;
- }
+.jobInfo{
+  color: black;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  flex-direction: column;
+  flex-grow: 2;
+}
 
 .jobImage{
-
   display: flex;
-  width: 10px;
-  height: 200px;
-  align-content: center;
+  width: min-content;
+  height: min-content;
+  width: 150px;
+  height: 150px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: left;
+}
 
-  
+.actualImage{
+  display:block;
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  align-items: center;
 }
 
 .jobName{

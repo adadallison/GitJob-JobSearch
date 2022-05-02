@@ -91,43 +91,27 @@ const Home = () => {
 
 
                     {/* map function that loads results with the same format */}
-                    {resData.map(post => (
-                        <div className='search-results-container'>
-                            
 
-                            
-                            <div className='jobImage'>
-                                
-                            <img src={post["job photo"]}/>
+
+                        {resData.map(post => (
+                            <div className='search-results-container'>
+
+                                <div className='jobImage'>
+                                    <img className='actualImage' src={post["job photo"]} />
+                                </div>
+
+                                <div className='jobInfo'>
+                                    <div>Job Name:{post["job name"]}</div>
+                                    <div>Job Field:{post["job field"]}</div>
+                                    <div>Date Posted:{post["date posted"]}</div>
+                                    <div>Job Description:{post["job desc."]}</div>
+                                    <div>Job Salary:{post["job salary"]}</div>
+                                </div>
 
                             </div>
+                        ))}
 
-                            <div className='jobName'>
-                                <div>Job Name:  {post["job name"]}</div></div>
 
-                
-                                <div className='jobField'>
-                                <div>Job Field:  {post["job field"]}</div></div>
-
-                                <div className='jobPosted'>
-                                <div>Date Posted:  {post["date posted"]}</div></div>
-
-                                <div className='jobDesc'>
-                                <div>Job Description:  {post["job desc."]}</div></div>
-
-                                
-                                <div className='jobSalary'>
-                                <div>Job Salary:  {post["job salary"]}</div></div>
-                            
-
-                            <div className='jobArrow'>
-                                <AiIcons.AiOutlineSearch />
-                            </div>
-                            
-                          
-                            <br />
-                        </div>
-                    ))}
 
                 </div>
             </div>
