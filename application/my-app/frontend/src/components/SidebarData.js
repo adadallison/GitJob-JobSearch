@@ -15,12 +15,7 @@ export const NotLoggedIn = [
         icon: <AiIcons.AiFillHome />,
         cName: 'nav-text'
     },
-    {
-        title: 'Jobs',
-        path: '/jobs',
-        icon: <AiIcons.AiFillDatabase />,
-        cName: 'nav-text'
-    },
+    
     {
         title: 'Careers',
         path: '/careers',
@@ -52,12 +47,7 @@ export const studentSidebar = [
         icon: <AiIcons.AiFillHome />,
         cName: 'nav-text'
     },
-    {
-        title: 'Jobs',
-        path: '/jobs',
-        icon: <AiIcons.AiFillDatabase />,
-        cName: 'nav-text'
-    },
+    
     {
         title: 'Careers',
         path: '/careers',
@@ -110,11 +100,6 @@ export const adminSidebar = [
         icon: <AiIcons.AiFillHome />,
         cName: 'nav-text'
     },
-    {
-        title: 'Jobs',
-        path: '/jobs',
-        icon: <AiIcons.AiFillDatabase />,
-        cName: 'nav-text'
-    }, 
+    
 
 ]
