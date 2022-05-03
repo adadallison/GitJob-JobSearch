@@ -20,6 +20,7 @@ const Profile = () => {
             </NavBar>
 
             <div className="container">
+                
                 <Sidebar>
                 </Sidebar>
                 <div>

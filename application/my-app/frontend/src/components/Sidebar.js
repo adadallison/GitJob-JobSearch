@@ -38,7 +38,7 @@ const Sidebar = () => {
 
     return (
         <>
-            <div className="sidenav-home">
+            <div className="sidenav-careers">
                 <div className='nav-text'>
 
                     {sidebar.map((item, index) => {
@@ -56,9 +56,7 @@ const Sidebar = () => {
                     <button onClick={() => {
                         window.localStorage.clear(); 
                         window.location.replace("/")}
-                    }>
-                            Logout
-                    </button>}
+                    }> Logout</button>}
                 </div>
 
     

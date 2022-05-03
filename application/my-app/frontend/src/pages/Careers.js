@@ -16,20 +16,10 @@ const Careers = () => {
 
 
                 <div className="sidenav-careers">
-                    <Sidebar>
+                <Sidebar>
                     </Sidebar>
-                    {/* <div className='nav-text'>
-                        {SidebarData.map((item, index) => {
-                            return (
-                                <li key={index} className={item.cName}>
-                                    <Link to={item.path}>
-                                        {item.icon}
-                                        <span>{item.title}</span>
-                                    </Link>
-                                </li>
-                            );
-                        })}
-                    </div> */}
+                    
+                
                 </div>
 
                 <div class="career-fields-container" >

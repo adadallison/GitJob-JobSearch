@@ -17,6 +17,7 @@ function Register() {
         axios.post(baseUrl + ":3001/register", { name, email, password, repassword, type })
             .then(res => {
                 console.log(res.data.result);
+                window.location.href="/login";
             });
     };
 

@@ -9,18 +9,14 @@ function NavBar() {
 
     const gitjob = () => {
         window.location.replace("/");
-      }
+    }
 
     return (
         <>
-            <IconContext.Provider value={{ color: 'fff' }}>
-
-                <div onClick={gitjob} className='navbar'>Gitjob </div>
-
-
-            </IconContext.Provider>
+            <div onClick={gitjob} className='navbar'>
+                GitJob
+            </div>
         </>
-
     );
 }
 

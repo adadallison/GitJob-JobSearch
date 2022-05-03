@@ -44,8 +44,11 @@ const Resume = () => {
             </NavBar>
 
             <div className="container">
-            <Sidebar>
+            <div className="sidenav-careers">
+                <Sidebar>
                 </Sidebar>
+                    
+                </div>
                 <div className="sidenav-home">
                     <div className='nav-text'>
                         {SidebarData.map((item, index)=> {
