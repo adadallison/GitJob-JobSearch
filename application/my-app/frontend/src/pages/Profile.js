@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React from 'react';
 import { useState, useEffect } from 'react';
 import Sidebar from '../components/Sidebar'
@@ -19,13 +18,18 @@ const Profile = () => {
             <NavBar>
             </NavBar>
 
-            <div className="container">
+            <div className="profileContainer">
                 
                 <Sidebar>
                 </Sidebar>
-                <div>
-                    <>{"Name: " + window.localStorage.getItem('name')}</>
-                    <>{"Type: " + window.localStorage.getItem('type')}</>
+                <div className='profile'>
+                    <div className='profileText'>Name: {window.localStorage.getItem('name')}</div>
+                    <br></br>
+                    <div className='profileText'>Account: {window.localStorage.getItem('type')}</div>
+                    <br></br>
+                    <div className='profileText'>Email: {window.localStorage.getItem('email')}</div>
+                    <br></br>
+                    <div className='profileText'>Skills: {window.localStorage.getItem('skills')}</div>
 
                 </div>
             </div>

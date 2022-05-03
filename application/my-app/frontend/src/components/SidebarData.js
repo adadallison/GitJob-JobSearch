@@ -1,8 +1,6 @@
 import React from 'react'
 import * as AiIcons from 'react-icons/ai';
 import * as BsIcons from 'react-icons/bs';
-import Login from '../pages/Login';
-import Resume from '../pages/Resume';
 
 export const SidebarData = [
 

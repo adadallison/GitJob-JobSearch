@@ -48,6 +48,21 @@
   align-items: flex-start;
 }
 
+.input-search{
+  border-radius: 20px;
+  border-width: 2px;
+  border-color: #4CAF50;
+  border-style: solid;
+  height: 36px;
+  font-size: 25px;
+  width: 320px;
+}
+
+.search-container{
+  margin-left: 0px;
+  margin-bottom: 25px;
+  margin-top: 20px;
+}
 
 .jobInfo{
   color: black;

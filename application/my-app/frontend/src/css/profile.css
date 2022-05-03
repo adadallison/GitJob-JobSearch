@@ -1,9 +1,26 @@
-.parent {
+.profileContainer {
+    display: flex;
+  }
+   
+.profile{
     display: flex;
     flex-direction: column;
-    height: 250px;
-    }
+    /* align-items: center;
+    justify-content: center; */
+    padding: 20px;
+    margin-left: 70px;
+    margin-top: 40px;
+    border-style: solid;
+    border-color: #4CAF50;
+    border-radius: 18px;
+    height: 350px;
+    width: 400px;
+}
 
-.child {
+.profileText{
     display: flex;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: black;
+    font-weight: bold;
 }
