@@ -24,11 +24,6 @@ const JobPosting = () => {
             });
     };
 
-    const more = (event) => {
-        
-    };
-
-  
 
     //generates search results
     useEffect(() => {
