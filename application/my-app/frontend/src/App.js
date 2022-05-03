@@ -14,11 +14,12 @@ import Rp from './pages/Careers/Rp';
 import Form4resume from './components/Form4resume';
 import Resume from './pages/Resume';
 import It from './pages/Careers/It';
-
 import Va from './pages/Careers/Va';
 import Bc from './pages/Careers/Bc';
 import Cs from './pages/Careers/Cs';
 import G from './pages/Careers/G';
+
+
 const App = () => {
   return (
     <div className="App">
@@ -42,6 +43,9 @@ const App = () => {
           <Route path="/JobPosting2" element={<Form/>}/>
           <Route path="/Resume" element={<Resume/>}/>
           <Route path="/JobPosting3" element={<Form4resume/>}/>
+          
+        
+      
           
         </Routes>
       </BrowserRouter>

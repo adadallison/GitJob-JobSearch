@@ -12,7 +12,7 @@ import Sidebar from '../../components/Sidebar';
 const AI = () => {
 
     return (
-        <div>
+        <div><Noti></Noti>
             <NavBar>
             </NavBar>
 
@@ -35,7 +35,7 @@ const AI = () => {
                     </Sidebar>
                     
                 </div>
-
+                
                 <div class="center-info">
                     <h1>Artificial Intelligence and Machine Learning Overview</h1>
 

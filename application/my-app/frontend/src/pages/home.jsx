@@ -5,8 +5,19 @@ import Sidebar from '../components/Sidebar'
 import "../css/home.css";
 import NavBar from '../components/Navbar';
 import * as BsIcons from 'react-icons/bs';
+import {useNotification} from "./Notifications/NotificationProvider";
 
 const Home = () => {
+     //NOTIFICATION
+    const [inputVal, setInputVal] = useState("");
+  const dispatch = useNotification();
+   
+  const handleNewNotification = () => {
+    dispatch({
+      type: "SUCCESS",
+      message: inputVal,
+      title: "Successful Request"})
+    }
 
     const [title, setTitle] = useState(""); //state variable for job title 
     const [field, setField] = useState(""); //state variable for job field 
@@ -24,6 +35,7 @@ const Home = () => {
 
             });
     };
+    
 
 
   
@@ -35,14 +47,22 @@ const Home = () => {
 
     return (
         <div>
+       
             <NavBar>
+            
             </NavBar>
 
             <div className="container">
                 <Sidebar>
+                
                 </Sidebar>
+                
                 <div class="center-scroll">
                     <div>
+                    <div className="App">
+      <input type="text" value={inputVal} onChange={e => setInputVal(e.target.value)}/>
+      <button onClick={handleNewNotification}>Add Notification</button>
+    </div>
                         <div className="search-container">
                             <form onSubmit={handleSubmit}>
                                 <input className="input-search" type="text" placeholder="Search" onChange={e => setTitle(e.target.value)} />
@@ -59,6 +79,7 @@ const Home = () => {
                                     <option value="Internet of Things">Internet of Things</option>
                                     <option value="5G">5G</option>
                                     <option value="Cyber Security">Cyber Security</option>
+                                    
                                 </select>
 
                                 {/* location drown down */}
