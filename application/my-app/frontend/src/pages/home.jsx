@@ -24,8 +24,6 @@ const Home = () => {
             });
     };
 
-
-  
     //generates search results
     useEffect(() => {
     }, []);
@@ -39,12 +37,12 @@ const Home = () => {
 
             <div className="container">
 
-            <div className="sidenav-careers">
-                <Sidebar>
-                </Sidebar>
-                    
+                <div className="sidenav-careers">
+                    <Sidebar>
+                    </Sidebar>
+
                 </div>
-            
+
                 <div class="center-scroll">
                     <div>
                         <div className="search-container">
@@ -87,34 +85,46 @@ const Home = () => {
                                     <option value="JavaScript">Java Script</option>
                                 </select>
 
-                                <button type="submit">Search<i className="search" /></button>
+                                <button type="submit">Search<i className="Search" /></button>
+
+                                <a className="question">?
+                                    <span className="questionText">
+                                        Search for jobs based <br />
+                                        on the given filters and <br />
+                                        the results will appear <br />
+                                        bellow!
+                                    </span>
+                                </a>
+
                             </form>
+
                         </div>
                     </div>
 
 
                     {/* map function that loads results with the same format */}
-                        {resData.map(post => (
-                            <div className='search-results-container'>
+                    {resData.map(post => (
+                        <div className='search-results-container'>
 
-                                <div className='jobImage'>
-                                    <img className='actualImage' src={post["job photo"]} />
-                                </div>
-
-                                
-                                <div className='jobInfo'>
-                                    <div className='jobName'>Job Name: {post["job name"]}</div>
-                                    <div>Job Field: {post["job field"]}</div>
-                                    <div>Date Posted: {post["date posted"]}</div>
-                                    <div>Job Location: {post["job location"]}</div>
-                                    <div>Job Description: {post["job desc."]}</div>
-                                    <div>Job Salary: {post["job salary"]}</div>
-                                    <div>Job Skills: {post["job skills"]}</div>
-                                </div>
+                            <div className='jobImage'>
+                                <img className='actualImage' src={post["job photo"]} />
                             </div>
-                        ))}
+
+
+                            <div className='jobInfo'>
+                                <div className='jobName'>Job Name: {post["job name"]}</div>
+                                <div>Job Field: {post["job field"]}</div>
+                                <div>Date Posted: {post["date posted"]}</div>
+                                <div>Job Location: {post["job location"]}</div>
+                                <div>Job Description: {post["job desc."]}</div>
+                                <div>Job Salary: {post["job salary"]}</div>
+                                <div>Job Skills: {post["job skills"]}</div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
+
         </div>
 
 
