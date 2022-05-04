@@ -5,6 +5,9 @@ import Sidebar from '../components/Sidebar'
 import "../css/home.css";
 import "../css/careers.css";
 import NavBar from '../components/Navbar';
+import * as AiIcons from 'react-icons/ai';
+import * as BsIcons from 'react-icons/bs';
+
 
 const Home = () => {
 
@@ -25,6 +28,10 @@ const Home = () => {
                 console.log(res.data.result);
                 setResData(res.data.result); // sets value
             });
+    };
+
+    const popUp = () => {
+        console.log("HELLO")
     };
 
     //generates search results
@@ -107,7 +114,7 @@ const Home = () => {
 
                     {/* map function that loads results with the same format */}
                     {resData.map(post => (
-                        <div className='search-results-container'>
+                        <div className='search-results-container' onClick={popUp}>
 
                             <div className='jobImage'>
                                 <img className='actualImage' src={post["job photo"]} />
@@ -123,6 +130,19 @@ const Home = () => {
                                 <div>Job Salary: {post["job salary"]}</div>
                                 <div>Job Skills: {post["job skills"]}</div>
                             </div>
+
+                            <div>
+                                <button href="">
+                                <BsIcons.BsBookmark />
+                                </button>
+
+                                <button href="">
+                                <AiIcons.AiOutlineAudit />
+                                </button>
+                               
+                            </div>
+
+                           
                         </div>
                     ))}
                 </div>
