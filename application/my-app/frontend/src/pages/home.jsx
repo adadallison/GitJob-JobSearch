@@ -9,7 +9,9 @@ import NavBar from '../components/Navbar';
 const Home = () => {
 
     const [title, setTitle] = useState(""); //state variable for job title 
-    const [field, setField] = useState(""); //state variable for job field 
+    const [field, setField] = useState(""); //state variable for job field
+    const [location, setLocation] = useState(""); //state variable for job field 
+    const [skill, setSkill] = useState(""); //state variable for job field  
     const [resData, setResData] = useState([]);
 
     const { baseUrl } = require("../config/config.js"); // retrieves site url where POST request is sent
@@ -17,7 +19,8 @@ const Home = () => {
     // event handler "handleSubmit" handles 'submit' button event
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post(baseUrl + ":3001/search", { title, field }) //created POST request to send data to URL
+        axios.post(baseUrl + ":3001/search", 
+        { title, field, location, skill }) //created POST request to send data to URL
             .then(res => {
                 console.log(res.data.result);
                 setResData(res.data.result); // sets value
@@ -52,7 +55,7 @@ const Home = () => {
                                 {/* field drown down */}
                                 <select id="field" name="field" onChange={e => setField(e.target.value)}>
                                     <option value="">Select Field</option>
-                                    <option value="Artificial Intelligence and Machine Learning">AI and ML</option>
+                                    <option value="AI and ML">AI and ML</option>
                                     <option value="Robotic Process Automation">Robotic Process Automation</option>
                                     <option value="Edge Computing">Edge Computing</option>
                                     <option value="Quantum Computing">Quantum Computing</option>
@@ -64,7 +67,7 @@ const Home = () => {
                                 </select>
 
                                 {/* location drown down */}
-                                <select id="locations" name="field" onChange={e => setField(e.target.value)}>
+                                <select id="locations" name="field" onChange={e => setLocation(e.target.value)}>
                                     <option value="">Select Location</option>
                                     <option value="California">California</option>
                                     <option value="Seattle">Seattle</option>
@@ -76,7 +79,7 @@ const Home = () => {
                                 </select>
 
                                 {/* skills drown down */}
-                                <select id="skills" name="field" onChange={e => setField(e.target.value)}>
+                                <select id="skills" name="field" onChange={e => setSkill(e.target.value)}>
                                     <option value="">Select Skill</option>
                                     <option value="C++">C++</option>
                                     <option value="Java">Java</option>

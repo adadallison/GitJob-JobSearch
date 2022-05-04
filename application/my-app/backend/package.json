@@ -106,6 +106,7 @@
     "minimatch": "^3.1.2",
     "minimist": "^1.2.5",
     "ms": "^2.0.0",
+    "multer": "^1.4.4",
     "mysql2": "^2.3.3",
     "named-placeholders": "^1.1.2",
     "negotiator": "^0.6.3",

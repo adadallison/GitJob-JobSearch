@@ -5,8 +5,9 @@ const mysql = require('mysql2');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const buffer = require('buffer');
-const { response } = require('express');
-const app = express();
+const multer = require('multer');
+
+const app = express(); 
 
 const {pool} = require('./models/pool.js');
 
@@ -16,23 +17,40 @@ app.use(express.json());
 app.post("/search", (req, res) => {
     console.log(req.body);
     
-    pool.getConnection((err, connection) => {
+    pool.getConnection(async (err, connection) => {
         if (err) throw err;
         
-        var query = "SELECT * FROM `job posts`";
-        var param = [];
+        let query = "SELECT * FROM `job posts`";
+        let add = ' WHERE';
+        let param = [];
 
-        const title = req.body["title"];
-        const field = req.body["field"];
+        const title = req.body.title;
+        const field = req.body.field;
+        const location = req.body.location;
+        const skill = req.body.skill;
     
         if(title != ""){
-            query += "WHERE `job name` LIKE concat('%', ?, '%')";
-            param += title;
+            query += add + " `job name` LIKE concat('%', ?, '%')";
+            param.push(title);
+            add = ' AND';
         }
 
         if(field != ""){
-            query += "WHERE `job field` LIKE concat('%', ?, '%')";
-            param += field;
+            query += add + " `job field` LIKE concat('%', ?, '%')";
+            param.push(field);
+            add = ' AND';
+        }
+
+        if(location != ""){
+            query += add + " `job location` LIKE concat('%', ?, '%')";
+            param.push(location);
+            add = ' AND';
+        }
+
+        if(skill != ""){
+            query += add + " `job skills` LIKE concat('%', ?, '%')";
+            param.push(skill);
+            add = ' AND';
         }
 
         validateStatus = true;
@@ -48,15 +66,12 @@ app.post("/search", (req, res) => {
                 result.map(e => {
                     if(e['job photo'] != null)
                         e['job photo'] = "data:image;base64," + Buffer.from(e['job photo']).toString('base64');
-                    console.log(e);
                     return e;
                 });
                 res.json({result});
             });
-            
-            connection.release();
         }
-    
+        connection.release();
     });
 });
 
@@ -129,6 +144,12 @@ app.post("/login", async (req, res) => {
     }
 
     var user = await findUser(pool, email);
+    if(user == undefined){
+        console.log("Here")
+        res.status(400);
+        res.send("Cannot find user.");
+        return
+    }
     
     console.log("Here4 " + JSON.stringify(user));
 
@@ -185,6 +206,11 @@ app.post("/jobPost", (req, res) => {
 
         connection.release();
     });
+});
+
+app.post("/postResume", multer().none(), (req, res) => {
+    console.log("In post resume");
+    console.log("req.body: ", req.body);
 });
 
 app.listen(process.env.PORT);

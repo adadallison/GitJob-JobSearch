@@ -13,15 +13,15 @@ const Resume = () => {
 
     const [title, setTitle] = useState("");
     const [field, setField] = useState("");
-    const [resData, setResData] = useState([]);
-    const ip = "13.52.76.208";
-
-    
+    const [resData, setResData] = useState([]);    
 
     const handleSubmit = (event) => {
        //window.location.href="/results";
         event.preventDefault();
-        axios.post("http://" + ip + ":3001/searchresume", { title, field })
+
+        const { baseUrl } = require("../config/config.js");
+
+        axios.post(baseUrl + ":3001/searchresume", { title, field })
             .then(res => {
                 console.log(res.data.result);
                 setResData(res.data.result);
