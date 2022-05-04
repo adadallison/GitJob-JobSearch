@@ -164,3 +164,42 @@
 .notification-item.error .bar {
   background-color: red;
 }
+
+.question{
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  padding-top: 5px;
+  margin-left: 9px;
+  border: #4E91F4;
+  color: #4E91F4;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 160px;
+  width: 11px;
+  height: 11px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+
+.question .questionText {
+  position: absolute;
+  visibility: hidden;
+  height: fit-content;
+  width: fit-content;
+  text-align: left;
+  margin: auto;
+  background-color: whitesmoke;
+  color: #4E91F4 ;
+  font-size: small;
+  font-weight: lighter;
+  font-family: sans-serif;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+
+.question:hover .questionText {
+  visibility: visible;
+}
