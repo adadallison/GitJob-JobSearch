@@ -12,7 +12,7 @@ import Sidebar from '../../components/Sidebar';
 const AI = () => {
 
     return (
-        <div><Noti></Noti>
+        <div>
             <NavBar>
             </NavBar>
 

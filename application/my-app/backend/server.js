@@ -183,23 +183,31 @@ app.post("/login", async (req, res) => {
     res.send({ token, name: user.name , type: user.type});
 });
 
+// post job form
 app.post("/jobPost", (req, res) => {
     console.log(req.body);
     const jobDesc = req.body.formData.jobdescription;
     const jobTitle = req.body.formData.jobtitle;
     const jobField = req.body.formData.jobs;
+    const jobSalary = req.body.formData.jobSalary;
+    const jobSkills = req.body.formData.jobSkills;
+    const jobTimeStamp = req.body.formData.jobTimeStamp;
 
-    console.log(jobDesc, " ", jobTitle, " ", jobField);
+    console.log(jobDesc, " ", jobTimeStamp, " ", jobTitle, " ", jobField, " ", jobSalary, " ", jobSkills);
     
-    var query = "INSERT INTO `job posts` (`job desc.`, `job name`, `job field`) VALUES ( ? , ? , ?)";
+    // mysql query
+    var query = "INSERT INTO `job posts` (`job desc.`, `date posted`, `job name`, `job field`, `job salary`, `job skills`) VALUES ( ? , ? , ? , ? , ? , ?)";
 
     pool.getConnection((err, connection) => {
         if (err) throw err;
 
         connection.query(query, [
             jobDesc,
+            jobTimeStamp,
             jobTitle,
-            jobField
+            jobField,
+            jobSalary,
+            jobSkills
         ], (err, result) => {
             if (err) throw err;
         });
