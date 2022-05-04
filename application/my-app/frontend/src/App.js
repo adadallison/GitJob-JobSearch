@@ -19,6 +19,7 @@ import Va from './pages/Careers/Va';
 import Bc from './pages/Careers/Bc';
 import Cs from './pages/Careers/Cs';
 import G from './pages/Careers/G';
+import AdminDelete from './pages/AdminDelete';
 
 
 const App = () => {
@@ -45,7 +46,7 @@ const App = () => {
           <Route path="/JobPosting2" element={<Form/>}/>
           <Route path="/Resume" element={<Resume/>}/>
           <Route path="/JobPosting3" element={<Form4resume/>}/>
-          
+          <Route path="/AdminDelete" element={<AdminDelete/>}/>
         
       
           

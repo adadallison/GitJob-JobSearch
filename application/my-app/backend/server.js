@@ -189,14 +189,15 @@ app.post("/jobPost", (req, res) => {
     const jobDesc = req.body.formData.jobdescription;
     const jobTitle = req.body.formData.jobtitle;
     const jobField = req.body.formData.jobs;
-    const jobSalary = req.body.formData.jobSalary;
-    const jobSkills = req.body.formData.jobSkills;
+    const jobSalary = req.body.formData.pay;
+    const jobSkills = req.body.formData.skill;
+    const jobLocation = req.body.formData.location;
     const jobTimeStamp = req.body.formData.jobTimeStamp;
 
     console.log(jobDesc, " ", jobTimeStamp, " ", jobTitle, " ", jobField, " ", jobSalary, " ", jobSkills);
     
     // mysql query
-    var query = "INSERT INTO `job posts` (`job desc.`, `date posted`, `job name`, `job field`, `job salary`, `job skills`) VALUES ( ? , ? , ? , ? , ? , ?)";
+    var query = "INSERT INTO `job posts` (`job desc.`, `date posted`, `job name`, `job field`, `job salary`, `job skills`, `job location`) VALUES ( ? , ? , ? , ? , ? , ?, ?)";
 
     pool.getConnection((err, connection) => {
         if (err) throw err;
@@ -207,7 +208,8 @@ app.post("/jobPost", (req, res) => {
             jobTitle,
             jobField,
             jobSalary,
-            jobSkills
+            jobSkills,
+            jobLocation
         ], (err, result) => {
             if (err) throw err;
         });
