@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import Sidebar from '../components/Sidebar'
-import "../css/profile.css";
+import "../css/myjobs.css";
 import NavBar from '../components/Navbar';
 
 const MyJobs = () => {
@@ -18,11 +18,11 @@ const MyJobs = () => {
             <NavBar>
             </NavBar>
 
-            <div className="profileContainer">
+            <div className="jobsContainer">
                 
                 <Sidebar>
                 </Sidebar>
-                <div className='profile'>
+                <div className='jobs'>
                     
 
                 </div>
