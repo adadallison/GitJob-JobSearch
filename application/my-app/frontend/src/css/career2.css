@@ -3,9 +3,11 @@
   .flex-container {
     display: flex;
     position: relative;
+    
   }
   
   .faqflex{
+    padding: 30px;
     justify-content: space-evenly;
     position: center;
     display: flex;
@@ -13,48 +15,28 @@
     white-space: nowrap;
     flex-direction: row;
     margin-left: 100px;
-    width: 100vw;
-    height: 100vh;
-    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    overflow-y: auto
+
   }
-  
-  
-  .flex-item {
-    background: #de6954;
-    padding: 5px;
-    width: 200px;
-    height: 150px;
-    margin-top: 10px;
-    line-height: 150px;
-    color: white;
-    font-weight: bold;
-    font-size: 10px;
-  }
-  
-  /* FAQ */
   
   .faqcontainer {
     position: relative;
     width: 50%;
   }
   
-  .faqimage {
-    display: block;
-    width: 75%;
-    height: auto;
-    margin: 15px;
-  
-  }
   
   .overlay {
+    display:block;
     position: relative;
-    height: 95%;
-    width: 80%;
+    height: 96%;
+    width: 80.5%;
     opacity: 0;
-    transition: .9s ease;
+    transition: .8s ease;
     background-color: #4E91F4;
-  font-family: Courier;
-    color: #4E91F4;
+    word-wrap: break-word;
+    overflow-x:0;
   }
   
   .faqcontainer:hover .overlay {
@@ -62,22 +44,14 @@
   }
   
   .faqtext {
-    color: white;
-    font-size: 1.5vw;
-    font-weight: 400;
     position: relative;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-
-  .faqh1{
-    text-align: center;
-    font-size: 5vw;
-    margin: 30px;
+    padding: 2px;
+    color: white;
+    height: 96%;
+    width: 80.5%;
+    font-size: 1vw;
+    position: relative;
+    font-family: sans-serif;
   }
   
   .ques{
@@ -85,13 +59,10 @@
     border-style: solid;
     border-color: black;
     font-family: Galano,-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;;
-    display: block;
     height: 95%;
     width: 80%;
-    color:  black;
     font-size: 19px;
     font-weight: 700;
-    text-align: center;
-  
+    overflow-wrap: break-word;
   }
   

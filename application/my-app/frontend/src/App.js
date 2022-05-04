@@ -7,6 +7,7 @@ import Careers from './pages/Careers';
 import AI from './pages/Careers/AI';
 import JobPosting from './pages/JobPosting';
 import Profile from "./pages/Profile";
+import MyJobs from "./pages/MyJobs"
 import Qc from './pages/Careers/Qc';
 import Ec from './pages/Careers/Ec';
 import Form from './components/Form';
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
           <Route path="/profile" element={<Profile/>}/>
+          <Route path="/jobs" element={<MyJobs/>}/>
           <Route path="/AI" element={<AI/>}/>
           <Route path="/Qc" element={<Qc/>}/>
           <Route path="/Ec" element={<Ec/>}/>
