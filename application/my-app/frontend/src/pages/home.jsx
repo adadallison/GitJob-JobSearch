@@ -5,13 +5,15 @@ import Sidebar from '../components/Sidebar'
 import "../css/home.css";
 import "../css/careers.css";
 import NavBar from '../components/Navbar';
+import * as AiIcons from 'react-icons/ai';
+import * as BsIcons from 'react-icons/bs';
 import {useNotification} from "./Notifications/NotificationProvider";
-
 import {StudentButtons} from '../components/JobButtons';
 
 
 const Home = () => {
-//NOTIFICATION
+
+    //NOTIFICATION
 const [inputVal, setInputVal] = useState("");
 const dispatch = useNotification();
  
@@ -41,16 +43,25 @@ const handleNewNotification = () => {
                 setResData(res.data.result); // sets value
             });
     };
-
+    
     const popUp = () => {
-        console.log("HELLO")
+    };
+
+    const save = () => {
+        // if save button is clicked then it will check each post and if it sees that a post has been clicked, that post will be moved to an array of bookmarks
+        const bookmarks = [];
+        // console.log(resData)
+        for (key in resData){
+            if (title ===X){
+                bookmarks.concat(title);
+                console.log(bookmarks);
+            }
+        }
     };
 
     //generates search results
     useEffect(() => {
     }, []);
-
-
 
     return (
         <div>
@@ -66,10 +77,7 @@ const handleNewNotification = () => {
                 </div>
 
                 <div class="center-scroll">
-                    <div><div className="App">
-      <input type="text" value={inputVal} onChange={e => setInputVal(e.target.value)}/>
-      <button onClick={handleNewNotification}>Add Notification</button>
-    </div>
+                    <div>
                         <div className="search-container">
                             <form onSubmit={handleSubmit}>
                                 <input className="input-search" type="text" placeholder="Search" onChange={e => setTitle(e.target.value)} />
@@ -129,14 +137,14 @@ const handleNewNotification = () => {
 
                     {/* map function that loads results with the same format */}
                     {resData.map(post => (
-                        <div className='search-results-container' onClick={popUp}>
+                        <div  className='search-results-container' onClick={popUp}>
 
                             <div className='jobImage'>
                                 <img className='actualImage' src={post["job photo"]} />
                             </div>
 
 
-                            <div className='jobInfo'>
+                            <div key={post.toString()} className='jobInfo'>
                                 <div className='jobName'>Job Name: {post["job name"]}</div>
                                 <div>Job Field: {post["job field"]}</div>
                                 <div>Date Posted: {post["date posted"]}</div>
@@ -146,7 +154,16 @@ const handleNewNotification = () => {
                                 <div>Job Skills: {post["job skills"]}</div>
                             </div>
 
-                            <StudentButtons></StudentButtons>
+                            <div>
+                                <button onClick={save} value="savebutton">
+                                <BsIcons.BsBookmark />
+                                </button>
+
+                                <button href="">
+                                <AiIcons.AiOutlineAudit />
+                                </button>
+                               
+                            </div>
                         </div>
                     ))}
                 </div>
@@ -159,3 +176,4 @@ const handleNewNotification = () => {
 };
 
 export default Home;
+

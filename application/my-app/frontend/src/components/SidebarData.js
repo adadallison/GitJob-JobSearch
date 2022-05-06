@@ -92,7 +92,12 @@ export const companySidebar = [
         path: '/Resume',
         icon: <AiIcons.AiFillDatabase />,
         cName: 'nav-text'
-    }, 
+    },{
+        title: 'Profile',
+        path: '/profile',
+        icon: <AiIcons.AiFillProfile />,
+        cName: 'nav-text'
+    }
 
 ]
 
