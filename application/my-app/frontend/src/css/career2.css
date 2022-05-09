@@ -17,13 +17,15 @@
     margin-left: 100px;
     overflow-x: hidden;
     width: 100%;
-    overflow-y: auto
+    overflow-y: auto;
+    
 
   }
   
   .faqcontainer {
     position: relative;
     width: 50%;
+    white-space: pre-line; 
   }
   
   
@@ -41,6 +43,7 @@
   
   .faqcontainer:hover .overlay {
     opacity: 1;
+    
   }
   
   .faqtext {
@@ -56,8 +59,10 @@
   
   .ques{
     position: absolute;
+  
+    border-color: #4E91F4;
+    border-radius: 20px;
     border-style: solid;
-    border-color: black;
     font-family: Galano,-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;;
     height: 95%;
     width: 80%;

@@ -20,7 +20,7 @@ import Bc from './pages/Careers/Bc';
 import Cs from './pages/Careers/Cs';
 import G from './pages/Careers/G';
 import AdminDelete from './pages/AdminDelete';
-import CompanyDelete from './pages/CompanyDelete';
+
 
 const App = () => {
   return (
@@ -47,10 +47,11 @@ const App = () => {
           <Route path="/Resume" element={<Resume/>}/>
           <Route path="/JobPosting3" element={<Form4resume/>}/>
           <Route path="/AdminDelete" element={<AdminDelete/>}/>
-          <Route path="/CompanyDelete" element={<CompanyDelete/>}/>
+        
       
           
         </Routes>
+        
       </BrowserRouter>
     </div>
   );

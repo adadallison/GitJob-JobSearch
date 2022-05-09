@@ -30,9 +30,6 @@ const Profile = () => {
                     <div className='profileText'>Email: {window.localStorage.getItem('email')}</div>
                     <br></br>
                     <div className='profileText'>Skills: {window.localStorage.getItem('skills')}</div>
-                    <br></br>
-                    <div className='profileText'>Skills: {window.localStorage.getItem('id')}</div>
-
 
                 </div>
             </div>

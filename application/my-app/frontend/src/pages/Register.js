@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import "../css/login.css";
-
+import Footer from '../components/Footer';
+import NavBar from '../components/Navbar';
 function Register() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -22,8 +23,9 @@ function Register() {
     };
 
     return (
-        <div>
-            <div id="login" >GitJob</div>
+        <div className="page-container">
+      <div className="content-wrap"><div>
+      <NavBar></NavBar></div>
             <form onSubmit={handleSubmit}>
                 <div id="form">
                     <div><label name="name" required>Name  </label></div>
@@ -47,10 +49,16 @@ function Register() {
                     <input type="radio" value="Company" name='accountType'></input>Company
                 </div>
                 <div>
-                    <button type="submit">Register</button>
+                    <button type="submit">Register</button><a className="question">?
+                                    <span className="questionText">
+                                       Register by student or company to view more details.<br />
+                                       
+                                    </span>
+                                </a>
                 </div>
             </form>
-
+            </div>
+            <Footer/>
         </div>
     );
 }

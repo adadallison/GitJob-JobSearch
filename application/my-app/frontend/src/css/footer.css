@@ -1,0 +1,31 @@
+.main-footer {
+    color: white;
+    background-color: #4E91F4;
+    padding-top: 3em;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    
+  }
+
+
+  .col{
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+  }
+
+
+  .row{
+    text-align: center;
+
+    
+  }
+
+  .container{
+    text-align: center;
+    
+
+  }
