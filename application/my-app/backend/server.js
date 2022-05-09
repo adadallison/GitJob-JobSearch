@@ -17,6 +17,7 @@ app.use(express.json());
 // function to get jwt if it exists from client
 const getTokenFrom = request => {
     const authorization = request.get('authorization');
+
     if (authorization && authorization.toLowerCase().startsWith('bearer ')) {
         return authorization.substring(7);
     }
@@ -189,8 +190,24 @@ app.post("/login", async (req, res) => {
 
 // post job form
 app.post("/jobPost", (req, res) => {
-    console.log(req.body);
+    const token = getTokenFrom(req);
+
+    // if no jwt
+    if (token === null) {
+        return res.status(401).json({ error: 'unauthorized' });
+    }
+
+    // decode jwt
+    const decodedToken = jwt.verify(token, process.env.SECRET);
+
+    // verify jwt is correct type
+    if (decodedToken.type !== "Company") {
+        console.log("Here")
+        return res.status(401).json({ error: 'token missing or invalid' })
+    }
+
     const jobDesc = req.body.formData.jobdescription;
+    const accountId = +decodedToken.aid;
     const jobTitle = req.body.formData.jobtitle;
     const jobField = req.body.formData.jobs;
     const jobSalary = req.body.formData.pay;
@@ -201,16 +218,18 @@ app.post("/jobPost", (req, res) => {
         replace(/T/, ' ').      // replace T with a space
         replace(/\..+/, '');     // delete the dot and everything after
 
-    console.log(jobDesc, " ", jobTimeStamp, " ", jobTitle, " ", jobField, " ", jobSalary, " ", jobSkills);
-
+    console.log(jobDesc, " ", +accountId, " ", jobTimeStamp, " ", jobTitle, " ", jobField, " ", jobSalary, " ", jobSkills);
+    console.log("Type of accountId: ", typeof(accountId))
     // mysql query
-    var query = "INSERT INTO `job posts` (`job desc.`, `date posted`, `job name`, `job field`, `job salary`, `job skills`, `job location`) VALUES ( ? , ? , ? , ? , ? , ?, ?)";
+    let query = "INSERT INTO `job posts` (`job desc.`, `aid` , `date posted`, `job name`, `job field`,"
+        query += " `job salary`, `job skills`, `job location`) VALUES ( ? , ?, ? , ? , ? , ? , ?, ?)";
 
     pool.getConnection((err, connection) => {
         if (err) throw err;
 
         connection.query(query, [
             jobDesc,
+            accountId,
             jobTimeStamp,
             jobTitle,
             jobField,
@@ -279,7 +298,6 @@ app.get("/getCompanyPost", (req, res) => {
         return res.status(401).json({ error: 'token missing or invalid' })
     }
 
-    console.log("at pool");
     pool.getConnection((err, connection) => {
         const query = "SELECT * FROM `job posts` WHERE aid = ?";
         const aid = decodedToken.aid;

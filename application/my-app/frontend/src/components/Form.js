@@ -29,14 +29,21 @@ function Form() {
     const [formData, setFormData] = useReducer(formReducer, {});
     const [submitting, setSubmitting] = useState(false);
 
-    const handleSubmit = event => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         setSubmitting(true);
 
-        axios.post(baseUrl + ":3001/jobPost", { formData })
-            .then(res => {
-                console.log(res.data.result);
-            });
+        const getJWT = async () => {
+            return window.localStorage.getItem("accessToken");
+        }
+        
+        const JWT = await getJWT();
+        console.log(JWT);
+        axios.post(baseUrl + ":3001/jobPost", { 
+            formData 
+        }, {
+            headers: { "Authorization": `Bearer ${JWT}` },
+        });
 
         setTimeout(() => {
             setSubmitting(false);
