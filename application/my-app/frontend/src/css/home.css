@@ -203,3 +203,8 @@
 .question:hover .questionText {
   visibility: visible;
 }
+
+.plusButton{
+  color: #4CAF50;
+  margin-top: 7px;
+}

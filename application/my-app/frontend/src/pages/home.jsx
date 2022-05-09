@@ -6,9 +6,11 @@ import "../css/home.css";
 import "../css/careers.css";
 import NavBar from '../components/Navbar';
 import * as AiIcons from 'react-icons/ai';
+import * as CgIcons from 'react-icons/cg';
 import * as BsIcons from 'react-icons/bs';
 import { useNotification } from "./Notifications/NotificationProvider";
 import Popup from '../components/PopUp';
+
 
 
 const Home = () => {
@@ -208,9 +210,9 @@ const Home = () => {
                                 <div>Job Salary: {post["job salary"]}</div>
                                 <div>Job Des: {post["job desc."]}</div>
                                 <div>Job Skills: {post["job skills"]}</div>
-                                <button onClick={() => setButtonPopup(true)} >
-                                    <AiIcons.AiOutlinePlusCircle />
-                                </button>
+                                <div className="plusButton" onClick={() => setButtonPopup(true)} >
+                                    <CgIcons.CgMoreO size={28}/>
+                                </div>
 
                                 <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
                                     <p>Job Des: {post["job desc."]}</p>
