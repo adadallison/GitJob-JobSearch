@@ -29,8 +29,13 @@ const Home = () => {
     const [location, setLocation] = useState(""); //state variable for job field 
     const [skill, setSkill] = useState(""); //state variable for job field  
     const [resData, setResData] = useState([]);
+    const [tempPost, setTempPost] = useState({});
 
     const { baseUrl } = require("../config/config.js"); // retrieves site url where POST request is sent
+
+    //generates search results
+    useEffect(() => {
+    }, []);
 
     // event handler "handleSubmit" handles 'submit' button event
     const handleSubmit = (event) => {
@@ -56,6 +61,10 @@ const Home = () => {
             });
     };
 
+    const handlePopup = (post) => {
+        setButtonPopup(true);
+        setTempPost(post);
+    }
 
     // id and name in 'job posts' databse table were changed from 'job id and job name'
     const save = (e) => {
@@ -115,11 +124,6 @@ const Home = () => {
         // //if button of Job saved === job in arrayJobs then do somn to that specific job
 
     };
-
-
-    //generates search results
-    useEffect(() => {
-    }, []);
 
     return (
         <div>
@@ -234,21 +238,9 @@ const Home = () => {
                                 {/* <div>Job Des: {post["job desc."]}</div> */}
                                 {/* <div>Job Skills: {post["job skills"]}</div> */}
                                 <br></br>
-                                <div className="plusButton" onClick={() => setButtonPopup(true)} >
+                                <div className="plusButton" onClick={() => handlePopup(post)} >
                                     <CgIcons.CgMoreO size={28} />
                                 </div>
-
-                                <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-                                    <div>
-                                    <h4>Description</h4>
-                                    <div>{post["job location"]}</div> <br></br>
-                        
-                                    <p className='descriptionScroll'>
-                                    {post["job desc."]}
-                                        </p>
-                              
-                                    </div>
-                                </Popup>
 
                                 {/* <div className='faqcontainer1'>
                                 <div onClick={popUp} >
@@ -284,6 +276,18 @@ const Home = () => {
 
                     ))}
 
+                    <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+                        <div>
+                            <h4>Description</h4>
+                            <div>{tempPost["job location"]}</div> <br></br>
+
+                            <p className='descriptionScroll'>
+                                {tempPost["job desc."]}
+                            </p>
+
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172139.4161662446!2d-122.48214752341369!3d47.61294318323425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490102c93e83355%3A0x102565466944d59a!2sSeattle%2C%20WA!5e0!3m2!1sen!2sus!4v1652137186026!5m2!1sen!2sus" width="600" height="600" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </Popup>
 
                 </div>
 

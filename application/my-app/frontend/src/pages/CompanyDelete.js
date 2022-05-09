@@ -16,6 +16,7 @@ function CompanyDelete() {
             const getJWT = async () => {
                 return window.localStorage.getItem("accessToken");
             }
+            
             const JWT = await getJWT();
             await axios.get(baseUrl + ":3001/getCompanyPost", {
                 headers: { "Authorization": `Bearer ${JWT}` }
@@ -24,15 +25,14 @@ function CompanyDelete() {
                     console.log(res.data.result);
                     setResData(res.data.result); // sets value
                     console.log(resData);
-                });
+                }).catch(function(error) {
+                    console.log(error);
+                });;
+            return
         }
 
         getAllPost();
     }, [])
-
-    if (resData == undefined) {
-        return null;
-    }
 
     const deletePost = async (postId) => {
         const getJWT = async () => {

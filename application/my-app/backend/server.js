@@ -185,7 +185,7 @@ app.post("/login", async (req, res) => {
         process.env.SECRET,
     );
 
-    res.send({ token, name: user.name, type: user.type });
+    res.send({ token, name: user.name, type: user.type , email: user.email});
 });
 
 // post job form
