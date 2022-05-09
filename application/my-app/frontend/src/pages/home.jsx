@@ -242,7 +242,7 @@ const Home = () => {
                                     <p>
                                     <h4>Description</h4>
                                     <div>{post["job location"]}</div> <br></br>
-                                    {post["job desc."]}sdlkcjdslkndssanfnanfinaiofnaoilnfrklfrncpeivnpknvpkane vpkineafvkva
+                                    {post["job desc."]}
                                     </p>
                                 </Popup>
 
