@@ -178,6 +178,9 @@
     "dev": "nodemon server.js",
     "production": "NODE_ENV=production node server.js"
   },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
   "author": "",
   "license": "ISC"
 }

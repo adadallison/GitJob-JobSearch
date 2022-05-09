@@ -143,7 +143,7 @@ const Home = () => {
                                 {/* field drown down */}
                                 <select id="field" name="field" onChange={e => setField(e.target.value)}>
                                     <option value="">Select field</option>
-                                    <option value="Artificial Intelligence and Machine Learning">Artificial Intelligence and Machine Learning</option>
+                                    <option value="AI and ML">Artificial Intelligence and Machine Learning</option>
                                     <option value="Robotic Process Automation">Robotic Process Automation</option>
                                     <option value="Edge Computing">Edge Computing</option>
                                     <option value="Quantum Computing">Quantum Computing</option>
@@ -157,26 +157,26 @@ const Home = () => {
                                 {/* location drown down */}
                                 <select id="locations" name="field" onChange={e => setLocation(e.target.value)}>
                                     <option value="">Select location</option>
-                                    <option value="San Francisco">San Francisco, CA</option>
-                                    <option value="Palo Alto">Palo Alto, CA</option>
-                                    <option value="San Diego">San Diego, CA</option>
-                                    <option value="Phoenix">Phoenix, AZ</option>
-                                    <option value="Las Vegas">Las Vegas, NV</option>
-                                    <option value="Chicago">Chicago, IL</option>
-                                    <option value="Los Angeles">Los Angeles, CA</option>
-                                    <option value="Seattle">Seattle, WA</option>
-                                    <option value="Austin">Austin, TX</option>
-                                    <option value="New York">New York, NY</option>
-                                    <option value="Atlanta">Atlanta, Florida</option>
-                                    <option value="Orlando">Orlando, Florida</option>
+                                    <option value="San Francisco, CA">San Francisco, CA</option>
+                                    <option value="Palo Alto, CA">Palo Alto, CA</option>
+                                    <option value="San Diego, CA">San Diego, CA</option>
+                                    <option value="Phoenix, AZ">Phoenix, AZ</option>
+                                    <option value="Las Vegas, NV">Las Vegas, NV</option>
+                                    <option value="Chicago, IL">Chicago, IL</option>
+                                    <option value="Los Angeles, CA">Los Angeles, CA</option>
+                                    <option value="Seattle, WA">Seattle, WA</option>
+                                    <option value="Austin, TX">Austin, TX</option>
+                                    <option value="New York, NY">New York, NY</option>
+                                    <option value="Atlanta, FL">Atlanta, FL</option>
+                                    <option value="Orlando, FL">Orlando, FL</option>
                                     <option value="Tampa">Tampa, Florida</option>
-                                    <option value="Alexandria">Alexandria, VA</option>
-                                    <option value="Washington">Washington, D.C</option>
-                                    <option value="Portland">Portland, OR</option>
-                                    <option value="Houston">Houston, TX</option>
-                                    <option value="Boston">Boston, Massachusetts</option>
-                                    <option value="Denver">Denver, Colorado</option>
-                                    <option value="Boise">Boise, Idaho</option>
+                                    <option value="Alexandria, VA">Alexandria, VA</option>
+                                    <option value="Washington, D.C.">Washington, D.C.</option>
+                                    <option value="Portland, OR">Portland, OR</option>
+                                    <option value="Houston, TX">Houston, TX</option>
+                                    <option value="Boston, MA">Boston, Massachusetts</option>
+                                    <option value="Denver, CO">Denver, CO</option>
+                                    <option value="Boise, ID">Boise, ID</option>
 
                                 </select>
 
