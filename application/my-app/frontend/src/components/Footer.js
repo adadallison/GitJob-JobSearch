@@ -3,32 +3,44 @@ import "../css/footer.css";
 import * as AiIcons from 'react-icons/ai';
 function Footer() {
   return (
-    <div className="main-footer">
-      <div className="container">
-        <div className="row">
-          {/* Column1 */}
-          <div className="col">
-            <h3><AiIcons.AiFillCaretRight />Gitjob Inc</h3>
-            <h5 className="list-unstyled">
-              <h3>
-            
-        342-420-6969</h3>
-              <h3>Moscow, Russia</h3>
-              <h3>123 Streeet South North</h3>
-           <h3>&copy; Gitjob |All rights reserved|
-            Terms Of Service|Privacy</h3>
-          
-          
-          
-              
-            </h5>
+
+    <div>
+
+      <footer>
+
+        <section class="social">
+
+          <div class="rows">
+            GitJob ©
+
           </div>
-        </div>
-        
-        {/* Column2 */}
-       
-      </div>
+
+          <div class="rows">
+            San Francisco State University |
+            1600 Holloway Avenue . San Francisco . CA 94132
+
+          </div>
+
+
+          <div class="rows">
+
+            <a className="socials" href="https://facebook.com">
+              <AiIcons.AiOutlineFacebook size={30} ></AiIcons.AiOutlineFacebook>
+            </a>
+            <a className="socials" href="https://twitter.com">
+              <AiIcons.AiOutlineTwitter size={30} ></AiIcons.AiOutlineTwitter>
+            </a>
+            <a className="socials" href="https://instagram.com" id="insta">
+              <AiIcons.AiOutlineInstagram size={30}></AiIcons.AiOutlineInstagram>
+            </a>
+          </div>
+
+        </section>
+
+      </footer>
     </div>
+
+
   );
 }
 

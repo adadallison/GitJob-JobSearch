@@ -18,47 +18,46 @@ function Register() {
         axios.post(baseUrl + ":3001/register", { name, email, password, repassword, type })
             .then(res => {
                 console.log(res.data.result);
-                window.location.href="/login";
+                window.location.href = "/login";
             });
     };
 
     return (
         <div className="page-container">
-      <div className="content-wrap"><div>
-      <NavBar></NavBar></div>
-            <form onSubmit={handleSubmit}>
-                <div id="form">
-                    <div><label name="name" required>Name  </label></div>
-                    <input input className="input" type="text" required name="name" onChange={e => setName(e.target.value)}></input>
-                </div>
-                <div id="form">
-                    <div><label name="email" required>Email  </label></div>
-                    <input input className="input" type="text" required name="email" onChange={e => setEmail(e.target.value)}></input>
-                </div>
-                <div id="form">
-                    <div><label name="password" required>Password</label></div>
-                    <input input className="input" type="password" required name="password" onChange={e => setPassword(e.target.value)}></input>
-                </div>
-                <div id="form">
-                    <div><label name="password" required>Confirm Password</label></div>
-                    <input input className="input" type="password" required name="password" onChange={e => setRepassword(e.target.value)}></input>
-                </div>
-                <div id="form" required onChange={e => setType(e.target.value)}>
-                    <input type="radio" value="Student" name='accountType'></input>Student
-                    {/* <input type="radio" value="Recruiter" name='accountType'></input>Recruiter */}
-                    <input type="radio" value="Company" name='accountType'></input>Company
-                </div>
-                <div>
-                    <button type="submit">Register</button><a className="question">?
-                                    <span className="questionText">
-                                       Register by student or company to view more details.<br />
-                                       
-                                    </span>
-                                </a>
-                </div>
-            </form>
+            <div className="content-wrap"><div>
+                <NavBar></NavBar></div>
+                <form onSubmit={handleSubmit}>
+                    <div id="form">
+                        <div><label className='textInput' name="name" required>Name </label></div>
+                        <input input placeholder='e.g. Jane Doe' className="regInput" type="text" required name="name" onChange={e => setName(e.target.value)}></input>
+                    </div>
+                    <div id="form">
+                        <div><label className='textInput' name="email" required>Email  </label></div>
+                        <input input placeholder='e.g. janedoe@email.com' className="regInput" type="text" required name="email" onChange={e => setEmail(e.target.value)}></input>
+                    </div>
+                    <div id="form">
+                        <div><label className='textInput' name="password" required>Password</label></div>
+                        <input input className="regInput" type="password" required name="password" onChange={e => setPassword(e.target.value)}></input>
+                    </div>
+                    <div id="form">
+                        <div><label className='textInput' name="password" required>Confirm Password</label></div>
+                        <input input className="regInput" type="password" required name="password" onChange={e => setRepassword(e.target.value)}></input>
+                    </div>
+                    
+                    <div id="form" required onChange={e => setType(e.target.value)}>
+                        <input type="radio" value="Student" name='accountType'></input>Student
+                        <input type="radio" value="Company" name='accountType'></input>Company
+                    </div>
+                    <div>
+                        <button type="submit">Register</button><a className="question">?
+                            <span className="questionText">
+                                Register by student or company to view more details
+                            </span>
+                        </a>
+                    </div>
+                </form>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     );
 }

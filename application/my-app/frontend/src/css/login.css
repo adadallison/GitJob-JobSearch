@@ -1,4 +1,4 @@
-#login{
+#login {
     position: sticky;
     background: #4E91F4;
     height: 100px;
@@ -7,59 +7,77 @@
     color: white;
 }
 
-#form{
+#form {
     display: block;
     margin: 40px;
     font-family: 'Courier New', Courier, monospace;
 }
 
-.input{
+.loginInput {
     border-radius: 20px;
-    border-width: 1.5px;
-    height: 20px;
-    width: 170px;
-    
+    border-width: 2px;
+    border-color: #4CAF50;
+    border-style: solid;
+    height: 36px;
+    font-size: 18px;
+    width: 320px;
+    margin: 10px;
 }
 
-label{
-    color: rgba(0,0,0,0.6);
+label {
+    color: rgba(0, 0, 0, 0.6);
     font-family: 'Courier New', Courier, monospace;
-    
+
 }
 
-button{
+button {
     margin-top: 20px;
 
 }
-h1{
+
+h1 {
 
     font-weight: normal;
 
 }
- h2{
+
+h2 {
     font-weight: normal;
     width: 130px;
- }
+}
 
- .page-container {
+.page-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
- 
-   
-    
-  }
-  .content-wrap {
+}
+
+.content-wrap {
     flex: 1;
-    
-  }
- 
-h3{
+
+}
+
+h3 {
     display: table-cell;
-        width: 490px;
-        height: 200px;
-        padding:1px;
-        
-       
+    width: 490px;
+    height: 200px;
+    padding: 1px;
+}
+
+/* Register */
+
+.textInput{
+    font-family: sans-serif;
     
+}
+
+.regInput {
+    border-radius: 20px;
+    border-width: 2px;
+    border-color: #4CAF50;
+    border-style: solid;
+    height: 30px;
+    font-size: 18px;
+    width: 300px;
+
 }
