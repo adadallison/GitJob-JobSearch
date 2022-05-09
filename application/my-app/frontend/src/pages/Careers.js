@@ -19,10 +19,15 @@ const Careers = () => {
                     <Sidebar>
                     </Sidebar>
                 </div>
-
+                <a className="question">?
+                                    <span className="questionText">
+                                        Brief background on the jobs.<br />
+                                       
+                                    </span>
+                                </a>
                 <div class=" faqflex">
 
-                    <div class="faqcontainer">
+                    <div class="faqcontainer" >
 
                         <p class="ques">
                             Artificial Intelligence and Machine Learning

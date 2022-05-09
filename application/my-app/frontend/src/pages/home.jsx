@@ -5,10 +5,9 @@ import Sidebar from '../components/Sidebar'
 import "../css/home.css";
 import "../css/careers.css";
 import NavBar from '../components/Navbar';
+import * as AiIcons from 'react-icons/ai';
+import * as BsIcons from 'react-icons/bs';
 import {useNotification} from "./Notifications/NotificationProvider";
-
-import {StudentButtons} from '../components/JobButtons';
-
 
 const Home = () => {
 //NOTIFICATION
@@ -21,6 +20,12 @@ const handleNewNotification = () => {
     message: inputVal,
     title: "Successful Request"})
   }
+  //removefunction
+  const handleRemoveClick = index => {
+    const list = [...inputList];
+    list.splice(index, 1);
+    setInputList(list);
+  };
 
 
     const [title, setTitle] = useState(""); //state variable for job title 
@@ -146,7 +151,18 @@ const handleNewNotification = () => {
                                 <div>Job Skills: {post["job skills"]}</div>
                             </div>
 
-                            <StudentButtons></StudentButtons>
+                            <div>
+                                <button href="">
+                                <BsIcons.BsBookmark />
+                                </button>
+
+                                <button href="">
+                                <AiIcons.AiOutlineAudit />
+                                </button>
+                               
+                            </div>
+
+                           
                         </div>
                     ))}
                 </div>
