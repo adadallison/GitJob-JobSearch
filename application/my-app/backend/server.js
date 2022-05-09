@@ -7,19 +7,28 @@ const bcrypt = require('bcrypt');
 const buffer = require('buffer');
 const multer = require('multer');
 
-const app = express(); 
+const app = express();
 
-const {pool} = require('./models/pool.js');
+const { pool } = require('./models/pool.js');
 
-app.use(cors({origin: "*"}));
+app.use(cors({ origin: "*" }));
 app.use(express.json());
+
+// function to get jwt if it exists from client
+const getTokenFrom = request => {
+    const authorization = request.get('authorization');
+    if (authorization && authorization.toLowerCase().startsWith('bearer ')) {
+        return authorization.substring(7);
+    }
+    return null;
+}
 
 app.post("/search", (req, res) => {
     console.log(req.body);
-    
+
     pool.getConnection(async (err, connection) => {
         if (err) throw err;
-        
+
         let query = "SELECT * FROM `job posts`";
         let add = ' WHERE';
         let param = [];
@@ -28,47 +37,49 @@ app.post("/search", (req, res) => {
         const field = req.body.field;
         const location = req.body.location;
         const skill = req.body.skill;
-    
-        if(title != ""){
+
+        if (title != "" && title != undefined) {
             query += add + " `job name` LIKE concat('%', ?, '%')";
             param.push(title);
             add = ' AND';
         }
 
-        if(field != ""){
+        if (field != "" && field != undefined) {
             query += add + " `job field` LIKE concat('%', ?, '%')";
             param.push(field);
             add = ' AND';
         }
 
-        if(location != ""){
+        if (location != "" && location != undefined) {
             query += add + " `job location` LIKE concat('%', ?, '%')";
             param.push(location);
             add = ' AND';
         }
 
-        if(skill != ""){
+        if (skill != "" && skill != undefined) {
             query += add + " `job skills` LIKE concat('%', ?, '%')";
             param.push(skill);
             add = ' AND';
         }
 
         validateStatus = true;
-        if(title.length > 40){
+        if (title.length > 40) {
             validateStatus = false;
-        }else if(field.length > 40){
+        } else if (field.length > 40) {
             validateStatus = false;
         }
 
-        if(validateStatus){
-            connection.query(query, param, (err,result) => {
+        console.log(validateStatus, query)
+
+        if (validateStatus) {
+            connection.query(query, param, (err, result) => {
                 if (err) throw err;
                 result.map(e => {
-                    if(e['job photo'] != null)
+                    if (e['job photo'] != null)
                         e['job photo'] = "data:image;base64," + Buffer.from(e['job photo']).toString('base64');
                     return e;
                 });
-                res.json({result});
+                res.json({ result });
             });
         }
         connection.release();
@@ -78,28 +89,28 @@ app.post("/search", (req, res) => {
 app.post("/register", async (req, res) => {
     var email = req.body["email"];
     var type = req.body["type"];
-    var name = req.body["name"]; 
+    var name = req.body["name"];
     var password = req.body["password"];
     var repassword = req.body["repassword"];
 
     console.log(req.body);
 
     var resultStatus = true;
-    
+
     // Validate username and password
-    if (type.length == 0 || type.length > 7){
+    if (type.length == 0 || type.length > 7) {
         resultStatus = false;
-    }else if(name.length == 0 || name.length > 30){
+    } else if (name.length == 0 || name.length > 30) {
         resultStatus = false;
-    }else if(password.length == 0 || password.length > 30){
+    } else if (password.length == 0 || password.length > 30) {
         resultStatus = false;
-    }else if(password.normalize() !== repassword.normalize()){
+    } else if (password.normalize() !== repassword.normalize()) {
         resultStatus = false;
     }
-    
-    if(resultStatus){
+
+    if (resultStatus) {
         var query = "INSERT INTO accounts (email, type, name, password) VALUES ( ? , ? , ? , ?)";
-        
+
         bcrypt.hash(password, 10, (err, hash) => {
             if (err) throw err;
 
@@ -108,29 +119,20 @@ app.post("/register", async (req, res) => {
                 type,
                 name,
                 hash
-            ],(err,result) => {
+            ], (err, result) => {
                 if (err) throw err;
             });
 
         });
 
         res.status(201).send();
-    }else{
+    } else {
         res.status(400).send();
     }
 });
 
-// function to get jwt if it exists from client
-const getTokenFrom = (request) => {
-    const authorization = request.get('authorization');
-    if(authorization && authorization.toLowerCase().startsWith('')){
-        return authorization.substring(7);
-    }
-    return null;
-};
-
 app.post("/login", async (req, res) => {
-    const {email, password} = req.body;
+    const { email, password } = req.body;
 
     // check to see if user name and password matches with one in db
     const findUser = (pool, email) => {
@@ -144,13 +146,13 @@ app.post("/login", async (req, res) => {
     }
 
     var user = await findUser(pool, email);
-    if(user == undefined){
+    if (user == undefined) {
         console.log("Here")
         res.status(400);
         res.send("Cannot find user.");
         return
     }
-    
+
     console.log("Here4 " + JSON.stringify(user));
 
     console.log(await bcrypt.compare(password, user.password));
@@ -158,12 +160,12 @@ app.post("/login", async (req, res) => {
     console.log("password " + password);
     console.log("user password " + user.type);
 
-    const passwordResult = await user === undefined 
-        ? false 
+    const passwordResult = await user === undefined
+        ? false
         : await bcrypt.compare(password, user.password);
 
     // if username or password doesn't match send error to client
-    if(!(user && passwordResult)){
+    if (!(user && passwordResult)) {
         console.log("bad request");
         return res.status(400).send("Invalid username or password");
     }
@@ -176,11 +178,11 @@ app.post("/login", async (req, res) => {
     // creates jwt token
     const token = jwt.sign(
         infoForToken,
-        process.env.SECRET, 
+        process.env.SECRET,
         { expiresIn: 60 * 60 }
     );
 
-    res.send({ token, name: user.name , type: user.type});
+    res.send({ token, name: user.name, type: user.type });
 });
 
 // post job form
@@ -195,7 +197,7 @@ app.post("/jobPost", (req, res) => {
     const jobTimeStamp = req.body.formData.jobTimeStamp;
 
     console.log(jobDesc, " ", jobTimeStamp, " ", jobTitle, " ", jobField, " ", jobSalary, " ", jobSkills);
-    
+
     // mysql query
     var query = "INSERT INTO `job posts` (`job desc.`, `date posted`, `job name`, `job field`, `job salary`, `job skills`, `job location`) VALUES ( ? , ? , ? , ? , ? , ?, ?)";
 
@@ -222,5 +224,37 @@ app.post("/postResume", multer().none(), (req, res) => {
     console.log("In post resume");
     console.log("req.body: ", req.body);
 });
+
+app.delete("/deletePost", (req, res) => {
+    const token = getTokenFrom(req);
+    
+    // if no jwt
+    if(token === null){
+        return res.status(401).json({error: 'unauthorized'});
+    }
+
+    // verify jwt
+    const decodedToken = jwt.verify(token, process.env.SECRET);
+    console.log(JSON.stringify(decodedToken))
+    if (decodedToken.type !== "Admin") {
+        console.log("Here")
+      return res.status(401).json({ error: 'token missing or invalid' })
+    }
+
+    pool.getConnection((err, connection) => {
+        if (err) throw err;
+        const query = "DELETE FROM `job posts` WHERE id = ?";
+        connection.query(query, [
+            req.body["postId"]
+        ], (err, result) => {
+            if (err) throw err;
+        });
+
+        connection.release();
+    });
+
+    res.send("success");
+});
+
 
 app.listen(process.env.PORT);
