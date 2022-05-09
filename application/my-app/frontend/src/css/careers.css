@@ -37,7 +37,6 @@
   
 
 
-
 .question2{
   display: inline-block;
   padding: 10px;
@@ -86,19 +85,16 @@
 }
 
 .faqflex{
+  display: flex;
   padding: 30px;
   justify-content: space-evenly;
   position: center;
-  display: flex;
   flex-wrap: wrap;
   white-space: nowrap;
   flex-direction: row;
-  margin-left: 100px;
   overflow-x: hidden;
   width: 100%;
   overflow-y: auto;
-  
-
 }
 
 .faqcontainer {
@@ -108,37 +104,17 @@
 }
 
 
-.overlay {
-  display:block;
-  position: relative;
-  height: 96%;
-  width: 80.5%;
-  opacity: 0;
-  transition: .8s ease;
-  background-color: #4E91F4;
-  word-wrap: break-word;
-  overflow-x:0;
-}
-
 .faqcontainer:hover .overlay {
   opacity: 1;
   
 }
 
-.faqtext {
-  position: relative;
-  padding: 2px;
-  color: white;
-  height: 96%;
-  width: 80.5%;
-  font-size: 1vw;
-  position: relative;
-  font-family: sans-serif;
-}
 
 .ques{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-
   border-color: #4E91F4;
   border-radius: 20px;
   border-style: solid;
@@ -148,4 +124,29 @@
   font-size: 19px;
   font-weight: 700;
   overflow-wrap: break-word;
+}
+
+.overlay {
+  display: block;
+  position: relative;
+  margin-top: 20px;
+  padding: 5px;
+  height: 90%;
+  width: 79%;
+  opacity: 0;
+  transition: .7s ease;
+  background-color: #4E91F4;
+  word-wrap: break-word;
+  border-radius: 19px;
+  overflow-x:0;
+}
+
+.faqtext {
+  position: absolute;
+  color: white;
+  height: 96%;
+  width: 100%;
+  font-size: 1vw;
+  position: relative;
+  font-family: sans-serif;
 }
