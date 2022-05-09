@@ -36,9 +36,116 @@
   }
   
 
-.question{
-  left: 50px;
-  top: 30px;
+
+
+.question2{
+  display: inline-block;
+  padding: 10px;
+  padding-top: 5px;
+  margin-top: 15px;
+  margin-left: 15px;
+  border: #4E91F4;
+  color: #4E91F4;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 160px;
+  width: 11px;
+  height: 11px;
+  font-family: sans-serif;
   font-weight: bold;
+}
+
+
+.question2 .questionText2 {
+  position: absolute;
+  visibility: hidden;
+  height: fit-content;
+  width: fit-content;
+  text-align: left;
+  margin: auto;
+  background-color: whitesmoke;
+  color: #4E91F4 ;
+  font-size: small;
+  font-weight: lighter;
+  font-family: sans-serif;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+
+.question2:hover .questionText2 {
+  visibility: visible;
+}
+
+/* FAQ */
   
+.flex-container {
+  display: flex;
+  position: relative;
+  
+}
+
+.faqflex{
+  padding: 30px;
+  justify-content: space-evenly;
+  position: center;
+  display: flex;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  flex-direction: row;
+  margin-left: 100px;
+  overflow-x: hidden;
+  width: 100%;
+  overflow-y: auto;
+  
+
+}
+
+.faqcontainer {
+  position: relative;
+  width: 50%;
+  white-space: pre-line; 
+}
+
+
+.overlay {
+  display:block;
+  position: relative;
+  height: 96%;
+  width: 80.5%;
+  opacity: 0;
+  transition: .8s ease;
+  background-color: #4E91F4;
+  word-wrap: break-word;
+  overflow-x:0;
+}
+
+.faqcontainer:hover .overlay {
+  opacity: 1;
+  
+}
+
+.faqtext {
+  position: relative;
+  padding: 2px;
+  color: white;
+  height: 96%;
+  width: 80.5%;
+  font-size: 1vw;
+  position: relative;
+  font-family: sans-serif;
+}
+
+.ques{
+  position: absolute;
+
+  border-color: #4E91F4;
+  border-radius: 20px;
+  border-style: solid;
+  font-family: Galano,-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;;
+  height: 95%;
+  width: 80%;
+  font-size: 19px;
+  font-weight: 700;
+  overflow-wrap: break-word;
 }

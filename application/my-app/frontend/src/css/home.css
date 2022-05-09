@@ -166,7 +166,6 @@
 }
 
 .question{
-  position: relative;
   display: inline-block;
   padding: 10px;
   padding-top: 5px;
@@ -206,5 +205,5 @@
 
 .plusButton{
   color: #4CAF50;
-  margin-top: 7px;
+  margin-top: px;
 }

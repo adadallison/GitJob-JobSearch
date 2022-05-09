@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import "../css/careers.css";
-import "../css/career2.css";
 import NavBar from '../components/Navbar';
 
 
@@ -19,12 +18,18 @@ const Careers = () => {
                     <Sidebar>
                     </Sidebar>
                 </div>
-                <a className="question">?
-                                    <span className="questionText">
-                                        Brief background on the jobs.<br />
-                                       
-                                    </span>
-                                </a>
+                
+                <a className="question2">?
+                    <span className="questionText2">
+                        Brief background <br/>
+                        on the different <br/>
+                        career fields for <br/> 
+                        jobs posted.
+
+                    </span>
+                </a>
+
+
                 <div class=" faqflex">
 
                     <div class="faqcontainer" >
