@@ -24,7 +24,9 @@ const MyJobs = () => {
                 <Sidebar>
                 </Sidebar>
                 <div className='jobs'>
-                    
+                
+                    <div className='profileText'>Saved: {window.localStorage.getItem('savedJob')}</div>
+
 
                 </div>
             </div>
