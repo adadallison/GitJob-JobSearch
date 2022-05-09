@@ -85,6 +85,7 @@
 }
 
 .faqflex{
+  margin-left: 89px;
   display: flex;
   padding: 30px;
   justify-content: space-evenly;
