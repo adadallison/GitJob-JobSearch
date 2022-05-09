@@ -62,107 +62,127 @@ function Form() {
   return (
 
     <div>
-      <NavBar/>
-
-  
-    <div className='container'> 
-      <Sidebar/>
+      <NavBar />
 
 
-      <div className="JobPosting2">
-        {submitting &&
-          <div>You are submitting the following:
-            <ul>
-              {Object.entries(formData).map(([name, value]) => (
-                <li key={name}><strong>{name}</strong>:{value.toString()}</li>
-              ))}
-            </ul></div>
-        }
-
-        <form onSubmit={handleSubmit}>
-
-          <fieldset>
-            <label>
-              <p>Company</p>
-              <input name="company" onChange={handleChange} value={formData.company || ''} />
-            </label>
-            <label>
-              <p>Job Title</p>
-              <input name="jobtitle" onChange={handleChange} value={formData.jobtitle || ''} />
-            </label>
-            <label>
-              <p>Pay</p>
-              <input name="pay" onChange={handleChange} value={formData.pay || ''} />
-            </label>
-            <label>
-              <p>Job Description </p>
-              <textarea name="jobdescription" onChange={handleChange} value={formData.jobdescription || ''} />
-            </label>
-            <label>
-              <p>Logo</p>
-              <input name="logo" type="file" onChange={handleChange} value={formData.logo || ''} />
-            </label>
-            <label>
-              <p>Jobs</p>
-              <select name="jobs" onChange={handleChange} value={formData.jobs || ''}>
-                <option value=" ">--Please choose a job--</option>
-                <option value="AI and ML">Artificial Intelligence and Machine Learning</option>
-                <option value="Robotic Process Automation">Robotic Process Automation</option>
-                <option value="IoT">Internet Of Things</option>
-                <option value="5G">5G</option>
-                <option value="Virtual Augmented Reality">Virtual Augmented Reality</option>
-                <option value="Blockchain">Blockchain</option>
-                <option value="Quantum Computing">Quantum Computing</option>
-                <option value="Edge Computing">Edge Computing</option>
-                <option value="Cyber Security">Cyber Security</option>
-              </select>
-            </label>
+      <div className='container'>
+        <Sidebar />
 
 
-            <label>
-              <p>Location</p>
-              <select name="location" onChange={handleChange} value={formData.location || ''}>
-                <option value="">--Please choose a location--</option>
-                <option value="California">California</option>
-                <option value="Seattle">Seattle</option>
-                <option value="Texas">Texas</option>
-                <option value="New York">New York</option>
-                <option value="Florida">Florida</option>
-                <option value="Virginia">Virginia</option>
-                <option value="Washington State">Washington State</option>
-              </select>
-            </label>
+        <div className="JobPosting2">
+          {submitting &&
+            <div>You are submitting the following:
+              <ul>
+                {Object.entries(formData).map(([name, value]) => (
+                  <li key={name}><strong>{name}</strong>:{value.toString()}</li>
+                ))}
+              </ul></div>
+          }
+
+          <form onSubmit={handleSubmit}>
+
+            <fieldset className='fieldset'>
+              <label>
+                <p className='jobForm'>Company</p>
+                <input className='input-search' placeholder='Enter company name' name="company" onChange={handleChange} value={formData.company || ''} />
+              </label>
+              <label>
+                <p className='jobForm'>Job Title</p>
+                <input className='input-search' placeholder='Enter postion title' name="jobtitle" onChange={handleChange} value={formData.jobtitle || ''} />
+              </label>
+              <label>
+                <p className='jobForm' >Salary</p>
+                <input className='input-search' placeholder='e.g. 100K-200K' name="pay" onChange={handleChange} value={formData.pay || ''} />
+              </label>
+              <label>
+                <p className='jobForm'>Job Description </p>
+                <textarea className='textarea' placeholder='Enter detailed job description' name="jobdescription" onChange={handleChange} value={formData.jobdescription || ''} />
+              </label>
+              <label>
+                <p className='jobForm'>Company Logo</p>
+                <input name="logo" type="file" onChange={handleChange} value={formData.logo || ''} />
+              </label>
+              <label>
+                <p className='jobForm'>Job Field</p>
+                <select name="jobs" onChange={handleChange} value={formData.jobs || ''}>
+                  <option value=" ">Select field</option>
+                  <option value="Artificial Intelligence and Machine Learning">Artificial Intelligence and Machine Learning</option>
+                  <option value="Robotic Process Automation">Robotic Process Automation</option>
+                  <option value="Internet of Things">Internet Of Things</option>
+                  <option value="5G">5G</option>
+                  <option value="Virtual Augmented Reality">Virtual Augmented Reality</option>
+                  <option value="Blockchain">Blockchain</option>
+                  <option value="Quantum Computing">Quantum Computing</option>
+                  <option value="Edge Computing">Edge Computing</option>
+                  <option value="Cyber Security">Cyber Security</option>
+                </select>
+              </label>
 
 
-            <label>
-              <p>Skills</p>
-              <select name="skill" onChange={handleChange} value={formData.skill || ''} >
-                <option value="">--Please choose a skill--</option>
-                <option value="C++">C++</option>
-                <option value="Java">Java</option>
-                <option value="Excel">Excel</option>
-                <option value="Python">Python</option>
-                <option value="JavaScript">Java Script</option>
-              </select>
-            </label>
+              <label>
+                <p className='jobForm'>Location</p>
+                <select name="location" onChange={handleChange} value={formData.location || ''}>
+                  <option value="">Select location</option>
+                  <option value="San Francisco">San Francisco, CA</option>
+                  <option value="Palo Alto">Palo Alto, CA</option>
+                  <option value="San Diego">San Diego, CA</option>
+                  <option value="Phoenix">Phoenix, AZ</option>
+                  <option value="Las Vegas">Las Vegas, NV</option>
+                  <option value="Chicago">Chicago, IL</option>
+                  <option value="Los Angeles">Los Angeles, CA</option>
+                  <option value="Seattle">Seattle, WA</option>
+                  <option value="Austin">Austin, TX</option>
+                  <option value="New York">New York, NY</option>
+                  <option value="Atlanta">Atlanta, Florida</option>
+                  <option value="Orlando">Orlando, Florida</option>
+                  <option value="Tampa">Tampa, Florida</option>
+                  <option value="Alexandria">Alexandria, VA</option>
+                  <option value="Washington">Washington, D.C</option>
+                  <option value="Portland">Portland, OR</option>
+                  <option value="Houston">Houston, TX</option>
+                  <option value="Boston">Boston, Massachusetts</option>
+                  <option value="Denver">Denver, Colorado</option>
+                  <option value="Boise">Boise, Idaho</option>
+                  
+                </select>
+              </label>
 
-            <label>
-              <button type="submit">Submit</button><a className="question">?
-                                    <span className="questionText">
-                                        Post a job to find new recruits.<br />
-                                       
-                                    </span>
-                                </a>
-            </label>
 
-          </fieldset>
+              <label>
+                <p className='jobForm'>Skills</p>
+                <select name="skill" onChange={handleChange} value={formData.skill || ''} >
+                  <option value="">Select skill</option>
+                  <option value="C++">C++</option>
+                  <option value="Java">Java</option>
+                  <option value="Excel">Excel</option>
+                  <option value="Python">Python</option>
+                  <option value="JavaScript">JavaScript</option>
+                  <option value="Go">Go</option>
+                  <option value="C#">C#</option>
+                  <option value="React.js">React.js</option>
+                  <option value="Ruby">Ruby</option>
+                  <option value="Swift">Swift</option>
+                </select>
+              </label>
+
+              <label>
+                <button type="submit">Submit</button><a className="question">?
+                  <span className="questionText">
+                    Fill out all the fields<br/>
+                    to find elegible job candidates!<br/>
+                    Press 'Submit' to post the job.
+                  </span>
+                </a>
+              </label>
+
+            </fieldset>
 
 
-        </form>
+          </form>
+        </div>
+
       </div>
-
-      </div>
-      </div>
+    </div>
   )
 }
 

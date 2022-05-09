@@ -1,36 +1,36 @@
 .container {
-    display: flex;
-    position: relative;
-  }
-  
-  /* make the center item scrollable somehow like twitter, and the side nav is just sticky */
-  
-   .center-scroll { 
-    flex-direction: column;
-    display: flex;
-    justify-content: center safe;
-    flex-wrap: nowrap;
-    white-space: nowrap;
-    overflow-y: auto;
-    width: 100vw;
-    height: 100vh;
-  }
+  display: flex;
+  position: relative;
+}
+
+/* make the center item scrollable somehow like twitter, and the side nav is just sticky */
+
+.center-scroll {
+  flex-direction: column;
+  display: flex;
+  justify-content: center safe;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-y: auto;
+  width: 100vw;
+  height: 100vh;
+}
 
 
-  #center-items {
-    background-color: white;
-    border-width: 1px;
-    border-style: solid;
-    height: 3in;
-    border-color: grey;
-    border-radius: 20px;
-    min-height: 3in;
-    margin: 19px;
-  } 
+#center-items {
+  background-color: white;
+  border-width: 1px;
+  border-style: solid;
+  height: 3in;
+  border-color: grey;
+  border-radius: 20px;
+  min-height: 3in;
+  margin: 19px;
+}
 
 
-.search-results-container{
-  border:1;
+.search-results-container {
+  border: 1;
   background-color: whitesmoke;
   font-size: 20px;
   display: flex;
@@ -48,7 +48,7 @@
   align-items: flex-start;
 }
 
-.input-search{
+.input-search {
   border-radius: 20px;
   border-width: 2px;
   border-color: #4CAF50;
@@ -56,15 +56,23 @@
   height: 36px;
   font-size: 25px;
   width: 320px;
+  margin: 10px;
 }
 
-.search-container{
+.search-container {
   margin-left: 0px;
   margin-bottom: 25px;
   margin-top: 20px;
 }
 
-.jobInfo{
+.jobName {
+  font-weight: bolder;
+  font-size: 26px;
+  font-family: sans-serif;
+}
+
+
+.jobInfo {
   color: black;
   text-align: left;
   display: flex;
@@ -72,9 +80,14 @@
   position: relative;
   flex-direction: column;
   flex-grow: 2;
+  font-family: sans-serif;
 }
 
-.jobImage{
+.jobLocation {
+  color: slategray;
+}
+
+.jobImage {
   display: flex;
   width: min-content;
   height: min-content;
@@ -85,7 +98,7 @@
   justify-content: left;
 }
 
-.jobClick{
+.jobClick {
   display: flex;
   width: 100px;
   height: 150px;
@@ -94,17 +107,14 @@
 
 }
 
-.actualImage{
-  display:block;
+.actualImage {
+  display: block;
   width: 100px;
   height: 100px;
   padding: 20px;
   align-items: center;
 }
 
-.jobName{
-  font-weight: bolder;
-}
 
 .notification-wrapper {
   position: fixed;
@@ -114,7 +124,7 @@
 }
 
 .notification-item {
-  box-shadow: 0 0 10px rgba(0,0,0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 20px;
@@ -125,21 +135,21 @@
 
 @keyframes SlideLeft {
   0% {
-      margin-left: 120%;
+    margin-left: 120%;
   }
 
   100% {
-      margin-left: 0;
+    margin-left: 0;
   }
 }
 
 @keyframes SlideRight {
   0% {
-      margin-left: 0;
+    margin-left: 0;
   }
 
   100% {
-      margin-left: 120%;
+    margin-left: 120%;
   }
 }
 
@@ -165,7 +175,8 @@
   background-color: red;
 }
 
-.question{
+/* question mark hover button */
+.question {
   display: inline-block;
   padding: 10px;
   padding-top: 5px;
@@ -190,7 +201,7 @@
   text-align: left;
   margin: auto;
   background-color: whitesmoke;
-  color: #4E91F4 ;
+  color: #4E91F4;
   font-size: small;
   font-weight: lighter;
   font-family: sans-serif;
@@ -203,7 +214,39 @@
   visibility: visible;
 }
 
-.plusButton{
+.plusButton {
   color: #4CAF50;
   margin-top: px;
+}
+
+/* Form.js */
+
+.jobForm {
+  text-align: left;
+  color: black;
+  font-family: sans-serif;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.textarea {
+  border-color: #4CAF50;
+  border-style: solid;
+  border-radius: 10px;
+  margin: 20px;
+  font-size: 20px;
+  border-width: 3px;
+  max-width: 521px;
+  max-height: 221px;
+
+}
+
+.fieldset {
+  width: 990px;
+  flex-direction: row;
+  display: flex;
+  justify-content: center safe;
+  flex-wrap: wrap;
+  white-space: pre-wrap;
+  overflow-y: auto;
 }

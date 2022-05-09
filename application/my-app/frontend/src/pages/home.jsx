@@ -142,8 +142,8 @@ const Home = () => {
 
                                 {/* field drown down */}
                                 <select id="field" name="field" onChange={e => setField(e.target.value)}>
-                                    <option value="">Select Field</option>
-                                    <option value="AI and ML">AI and ML</option>
+                                    <option value="">Select field</option>
+                                    <option value="Artificial Intelligence and Machine Learning">Artificial Intelligence and Machine Learning</option>
                                     <option value="Robotic Process Automation">Robotic Process Automation</option>
                                     <option value="Edge Computing">Edge Computing</option>
                                     <option value="Quantum Computing">Quantum Computing</option>
@@ -156,24 +156,43 @@ const Home = () => {
 
                                 {/* location drown down */}
                                 <select id="locations" name="field" onChange={e => setLocation(e.target.value)}>
-                                    <option value="">Select Location</option>
-                                    <option value="California">California</option>
-                                    <option value="Seattle">Seattle</option>
-                                    <option value="Texas">Texas</option>
-                                    <option value="New York">New York</option>
-                                    <option value="Florida">Texas</option>
-                                    <option value="Virginia">Virginia</option>
-                                    <option value="Washington State">Washington State</option>
+                                    <option value="">Select location</option>
+                                    <option value="San Francisco">San Francisco, CA</option>
+                                    <option value="Palo Alto">Palo Alto, CA</option>
+                                    <option value="San Diego">San Diego, CA</option>
+                                    <option value="Phoenix">Phoenix, AZ</option>
+                                    <option value="Las Vegas">Las Vegas, NV</option>
+                                    <option value="Chicago">Chicago, IL</option>
+                                    <option value="Los Angeles">Los Angeles, CA</option>
+                                    <option value="Seattle">Seattle, WA</option>
+                                    <option value="Austin">Austin, TX</option>
+                                    <option value="New York">New York, NY</option>
+                                    <option value="Atlanta">Atlanta, Florida</option>
+                                    <option value="Orlando">Orlando, Florida</option>
+                                    <option value="Tampa">Tampa, Florida</option>
+                                    <option value="Alexandria">Alexandria, VA</option>
+                                    <option value="Washington">Washington, D.C</option>
+                                    <option value="Portland">Portland, OR</option>
+                                    <option value="Houston">Houston, TX</option>
+                                    <option value="Boston">Boston, Massachusetts</option>
+                                    <option value="Denver">Denver, Colorado</option>
+                                    <option value="Boise">Boise, Idaho</option>
+
                                 </select>
 
                                 {/* skills drown down */}
                                 <select id="skills" name="field" onChange={e => setSkill(e.target.value)}>
-                                    <option value="">Select Skill</option>
+                                    <option value="">Select skill</option>
                                     <option value="C++">C++</option>
                                     <option value="Java">Java</option>
                                     <option value="Excel">Excel</option>
                                     <option value="Python">Python</option>
-                                    <option value="JavaScript">Java Script</option>
+                                    <option value="JavaScript">JavaScript</option>
+                                    <option value="Go">Go</option>
+                                    <option value="C#">C#</option>
+                                    <option value="React.js">React.js</option>
+                                    <option value="Ruby">Ruby</option>
+                                    <option value="Swift">Swift</option>
                                 </select>
 
                                 <button type="submit">Search<i className="Search" /></button>
@@ -201,21 +220,27 @@ const Home = () => {
                                 <img className='actualImage' src={post["job photo"]} />
                             </div>
 
+
+
                             <div key={post.toString()} className='jobInfo'>
-                                <div>Job ID: {post["id"]}</div>
-                                <div className='jobName'>Job Name: {post["job name"]}</div>
+                                {/* <div>Job ID: {post["id"]}</div> */}
+                                <div className='jobName'>{post["job name"]}</div>
+                                <div className='jobLocation'>{post["job location"]}</div>
+                                <br></br>
                                 <div>Job Field: {post["job field"]}</div>
                                 <div>Date Posted: {post["date posted"]}</div>
-                                <div>Job Location: {post["job location"]}</div>
-                                <div>Job Salary: {post["job salary"]}</div>
-                                <div>Job Des: {post["job desc."]}</div>
                                 <div>Job Skills: {post["job skills"]}</div>
+                                <div>${post["job salary"]}</div>
+                                {/* <div>Job Des: {post["job desc."]}</div> */}
+                                {/* <div>Job Skills: {post["job skills"]}</div> */}
+                                <br></br>
                                 <div className="plusButton" onClick={() => setButtonPopup(true)} >
-                                    <CgIcons.CgMoreO size={28}/>
+                                    <CgIcons.CgMoreO size={28} />
                                 </div>
 
                                 <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-                                    <p>Job Des: {post["job desc."]}</p>
+                                    <h3>Description</h3>
+                                    <p>{post["job desc."]}</p>
                                 </Popup>
 
                                 {/* <div className='faqcontainer1'>
@@ -232,12 +257,6 @@ const Home = () => {
 
                             </div>
 
-                           
-
-
-                            
-
-        
 
                             <div>
                                 {/*  data-id={post.name} is name of job onClick={save} data-id={post}*/}
@@ -250,12 +269,6 @@ const Home = () => {
                                 </button>
                             </div>
 
-                    
-
-                           
-
-
-                          
 
                         </div>
 
@@ -264,14 +277,14 @@ const Home = () => {
 
                     ))}
 
-                    
+
                 </div>
-                
+
             </div>
 
 
         </div>
-        
+
 
 
     );
