@@ -51,11 +51,6 @@ export const studentSidebar = [
         path: '/careers',
         icon: <BsIcons.BsFillBriefcaseFill />,
         cName: 'nav-text'
-    }, {
-        title: 'Profile',
-        path: '/profile',
-        icon: <AiIcons.AiFillProfile />,
-        cName: 'nav-text'
     },
     {
         title: 'My Jobs',
@@ -68,7 +63,12 @@ export const studentSidebar = [
         path: '/JobPosting3',
         icon: <AiIcons.AiFillDatabase />,
         cName: 'nav-text'
-    }, 
+    },{
+        title: 'Profile',
+        path: '/profile',
+        icon: <AiIcons.AiFillProfile />,
+        cName: 'nav-text'
+    },
 
 ]
 
@@ -97,7 +97,12 @@ export const companySidebar = [
         path: '/Resume',
         icon: <AiIcons.AiFillDatabase />,
         cName: 'nav-text'
-    }, 
+    },{
+        title: 'Profile',
+        path: '/profile',
+        icon: <AiIcons.AiFillProfile />,
+        cName: 'nav-text'
+    },
 
 ]
 

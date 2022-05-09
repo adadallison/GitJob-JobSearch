@@ -12,7 +12,7 @@ const Careers = () => {
             <NavBar>
             </NavBar>
 
-            <div class="flex-container" >
+            <div className="flex-container" >
 
                 <div className="sidenav-careers">
                     <Sidebar>
@@ -30,16 +30,16 @@ const Careers = () => {
                 </a>
 
 
-                <div class=" faqflex">
+                <div className=" faqflex">
 
-                    <div class="faqcontainer" >
+                    <div className="faqcontainer" >
 
-                        <p class="ques">
+                        <p className="ques">
                             Artificial Intelligence and Machine Learning
                         </p>
 
-                        <div class="overlay">
-                            <p class="faqtext">
+                        <div className="overlay">
+                            <p className="faqtext">
                                 A hackathon is where you come to learn and bring your creative ideas to life.
                                 Hundreds of hackers from across the world will gather
                                 and build something they're passionate about.
@@ -47,13 +47,13 @@ const Careers = () => {
                         </div>
                     </div>
 
-                    <div class="faqcontainer">
-                        <p class="ques">
+                    <div className="faqcontainer">
+                        <p className="ques">
                             Robotics and Process Automation
                         </p>
 
-                        <div class="overlay">
-                            <p class="faqtext">
+                        <div className="overlay">
+                            <p className="faqtext">
                                 We care about diversity, accessibility, and believe our differences
                                 make us better as a whole. Whether you’re a STEM major or not we want you to be here!
                                 Be prepared to learn, brainstorm, and build amazing software/hardware.
@@ -61,26 +61,26 @@ const Careers = () => {
                         </div>
                     </div>
 
-                    <div class="faqcontainer">
-                        <p class="ques">
+                    <div className="faqcontainer">
+                        <p className="ques">
                             Edge Computing
                         </p>
 
-                        <div class="overlay">
-                            <p class="faqtext">
+                        <div className="overlay">
+                            <p className="faqtext">
                                 SF Hacks is free for all admitted participants. We’ll have WiFi, food,
                                 workshops, and awesome swag during the entire 24 hours you’ll be with us.
                             </p>
                         </div>
                     </div>
 
-                    <div class="faqcontainer">
-                        <p class="ques">
+                    <div className="faqcontainer">
+                        <p className="ques">
                             Quantum Computing
                         </p>
 
-                        <div class="overlay">
-                            <p class="faqtext">
+                        <div className="overlay">
+                            <p className="faqtext">
                                 Hackathons are all about teamwork! If you don’t have a teammate,
                                 we’ll hold a team-formation workshop where you can meet your new best friend.
                                 Four people per team is the limit.
@@ -89,13 +89,13 @@ const Careers = () => {
                     </div>
 
 
-                    <div class="faqcontainer">
-                        <p class="ques">
+                    <div className="faqcontainer">
+                        <p className="ques">
                             Virtual and Augmented Reality
                         </p>
 
-                        <div class="overlay">
-                            <p class="faqtext">
+                        <div className="overlay">
+                            <p className="faqtext">
                                 Major League Hacking (MLH) is the official student hackathon
                                 league. SF Hacks is an official MLH Member Event, so that means we
                                 follow the MLH Code Of Conduct.
@@ -103,37 +103,37 @@ const Careers = () => {
                         </div>
                     </div>
 
-                    <div class="faqcontainer">
-                        <p class="ques">
+                    <div className="faqcontainer">
+                        <p className="ques">
                             Blockchain
                         </p>
 
-                        <div class="overlay">
-                            <p class="faqtext">
+                        <div className="overlay">
+                            <p className="faqtext">
                                 Unfortunately we will not be offering any travel reimbursement for SF Hacks 2020.
                             </p>
                         </div>
                     </div>
 
-                    <div class="faqcontainer">
-                        <p class="ques">
+                    <div className="faqcontainer">
+                        <p className="ques">
                             Internet of Things
                         </p>
 
-                        <div class="overlay">
-                            <p class="faqtext">
+                        <div className="overlay">
+                            <p className="faqtext">
                                 Unfortunately we will not be offering any travel reimbursement for SF Hacks 2020.
                             </p>
                         </div>
                     </div>
 
-                    <div class="faqcontainer">
-                        <p class="ques">
+                    <div className="faqcontainer">
+                        <p className="ques">
                             5G
                         </p>
 
-                        <div class="overlay">
-                            <p class="faqtext">
+                        <div className="overlay">
+                            <p className="faqtext">
                                 Unfortunately we will not be offering any travel reimbursement for SF Hacks 2020.
                             </p>
                         </div>

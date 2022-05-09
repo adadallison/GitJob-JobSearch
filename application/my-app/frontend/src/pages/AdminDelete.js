@@ -64,7 +64,7 @@ function AdminDelete() {
 
         </div>
 
-        <div class="center-scroll">
+        <div className="center-scroll">
           {resData && resData.map(post => (
             <div className='search-results-container'>
 

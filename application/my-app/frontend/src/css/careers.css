@@ -2,11 +2,7 @@
     display: flex;
   }
   
-  .sidenav-careers {
-    height: 100vh;
-    width: 330px; /* A fixed width as the default */
-    background-color: #4E91F4;
-  }
+
 
   
   .career-fields-container { 

@@ -64,7 +64,7 @@ const Resume = () => {
                     </div>  
                 </div>
 
-                <div class="center-scroll">
+                <div className="center-scroll">
                     <div>
                         <div className="search-container">
                             <form onSubmit={handleSubmit}>

@@ -6,12 +6,11 @@ import NavBar from '../components/Navbar';
 
 const Profile = () => {
 
+    const [email, setEmail] = useState("");
 
     //generates search results
     useEffect(() => {
     }, []);
-
-
 
     return (
         <div>
@@ -25,11 +24,9 @@ const Profile = () => {
                 <div className='profile'>
                     <div className='profileText'>Name: {window.localStorage.getItem('name')}</div>
                     <br></br>
-                    <div className='profileText'>Account: {window.localStorage.getItem('type')}</div>
+                    <div className='profileText'>Account Type: {window.localStorage.getItem('type')}</div>
                     <br></br>
                     <div className='profileText'>Email: {window.localStorage.getItem('email')}</div>
-                    <br></br>
-                    <div className='profileText'>Skills: {window.localStorage.getItem('skills')}</div>
 
                 </div>
             </div>

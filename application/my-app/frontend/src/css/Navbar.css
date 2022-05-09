@@ -2,9 +2,6 @@
 .navbar{
     background-color: #4E91F4;
     height: 80px;
-    /* border-bottom-color: white;
-    border-bottom-width: 2px;
-    border-bottom-style: solid; */
     font-family: 'Courier New', sans-serif;
     color: white;
     text-align: left;
@@ -15,6 +12,12 @@
 } 
 
 /* .sidenav in home.css controls the sidenav bar */
+
+.sidenav-careers {
+    height: 100vh;
+    width: 330px; /* A fixed width as the default */
+    background-color: #4E91F4;
+  }
 
 .nav-text{
     display:flex;

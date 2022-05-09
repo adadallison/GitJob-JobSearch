@@ -8,21 +8,21 @@ function Footer() {
 
             <footer>
 
-                <section class="social">
+                <section className="social">
 
-                    <div class="rows">
+                    <div className="rows">
                         GitJob ©
 
                     </div>
 
-                    <div class="rows">
+                    <div className="rows">
                         San Francisco State University |
                         1600 Holloway Avenue . San Francisco . CA 94132
 
                     </div>
 
 
-                    <div class="rows">
+                    <div className="rows">
 
                         <a className="socials" href="https://facebook.com">
                             <AiIcons.AiOutlineFacebook size={30} ></AiIcons.AiOutlineFacebook>

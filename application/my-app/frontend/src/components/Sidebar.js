@@ -16,10 +16,7 @@ const Sidebar = () => {
 
     useEffect(() => {
 
-        // if (window.localStorage.getItem('type') === 'null') {
-        //     setSidebar();
-        // }
-
+        // Depending on what type of user is logged in, the side bars tabs change
         if (window.localStorage.getItem('type') === 'Company') {
             setSidebar(companySidebar);
 

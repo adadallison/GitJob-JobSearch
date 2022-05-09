@@ -134,7 +134,7 @@ const Home = () => {
 
                 </div>
 
-                <div class="center-scroll">
+                <div className="center-scroll">
                     <div>
                         <div className="search-container">
                             <form onSubmit={handleSubmit}>
@@ -239,8 +239,10 @@ const Home = () => {
                                 </div>
 
                                 <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-                                    <h3>Description</h3>
-                                    <p>{post["job desc."]}</p>
+                                    <p>
+                                    {post["job location"]} <br></br>
+                                    {post["job desc."]}
+                                    </p>
                                 </Popup>
 
                                 {/* <div className='faqcontainer1'>
