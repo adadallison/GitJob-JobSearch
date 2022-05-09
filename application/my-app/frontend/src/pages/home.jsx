@@ -241,8 +241,8 @@ const Home = () => {
                                 <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
                                     <p>
                                     <h4>Description</h4>
-                                    {post["job location"]} <br></br>
-                                    {post["job desc."]}
+                                    <div>{post["job location"]}</div> <br></br>
+                                    {post["job desc."]}sdlkcjdslkndssanfnanfinaiofnaoilnfrklfrncpeivnpknvpkane vpkineafvkva
                                     </p>
                                 </Popup>
 
