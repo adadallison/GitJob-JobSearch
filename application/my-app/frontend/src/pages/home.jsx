@@ -239,11 +239,15 @@ const Home = () => {
                                 </div>
 
                                 <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-                                    <p>
+                                    <div>
                                     <h4>Description</h4>
                                     <div>{post["job location"]}</div> <br></br>
+                        
+                                    <p className='descriptionScroll'>
                                     {post["job desc."]}
-                                    </p>
+                                        </p>
+                              
+                                    </div>
                                 </Popup>
 
                                 {/* <div className='faqcontainer1'>
