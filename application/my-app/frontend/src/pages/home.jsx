@@ -7,22 +7,23 @@ import "../css/careers.css";
 import NavBar from '../components/Navbar';
 import * as AiIcons from 'react-icons/ai';
 import * as BsIcons from 'react-icons/bs';
-import {useNotification} from "./Notifications/NotificationProvider";
-import {StudentButtons} from '../components/JobButtons';
+import { useNotification } from "./Notifications/NotificationProvider";
+import { StudentButtons } from '../components/JobButtons';
 
 
 const Home = () => {
 
     //NOTIFICATION
-const [inputVal, setInputVal] = useState("");
-const dispatch = useNotification();
- 
-const handleNewNotification = () => {
-  dispatch({
-    type: "SUCCESS",
-    message: inputVal,
-    title: "Successful Request"})
-  }
+    const [inputVal, setInputVal] = useState("");
+    const dispatch = useNotification();
+
+    const handleNewNotification = () => {
+        dispatch({
+            type: "SUCCESS",
+            message: inputVal,
+            title: "Successful Request"
+        })
+    }
 
 
     const [title, setTitle] = useState(""); //state variable for job title 
@@ -36,23 +37,26 @@ const handleNewNotification = () => {
     // event handler "handleSubmit" handles 'submit' button event
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post(baseUrl + ":3001/search", 
-        { title, field, location, skill }) //created POST request to send data to URL
+        axios.post(baseUrl + ":3001/search",
+            { title, field, location, skill }) //created POST request to send data to URL
             .then(res => {
                 console.log(res.data.result);
                 setResData(res.data.result); // sets value
             });
     };
-    
-    const popUp = () => {
+
+    const popUp = (e) => {
+        let description = e.currentTarget.getAttribute('data-id')
+        console.log(description)
+        alert(description)
     };
 
     const save = () => {
         // if save button is clicked then it will check each post and if it sees that a post has been clicked, that post will be moved to an array of bookmarks
         const bookmarks = [];
         // console.log(resData)
-        for (key in resData){
-            if (title ===X){
+        for (key in resData) {
+            if (title === X) {
                 bookmarks.concat(title);
                 console.log(bookmarks);
             }
@@ -137,14 +141,36 @@ const handleNewNotification = () => {
 
                     {/* map function that loads results with the same format */}
                     {resData.map(post => (
-                        <div  className='search-results-container' onClick={popUp}>
+                        <div className='search-results-container' onClick={popUp} data-id={post["job desc."]}>
 
                             <div className='jobImage'>
                                 <img className='actualImage' src={post["job photo"]} />
                             </div>
 
-
                             <div key={post.toString()} className='jobInfo'>
+
+
+                                <div>Job ID: {post["id"]}</div>
+                                <div className='jobName'>Job Name: {post["name"]}</div>
+                                <div>Job Field: {post["job field"]}</div>
+                                <div>Date Posted: {post["date posted"]}</div>
+                                <div>Job Location: {post["job location"]}</div>
+                                <div>Job Salary: {post["job salary"]}</div>
+                                <div>Job Skills: {post["job skills"]}</div>
+                                <div class="faqcontainer">
+                                    Learn More +
+                                    <div class="overlay">
+                                        <p class="faqtext">
+                                            {post["job desc."]}
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                            {/* <div key={post.toString()} className='jobInfo'>
                                 <div className='jobName'>Job Name: {post["job name"]}</div>
                                 <div>Job Field: {post["job field"]}</div>
                                 <div>Date Posted: {post["date posted"]}</div>
@@ -152,17 +178,17 @@ const handleNewNotification = () => {
                                 <div>Job Description: {post["job desc."]}</div>
                                 <div>Job Salary: {post["job salary"]}</div>
                                 <div>Job Skills: {post["job skills"]}</div>
-                            </div>
+                            </div> */}
 
                             <div>
                                 <button onClick={save} value="savebutton">
-                                <BsIcons.BsBookmark />
+                                    <BsIcons.BsBookmark />
                                 </button>
 
                                 <button href="">
-                                <AiIcons.AiOutlineAudit />
+                                    <AiIcons.AiOutlineAudit />
                                 </button>
-                               
+
                             </div>
                         </div>
                     ))}
