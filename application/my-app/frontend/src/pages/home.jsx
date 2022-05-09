@@ -40,16 +40,14 @@ const Home = () => {
                 console.log(res.data)
                 setResData(res.data.result); // sets value
 
-                console.log(typeof (res.data.result))
-                console.log(typeof (res.data))
-                console.log(res.data)
+                // console.log(typeof (res.data.result))
+                // console.log(typeof (res.data))
+                // console.log(res.data)
 
-                console.log(res.data.result); //displays object 'results' that has array of 31 objects
-                console.log(res.data.result[0]); //displays first item in array of objects w full description
+                // console.log(res.data.result); //displays object 'results' that has array of 31 objects
+                // console.log(res.data.result[0]); //displays first item in array of objects w full description
 
-                console.log(Object.keys(res.data.result).length);
-
-
+                // console.log(Object.keys(res.data.result).length);
 
                 //window.localStorage.getItem('id');
 
@@ -203,26 +201,20 @@ const Home = () => {
 
                             <div key={post.toString()} className='jobInfo'>
                                 <div>Job ID: {post["id"]}</div>
-                                <div className='jobName'>Job Name: {post["name"]}</div>
+                                <div className='jobName'>Job Name: {post["job name"]}</div>
                                 <div>Job Field: {post["job field"]}</div>
                                 <div>Date Posted: {post["date posted"]}</div>
                                 <div>Job Location: {post["job location"]}</div>
                                 <div>Job Salary: {post["job salary"]}</div>
                                 <div>Job Des: {post["job desc."]}</div>
                                 <div>Job Skills: {post["job skills"]}</div>
-
-
+                                <button onClick={() => setButtonPopup(true)} >
+                                    <AiIcons.AiOutlinePlusCircle />
+                                </button>
 
                                 <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-                                    <div>Job Des: {post["job desc."]}</div>
+                                    <p>Job Des: {post["job desc."]}</p>
                                 </Popup>
-
-                                <div onClick={() => setButtonPopup(true)} >
-                                    <AiIcons.AiOutlinePlusCircle />
-                                </div>
-
-
-
 
                                 {/* <div className='faqcontainer1'>
                                 <div onClick={popUp} >
@@ -238,13 +230,16 @@ const Home = () => {
 
                             </div>
 
+                           
 
 
+                            
 
+        
 
                             <div>
-                                {/*  data-id={post.name} is name of job*/}
-                                <button onClick={save} data-id={post} >
+                                {/*  data-id={post.name} is name of job onClick={save} data-id={post}*/}
+                                <button  >
                                     <BsIcons.BsBookmark />
                                 </button>
 
@@ -253,19 +248,28 @@ const Home = () => {
                                 </button>
                             </div>
 
+                    
+
+                           
 
 
-
+                          
 
                         </div>
 
 
 
+
                     ))}
+
+                    
                 </div>
+                
             </div>
 
+
         </div>
+        
 
 
     );
