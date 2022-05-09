@@ -170,7 +170,10 @@ app.post("/login", async (req, res) => {
         return res.status(400).send("Invalid username or password");
     }
 
+    console.log(user);
+
     const infoForToken = {
+        aid: user.aid,
         email: email,
         type: user.type
     };
@@ -236,9 +239,8 @@ app.delete("/deletePost", (req, res) => {
     // verify jwt
     const decodedToken = jwt.verify(token, process.env.SECRET);
     console.log(JSON.stringify(decodedToken))
-    if (decodedToken.type !== "Admin") {
-        console.log("Here")
-      return res.status(401).json({ error: 'token missing or invalid' })
+    if (decodedToken.type !== "Admin" && decodedToken.type !== "Company") {
+        return res.status(401).json({ error: 'token missing or invalid' })
     }
 
     pool.getConnection((err, connection) => {
@@ -256,5 +258,41 @@ app.delete("/deletePost", (req, res) => {
     res.send("success");
 });
 
+app.get("/getCompanyPost", (req, res) => {
+    const token = getTokenFrom(req);
+    
+    console.log("Here1")
+    // if no jwt
+    if(token === null){
+        return res.status(401).json({error: 'unauthorized'});
+    }
+
+    console.log("Here2")
+    // verify jwt
+    const decodedToken = jwt.verify(token, process.env.SECRET);
+    console.log(JSON.stringify(decodedToken));
+
+    if (decodedToken.type !== "Company") {
+        console.log("Here")
+        return res.status(401).json({ error: 'token missing or invalid' })
+    }
+
+    console.log("at pool");
+    pool.getConnection((err, connection) => {
+        const query = "SELECT * FROM `job posts` WHERE aid = ?";
+        const aid = decodedToken.aid;
+        connection.query(query, aid, (err, result) => {
+            if (err) throw err;
+            result.map(e => {
+                if (e['job photo'] != null)
+                    e['job photo'] = "data:image;base64," + Buffer.from(e['job photo']).toString('base64');
+                return e;
+            });
+            res.json({ result });
+        });
+        connection.release();
+    });
+    res.status(200);
+});
 
 app.listen(process.env.PORT);
