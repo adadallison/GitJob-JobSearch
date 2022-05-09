@@ -8,11 +8,29 @@ import NavBar from '../components/Navbar';
 import * as AiIcons from 'react-icons/ai';
 import * as BsIcons from 'react-icons/bs';
 import { useNotification } from "./Notifications/NotificationProvider";
+<<<<<<< HEAD
 import Popup from '../components/PopUp';
+=======
+import { StudentButtons } from '../components/JobButtons';
+>>>>>>> 87bb6682fcd7cf65b275675df1acd5ceb6ff1c1c
 
 
 const Home = () => {
 
+<<<<<<< HEAD
+=======
+    //NOTIFICATION
+    const [inputVal, setInputVal] = useState("");
+    const dispatch = useNotification();
+
+    const handleNewNotification = () => {
+        dispatch({
+            type: "SUCCESS",
+            message: inputVal,
+            title: "Successful Request"
+        })
+    }
+>>>>>>> 87bb6682fcd7cf65b275675df1acd5ceb6ff1c1c
 
 
     var arrayJobs = [];
@@ -55,6 +73,7 @@ const Home = () => {
 
             });
     };
+<<<<<<< HEAD
 
 
     // id and name in 'job posts' databse table were changed from 'job id and job name'
@@ -114,6 +133,25 @@ const Home = () => {
         // //match button on job w button on job in arrayJobs
         // //if button of Job saved === job in arrayJobs then do somn to that specific job
 
+=======
+
+    const popUp = (e) => {
+        let description = e.currentTarget.getAttribute('data-id')
+        console.log(description)
+        alert(description)
+    };
+
+    const save = () => {
+        // if save button is clicked then it will check each post and if it sees that a post has been clicked, that post will be moved to an array of bookmarks
+        const bookmarks = [];
+        // console.log(resData)
+        for (key in resData) {
+            if (title === X) {
+                bookmarks.concat(title);
+                console.log(bookmarks);
+            }
+        }
+>>>>>>> 87bb6682fcd7cf65b275675df1acd5ceb6ff1c1c
     };
 
 
@@ -195,21 +233,53 @@ const Home = () => {
 
                     {/* map function that loads results with the same format */}
                     {resData.map(post => (
+<<<<<<< HEAD
                         <div className='search-results-container' >
+=======
+                        <div className='search-results-container' onClick={popUp} data-id={post["job desc."]}>
+>>>>>>> 87bb6682fcd7cf65b275675df1acd5ceb6ff1c1c
 
                             <div className='jobImage'>
                                 <img className='actualImage' src={post["job photo"]} />
                             </div>
 
                             <div key={post.toString()} className='jobInfo'>
+<<<<<<< HEAD
+                                <div>Job ID: {post["id"]}</div>
+                                <div className='jobName'>Job Name: {post["name"]}</div>
+=======
+
+
                                 <div>Job ID: {post["id"]}</div>
                                 <div className='jobName'>Job Name: {post["name"]}</div>
                                 <div>Job Field: {post["job field"]}</div>
                                 <div>Date Posted: {post["date posted"]}</div>
                                 <div>Job Location: {post["job location"]}</div>
                                 <div>Job Salary: {post["job salary"]}</div>
+                                <div>Job Skills: {post["job skills"]}</div>
+                                <div class="faqcontainer">
+                                    Learn More +
+                                    <div class="overlay">
+                                        <p class="faqtext">
+                                            {post["job desc."]}
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                            {/* <div key={post.toString()} className='jobInfo'>
+                                <div className='jobName'>Job Name: {post["job name"]}</div>
+>>>>>>> 87bb6682fcd7cf65b275675df1acd5ceb6ff1c1c
+                                <div>Job Field: {post["job field"]}</div>
+                                <div>Date Posted: {post["date posted"]}</div>
+                                <div>Job Location: {post["job location"]}</div>
+                                <div>Job Salary: {post["job salary"]}</div>
                                 <div>Job Des: {post["job desc."]}</div>
                                 <div>Job Skills: {post["job skills"]}</div>
+<<<<<<< HEAD
 
 
 
@@ -237,20 +307,31 @@ const Home = () => {
                                 </div> */}
 
                             </div>
+=======
+                            </div> */}
+>>>>>>> 87bb6682fcd7cf65b275675df1acd5ceb6ff1c1c
 
 
 
 
 
                             <div>
+<<<<<<< HEAD
                                 {/*  data-id={post.name} is name of job*/}
                                 <button onClick={save} data-id={post} >
+=======
+                                <button onClick={save} value="savebutton">
+>>>>>>> 87bb6682fcd7cf65b275675df1acd5ceb6ff1c1c
                                     <BsIcons.BsBookmark />
                                 </button>
 
                                 <button href="">
                                     <AiIcons.AiOutlineAudit />
                                 </button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 87bb6682fcd7cf65b275675df1acd5ceb6ff1c1c
                             </div>
 
 

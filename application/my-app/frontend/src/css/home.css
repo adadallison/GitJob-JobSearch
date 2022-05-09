@@ -203,6 +203,7 @@
   visibility: visible;
 }
 
+<<<<<<< HEAD
 
 /* /////////////////////////////////////////// FAQ //////////////////////////////////////////// */
   
@@ -255,3 +256,75 @@
     background-color: pink;
 
   }
+=======
+/* FAQ */
+  
+.flex-container {
+  display: flex;
+  position: relative;
+  
+}
+
+.faqflex{
+  padding: 30px;
+  justify-content: space-evenly;
+  position: center;
+  display: flex;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  flex-direction: row;
+  margin-left: 100px;
+  overflow-x: hidden;
+  width: 100%;
+  overflow-y: auto
+
+}
+
+.faqcontainer {
+  position: relative;
+  width: 50%;
+  text-decoration: underline;
+}
+
+
+.overlay {
+  display:block;
+  position: relative;
+  height: 500px;
+  width: 500px;
+  opacity: 0;
+  transition: .8s ease;
+  background-color: #4E91F4;
+  word-wrap: break-word;
+  overflow-x:0;
+  text-decoration: none;
+}
+
+.faqcontainer:hover .overlay {
+  opacity: 1;
+}
+
+.faqtext {
+  position: relative;
+  padding: 2px;
+  color: white;
+  height: 96%;
+  width: 80.5%;
+  font-size: 1vw;
+  position: relative;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+.ques{
+  position: absolute;
+  border-style: solid;
+  border-color: black;
+  font-family: Galano,-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;;
+  height: 95%;
+  width: 80%;
+  font-size: 19px;
+  font-weight: 700;
+  overflow-wrap: break-word;
+}
+>>>>>>> 87bb6682fcd7cf65b275675df1acd5ceb6ff1c1c
