@@ -214,7 +214,7 @@ const Home = () => {
 
                                 <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
                                     <p>Job Des: {post["job desc."]}</p>
-                            </Popup>
+                                </Popup>
 
                                 {/* <div className='faqcontainer1'>
                                 <div onClick={popUp} >
