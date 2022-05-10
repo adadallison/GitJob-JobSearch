@@ -23,11 +23,11 @@ const MyJobs = () => {
             await axios.get(baseUrl + ":3001/getBookmark", {
                 headers: { "Authorization": `Bearer ${JWT}` }
             })
-            .then(res => {
-                console.log(res.data.result);
-                setResData(res.data.result); // sets value
-                console.log(resData);
-            });
+                .then(res => {
+                    console.log(res.data.result);
+                    setResData(res.data.result); // sets value
+                    console.log(resData);
+                });
         }
 
         getBookmark();
@@ -51,45 +51,42 @@ const MyJobs = () => {
                 }
             })
     }
-    
+
     return (
         <div>
             <NavBar>
             </NavBar>
 
             <div className="jobsContainer">
-                
+
                 <Sidebar>
                 </Sidebar>
-                <div className='jobs'>
                 <div className="center-scroll">
-              {resData && resData.map(post => (
-                <div className='search-results-container'>
+                    {resData && resData.map(post => (
+                        <div className='search-results-container'>
 
-                  <div className='jobImage'>
-                    <img className='actualImage' src={post["job photo"]} />
-                  </div>
+                            <div className='jobImage'>
+                                <img className='actualImage' src={post["job photo"]} />
+                            </div>
 
 
-                  <div key={post["id"]} className='jobInfo'>
-                    <div className='jobName'>Job Name: {post["job name"]}</div>
-                    <div>Job Field: {post["job field"]}</div>
-                    <div>Date Posted: {post["date posted"]}</div>
-                    <div>Job Location: {post["job location"]}</div>
-                    <div>Job Description: {post["job desc."]}</div>
-                    <div>Job Salary: {post["job salary"]}</div>
-                    <div>Job Skills: {post["job skills"]}</div>
-                  </div>
+                            <div key={post["id"]} className='jobInfo'>
+                                <div className='jobName'>Job Name: {post["job name"]}</div>
+                                <div>Job Field: {post["job field"]}</div>
+                                <div>Date Posted: {post["date posted"]}</div>
+                                <div>Job Location: {post["job location"]}</div>
+                                <div>Job Description: {post["job desc."]}</div>
+                                <div>Job Salary: {post["job salary"]}</div>
+                                <div>Job Skills: {post["job skills"]}</div>
+                            </div>
 
-                  <div>
-                    <button onClick={() => deleteBookmark(post["id"])}>
-                      Delete
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-
+                            <div>
+                                <button onClick={() => deleteBookmark(post["id"])}>
+                                    Delete
+                                </button>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

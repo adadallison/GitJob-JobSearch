@@ -82,65 +82,6 @@ const Home = () => {
         setTempPost(post);
     }
 
-    // id and name in 'job posts' databse table were changed from 'job id and job name'
-    const save = (e) => {
-
-        // console.log("RESDATA:", resData);
-
-        // // had to do this whole loop on resData bc i couldnt access arrayjobs updated value from handlesubmit due to closures
-        // //res.data.result => resData bc we setResData in handleSubmit
-        // for (let i = 0; i < Object.keys(resData).length; i++) {
-        //     //if arrayJobs is the length of resData so it doesnt keep pushing everytime and doubling
-        //     if (arrayJobs.length <= Object.keys(resData).length) {
-        //         console.log("RES.DATA.RESULT[I]", resData[i]) //i know res.data.result is an ARRAY OF OBJECTS so im looping thru them
-        //         console.log(typeof (resData[i]))
-        //         console.log(resData[i].id)
-        //         console.log(resData[i].name)
-
-        //         arrayJobs.push(resData[i]) //pushing each object in arrayJobs so later i can COMPARE jobs w the jobs in the array to save them
-        //         console.log("ARRAYJOBS:", arrayJobs)
-        //         console.log("ARRAYJOBS ID:", arrayJobs[i].id)
-        //         //window.localStorage.setItem('array', arrayJobs)
-
-        //     }
-
-
-        // };
-
-        // //console.log(resData.post['name'])
-        // let job = e.currentTarget.getAttribute('data-id')
-        // console.log(job)
-        // console.log(arrayJobs.length)
-
-        // arraySavedJobs.push(job)
-        // //i need savedJob to be an array in local storage not just a single variable
-        // window.localStorage.setItem('savedJob', JSON.stringify(arraySavedJobs)); //maybe we need to make savedJob exist in server.js just like in /login
-
-        // //everytime i press search to see all the jobs, it erases the local storage i saved, maybe we should just make the jobs always be visible
-
-
-        // //not rlly necessary after all since i can push the job as it is to an array w out verifying its in resData
-        // //if it matches the jobs in resData then push to array 
-        // for (let i = 0; i < arrayJobs.length; i++) {
-        //     // console.log("LOOP:",arrayJobs[i])
-        //     arrayJobs[i]
-        //     if (job === arrayJobs[i].name) {
-        //         //now set job as local storage to later be accessed by bookmarks page?
-        //         console.log("ENTERED LOOP 2")
-        //         console.log(arrayJobs[i].name)
-        //         console.log("MATCH")
-        //         //arraySavedJobs.push(arrayJobs[i].name)
-
-        //     }
-        // }
-
-        // console.log("ARRAYSAVEDJOB:", arraySavedJobs)
-
-        // //match button on job w button on job in arrayJobs
-        // //if button of Job saved === job in arrayJobs then do somn to that specific job
-
-    };
-
     return (
         <div>
             <NavBar>
