@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  position:static;
+  position: relative;
 }
 
 /* make the center item scrollable somehow like twitter, and the side nav is just sticky */
@@ -58,7 +58,6 @@
   font-size: 25px;
   width: 245px;
   margin: 10px;
-  margin-left: -250px;
 }
 
 .search-container {
