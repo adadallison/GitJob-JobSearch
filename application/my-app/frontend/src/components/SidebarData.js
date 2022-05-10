@@ -88,12 +88,6 @@ export const companySidebar = [
         path: '/CompanyDelete',
         icon: <AiIcons.AiTwotoneDelete />,
         cName: 'nav-text'
-    },
-    {
-        title: 'Resume',
-        path: '/Resume',
-        icon: <AiIcons.AiFillDatabase />,
-        cName: 'nav-text'
     },{
         title: 'Profile',
         path: '/profile',
