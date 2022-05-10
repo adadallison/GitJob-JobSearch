@@ -84,7 +84,7 @@ export const companySidebar = [
         icon: <AiIcons.AiFillDatabase />,
         cName: 'nav-text'
     },{
-        title: 'Delete a Job',
+        title: 'My Posted Jobs',
         path: '/CompanyDelete',
         icon: <AiIcons.AiTwotoneDelete />,
         cName: 'nav-text'
