@@ -229,6 +229,7 @@ const Home = () => {
 
                             <div key={post.toString()} className='jobInfo'>
                                 {/* <div>Job ID: {post["id"]}</div> */}
+                                <div className='jobName'>{post["company"]}</div>
                                 <div className='jobName'>{post["job name"]}</div>
                                 <div className='jobLocation'>{post["job location"]}</div>
                                 <br></br>
