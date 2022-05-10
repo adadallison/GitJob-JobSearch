@@ -8,6 +8,7 @@ import axios from 'axios';
 import { useNotification } from "./Notifications/NotificationProvider";
 import Popup from '../components/PopUp';
 
+//Contains admin functionality that allows the deleting of ay post
 function AdminDelete() {
 
   //NOTIFICATION

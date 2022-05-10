@@ -4,7 +4,7 @@ import Sidebar from '../components/Sidebar'
 import "../css/form.css";
 import axios from 'axios';
 
-
+//Extra feature that we did not complete
 const formReducer = (state, event) => {
     if (event.reset) {
         return {

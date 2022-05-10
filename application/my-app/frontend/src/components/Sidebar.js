@@ -6,13 +6,10 @@ import { companySidebar } from './SidebarData';
 import { studentSidebar } from './SidebarData';
 import "../css/Navbar.css";
 
-
+//renders the sidebar on the left with all the buttons
 const Sidebar = () => {
     const [sidebar, setSidebar] = useState([]);
     const [loginStatus, setLoginStatus] = useState(true)
-    //const showSidebar = () => setSidebar(!sidebar);
-
-
 
     useEffect(() => {
 

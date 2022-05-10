@@ -1,6 +1,8 @@
 import React from "react";
 import "../css/footer.css";
 import * as AiIcons from 'react-icons/ai';
+
+//Renders the footer component
 function Footer() {
     return (
 
