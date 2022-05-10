@@ -232,9 +232,9 @@ const Home = () => {
                                 <div className='jobLocation'>{post["job location"]}</div>
                                 <br></br>
                                 <div>Job Field: {post["job field"]}</div>
-                                <div>Date Posted: {post["date posted"]}</div>
                                 <div>Job Skills: {post["job skills"]}</div>
                                 <div>${post["job salary"]}</div>
+                                <div>Date Posted: {post["date posted"]}</div>
                                 {/* <div>Job Des: {post["job desc."]}</div> */}
                                 {/* <div>Job Skills: {post["job skills"]}</div> */}
                                 <br></br>

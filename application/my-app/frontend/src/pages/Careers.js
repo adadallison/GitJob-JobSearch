@@ -18,19 +18,19 @@ const Careers = () => {
                     <Sidebar>
                     </Sidebar>
                 </div>
-                
+
                 <a className="question2">?
                     <span className="questionText2">
-                        Brief background <br/>
-                        on the different <br/>
-                        career fields for <br/> 
+                        Brief background <br />
+                        on the different <br />
+                        career fields for <br />
                         jobs posted.
 
                     </span>
                 </a>
 
 
-                <div className=" faqflex">
+                <div className="faqflex">
 
                     <div className="faqcontainer" >
 
@@ -40,7 +40,12 @@ const Careers = () => {
 
                         <div className="overlay">
                             <p className="faqtext">
-                            Machine learning engineers are the designers of self-running software that brings machines the ability to automate models that are predictive. They work with data scientists to take information and feed curated data into the models that they've uncovered or discovered. They use theoretical models within the data science sphere and build them out to scale as functioning and productive units or models that handle terabytes of real-time data.
+                            Machine learning is a subfield of artificial intelligence,
+                             which is broadly defined as the capability of a machine to 
+                             imitate intelligent human behavior. Artificial intelligence 
+                             systems are used to perform complex tasks in a way that is similar
+                            to how humans solve problems.]<br></br>
+                            ~ MIT
                             </p>
                         </div>
                     </div>
@@ -52,7 +57,15 @@ const Careers = () => {
 
                         <div className="overlay">
                             <p className="faqtext">
-                            Robotic process automation is a form of business process automation technology based on metaphorical software robots or on artificial intelligence /digital workers. It is sometimes referred to as software robotics.
+                            Robotic process automation (RPA), also known as software robotics, 
+                            uses automation technologies to mimic back-office tasks of human workers,
+                             such as extracting data, filling in forms, moving files, et cetera. It 
+                             combines APIs and user interface (UI) interactions to integrate and perform 
+                             repetitive tasks between enterprise and productivity applications. By deploying 
+                             scripts which emulate human processes, RPA tools complete autonomous execution of
+                              various activities and transactions across unrelated software systems.
+                              <br></br>
+                              ~ IBM
                             </p>
                         </div>
                     </div>
@@ -64,7 +77,13 @@ const Careers = () => {
 
                         <div className="overlay">
                             <p className="faqtext">
-                            Edge computing is a distributed computing paradigm that brings computation and data storage closer to the sources of data. This is expected to improve response times and save bandwidth. "A common misconception is that edge and IoT are synonymous.In simpler terms, edge computing means running fewer processes in the cloud and moving those processes to local places, such as on a user's computer, an IoT device, or an edge server.
+                            Edge computing is a distributed computing framework that brings
+                             enterprise applications closer to data sources such as IoT devices 
+                             or local edge servers. This proximity to data at its source can deliver
+                              strong business benefits, including faster insights, improved response 
+                              times and better bandwidth availability.
+                              <br></br>
+                              ~ IBM
                             </p>
                         </div>
                     </div>
@@ -76,7 +95,11 @@ const Careers = () => {
 
                         <div className="overlay">
                             <p className="faqtext">
-                                Quantum computing is a type of computation that harnesses the collective properties of quantum states, such as superposition, interference, and entanglement, to perform calculations. The devices that perform quantum computations are known as quantum computers.
+                            Quantum computers harness the unique behavior of quantum physics—such as 
+                            superposition, entanglement, and quantum interference—and apply it to computing. 
+                            This introduces new concepts to traditional programming methods.
+                            <br></br>
+                            ~ Microsoft
                             </p>
                         </div>
                     </div>
@@ -89,7 +112,10 @@ const Careers = () => {
 
                         <div className="overlay">
                             <p className="faqtext">
-                            Augmented reality (AR) and Virtual Reality (VR) bridge the digital and physical worlds. They allow you to take in information and content visually, in the same way you take in the world. AR dramatically expands the ways our devices can help with everyday activities like searching for information, shopping, and expressing yourself. VR lets you experience what it's like to go anywhere — from the front row of a concert to distant planets in outer space.
+                                Augmented reality (AR) and Virtual Reality (VR) bridge the digital and physical worlds. They allow you to take in information and content visually, in the same way you take in the world. AR dramatically expands the ways our devices can help with everyday activities like searching for information, shopping, and expressing yourself. VR lets you experience what it's like to go anywhere — from the front row of a concert to distant planets in outer space.
+                            <br></br>
+                            ~ Google
+
                             </p>
                         </div>
                     </div>
@@ -101,7 +127,14 @@ const Careers = () => {
 
                         <div className="overlay">
                             <p className="faqtext">
-                            A blockchain is a distributed database that is shared among the nodes of a computer network. As a database, a blockchain stores information electronically in digital format. Blockchains are best known for their crucial role in cryptocurrency systems, such as Bitcoin, for maintaining a secure and decentralized record of transactions. The innovation with a blockchain is that it guarantees the fidelity and security of a record of data and generates trust without the need for a trusted third party.
+                            Blockchain is a shared, immutable ledger that facilitates
+                             the process of recording transactions and tracking assets 
+                             in a business network. An asset can be tangible (a house, 
+                             car, cash, land) or intangible (intellectual property, patents, 
+                             copyrights, branding). Virtually anything of value can be tracked 
+                             and traded on a blockchain network, reducing risk and cutting costs
+                            for all involved.
+                            <br></br> ~ IBM
 
                             </p>
                         </div>
@@ -114,7 +147,14 @@ const Careers = () => {
 
                         <div className="overlay">
                             <p className="faqtext">
-                            The Internet of things describes physical objects with sensors, processing ability, software, and other technologies that connect and exchange data with other devices and systems over the Internet or other communications networks.
+                            The Internet of Things (IoT) describes the network of physical 
+                            objects—“things”—that are embedded with sensors, software, and 
+                            other technologies for the purpose of connecting and exchanging 
+                            data with other devices and systems over the internet. These devices
+                             range from ordinary household objects to sophisticated industrial tools.
+                              With more than 7 billion connected IoT devices today, experts are expecting 
+                              this number to grow to 10 billion by 2020 and 22 billion by 2025. 
+                              <br></br> ~ Oracle
                             </p>
                         </div>
                     </div>
@@ -126,7 +166,35 @@ const Careers = () => {
 
                         <div className="overlay">
                             <p className="faqtext">
-                            In telecommunications, 5G is the fifth-generation technology standard for broadband cellular networks, which cellular phone companies began deploying worldwide in 2019, and is the planned successor to the 4G networks which provide connectivity to most current cellphones.
+                            5G at its peak potential could be instrumental for 
+                            developing revolutionary applications unlike anything
+                             that exists today outside a wired environment. These
+                              applications are varied, but there is predicted growth 
+                              in fields like autonomous driving, virtual reality, and 
+                              augmented reality. Beyond speed and latency, 5G standards 
+                              will have a much higher connection density, allowing networks 
+                              to handle immense numbers of connected devices. 
+                            <br></br>
+                            ~ IBM
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="faqcontainer">
+                        <p className="ques">
+                            Cyber Security
+                        </p>
+
+                        <div className="overlay">
+                            <p className="faqtext">
+                                Cybersecurity is the practice of protecting critical
+                                systems and sensitive information from digital attacks.
+                                Also known as information technology (IT) security,
+                                cybersecurity measures are designed to combat threats
+                                against networked systems and applications, whether those
+                                threats originate from inside or outside of an organization.
+                                <br></br>
+                                ~ IBM
                             </p>
                         </div>
                     </div>
