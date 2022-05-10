@@ -15,7 +15,12 @@ function NavBar() {
         <>
             <div onClick={gitjob} className='navbar'>
                 GitJob
+                <div onClick={gitjob} className='titleName'>
+                    SFSU Software Engineering Project CSC 648-848, Spring 2022. For Demonstration Only
+                </div>
             </div>
+
+
         </>
     );
 }
