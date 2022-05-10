@@ -59,13 +59,8 @@ export const studentSidebar = [
         path: '/jobs',
         icon: <BiIcons.BiMoney />,
         cName: 'nav-text'
-    }, 
+    },
     {
-        title: 'Post a Resume',
-        path: '/JobPosting3',
-        icon: <AiIcons.AiFillDatabase />,
-        cName: 'nav-text'
-    },{
         title: 'Profile',
         path: '/profile',
         icon: <AiIcons.AiFillProfile />,

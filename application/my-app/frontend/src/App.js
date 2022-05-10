@@ -8,8 +8,6 @@ import JobPosting from './pages/JobPosting';
 import Profile from "./pages/Profile";
 import MyJobs from "./pages/MyJobs";
 import Form from './components/Form';
-import Form4resume from './components/Form4resume';
-import Resume from './pages/Resume';
 import AdminDelete from './pages/AdminDelete';
 import CompanyDelete from './pages/CompanyDelete';
 
@@ -26,8 +24,6 @@ const App = () => {
           <Route path="/jobs" element={<MyJobs />} />
           <Route path="/JobPosting" element={<JobPosting />} />
           <Route path="/JobPosting2" element={<Form />} />
-          <Route path="/Resume" element={<Resume />} />
-          <Route path="/JobPosting3" element={<Form4resume />} />
           <Route path="/AdminDelete" element={<AdminDelete />} />
           <Route path="/CompanyDelete" element={<CompanyDelete />} />
 

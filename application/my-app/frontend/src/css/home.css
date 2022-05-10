@@ -1,7 +1,6 @@
 .container {
   display: flex;
-  position: fixed;
-  overflow: hidden;
+  position:static;
 }
 
 /* make the center item scrollable somehow like twitter, and the side nav is just sticky */
@@ -40,6 +39,7 @@
   border-width: 2px;
   border-color: whitesmoke;
   margin-bottom: 50px;
+  margin-left: 80px;
   width: 900px;
   margin-left: 86px;
   padding: 32px 16px 32px 8px;
@@ -58,11 +58,11 @@
   font-size: 25px;
   width: 245px;
   margin: 10px;
+  margin-left: -250px;
 }
 
 .search-container {
   margin-bottom: 25px;
-  margin-top: 20px;
 }
 
 .jobName {
