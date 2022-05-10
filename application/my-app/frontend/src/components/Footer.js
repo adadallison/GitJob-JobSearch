@@ -18,7 +18,6 @@ function Footer() {
                     <div className="rows">
                         San Francisco State University |
                         1600 Holloway Avenue . San Francisco . CA 94132
-
                     </div>
 
 

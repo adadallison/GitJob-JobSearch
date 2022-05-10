@@ -1,6 +1,8 @@
 import React from 'react'
 import * as AiIcons from 'react-icons/ai';
 import * as BsIcons from 'react-icons/bs';
+import * as BiIcons from 'react-icons/bi';
+
 
 export const SidebarData = [
 
@@ -55,7 +57,7 @@ export const studentSidebar = [
     {
         title: 'My Jobs',
         path: '/jobs',
-        icon: <AiIcons.AiFillDatabase />,
+        icon: <BiIcons.BiMoney />,
         cName: 'nav-text'
     }, 
     {
