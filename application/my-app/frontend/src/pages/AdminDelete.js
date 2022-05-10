@@ -4,19 +4,20 @@ import Sidebar from '../components/Sidebar';
 import "../css/home.css";
 import "../css/form.css";
 import axios from 'axios';
-import {useNotification} from "./Notifications/NotificationProvider";
+import { useNotification } from "./Notifications/NotificationProvider";
 function AdminDelete() {
 
   //NOTIFICATION
   const [inputVal, setInputVal] = useState("");
   const dispatch = useNotification();
-   
+
   const handleNewNotification = () => {
     dispatch({
       type: "SUCCESS",
       message: inputVal,
-      title: "Successful Request"})
-    }
+      title: "Successful Request"
+    })
+  }
 
 
   const [resData, setResData] = useState();
@@ -77,39 +78,41 @@ function AdminDelete() {
 
         </div>
         <div class="center-scroll">
-                    <div><div className="App">
-      <input type="text" value={inputVal} onChange={e => setInputVal(e.target.value)}/>
-      <button onClick={handleNewNotification}>Add Notification</button>
-    </div>
+          <div><div className="App">
+            <input type="text" value={inputVal} onChange={e => setInputVal(e.target.value)} />
+            <button onClick={handleNewNotification}>Add Notification</button>
+          </div>
 
-        <div className="center-scroll">
-          {resData && resData.map(post => (
-            <div className='search-results-container'>
+            <div className="center-scroll">
+              {resData && resData.map(post => (
+                <div className='search-results-container'>
 
-              <div className='jobImage'>
-                <img className='actualImage' src={post["job photo"]} />
-              </div>
+                  <div className='jobImage'>
+                    <img className='actualImage' src={post["job photo"]} />
+                  </div>
 
 
-              <div key={post["id"]} className='jobInfo'>
-                <div className='jobName'>Job Name: {post["job name"]}</div>
-                <div>Job Field: {post["job field"]}</div>
-                <div>Date Posted: {post["date posted"]}</div>
-                <div>Job Location: {post["job location"]}</div>
-                <div>Job Description: {post["job desc."]}</div>
-                <div>Job Salary: {post["job salary"]}</div>
-                <div>Job Skills: {post["job skills"]}</div>
-              </div>
+                  <div key={post["id"]} className='jobInfo'>
+                    <div className='jobName'>Job Name: {post["job name"]}</div>
+                    <div>Job Field: {post["job field"]}</div>
+                    <div>Date Posted: {post["date posted"]}</div>
+                    <div>Job Location: {post["job location"]}</div>
+                    <div>Job Description: {post["job desc."]}</div>
+                    <div>Job Salary: {post["job salary"]}</div>
+                    <div>Job Skills: {post["job skills"]}</div>
+                  </div>
 
-              <div>
-                <button onClick={() => deletePost(post["id"])}>
-                  Delete
-                </button>
-              </div>
+                  <div>
+                    <button onClick={() => deletePost(post["id"])}>
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
-      </div></div></div>
+      </div>
     </div>
   )
 }

@@ -225,7 +225,7 @@ app.post("/jobPost", (req, res) => {
     console.log("Type of accountId: ", typeof(accountId)) 
     
     // mysql query
-    let query = "INSERT INTO `job posts` (`job desc.`, `aid` , `date posted`, `job name`, `job field`, " //company
+    let query = "INSERT INTO `job posts` (`job desc.`, `aid` , `date posted`, `job name`, `job field`, ";
         query += "`job salary`, `job skills`, `job location`, `company`) VALUES ( ? , ?, ? , ? , ? , ? , ?, ?, ?)";
 
     pool.getConnection((err, connection) => {
@@ -287,13 +287,11 @@ app.delete("/deletePost", (req, res) => {
 app.get("/getCompanyPost", (req, res) => {
     const token = getTokenFrom(req);
 
-    console.log("Here1")
     // if no jwt
     if (token === null) {
         return res.status(401).json({ error: 'unauthorized' });
     }
 
-    console.log("Here2")
     // verify jwt
     const decodedToken = jwt.verify(token, process.env.SECRET);
     console.log(JSON.stringify(decodedToken));
@@ -317,7 +315,125 @@ app.get("/getCompanyPost", (req, res) => {
         });
         connection.release();
     });
+
     res.status(200);
+});
+
+
+app.post("/bookmarkPost", (req, res) => {
+    const token = getTokenFrom(req);
+
+    // if no jwt
+    if (token === null) {
+        return res.status(401).json({ error: 'unauthorized' });
+    }
+
+    // verify jwt
+    const decodedToken = jwt.verify(token, process.env.SECRET);
+    console.log(JSON.stringify(decodedToken));
+
+    if (decodedToken.type !== "Student") {
+        return res.status(401).json({ error: 'token missing or invalid' })
+    }
+
+    const aid = decodedToken.aid;
+    const jid = req.body.postId;
+
+    let query = "INSERT IGNORE INTO `bookmark` (`aid`, `jid`) VALUES ( ? , ?)";
+
+    pool.getConnection((err, connection) => {
+        if (err) throw err;
+
+        connection.query(query, [
+            aid,
+            jid
+        ], (err, result) => {
+            if (err) throw err;
+        });
+
+        connection.release();
+    });
+
+    res.status(200);
+});
+
+app.get("/getBookmark", (req, res) => {
+    const token = getTokenFrom(req);
+
+    // if no jwt
+    if (token === null) {
+        return res.status(401).json({ error: 'unauthorized' });
+    }
+    console.log("Here1")
+
+    // verify jwt
+    const decodedToken = jwt.verify(token, process.env.SECRET);
+    console.log(JSON.stringify(decodedToken));
+
+    if (decodedToken.type !== "Student") {
+        return res.status(401).json({ error: 'token missing or invalid' })
+    }
+
+    const aid = decodedToken.aid;
+    const jid = req.body.postId;
+
+    const query = "SELECT `job posts`.* FROM `bookmark` JOIN `job posts` ON `bookmark`.jid = `job posts`.id AND `bookmark`.aid = ?;";
+
+    pool.getConnection((err, connection) => {
+        if (err) throw err;
+
+        connection.query(query, [
+            aid
+        ], (err, result) => {
+            if (err) throw err;
+            console.log(result);
+            result.map(e => {
+                console.log();
+                if (e['job photo'] != null)
+                    e['job photo'] = "data:image;base64," + Buffer.from(e['job photo']).toString('base64');
+                return e;
+            });
+            res.json({ result });
+        });
+
+        connection.release();
+    });
+
+    res.status(200);
+});
+
+app.delete("/deleteBookmark", (req, res) => {
+    const token = getTokenFrom(req);
+
+    // if no jwt
+    if (token === null) {
+        return res.status(401).json({ error: 'unauthorized' });
+    }
+
+    // verify jwt
+    const decodedToken = jwt.verify(token, process.env.SECRET);
+    console.log(JSON.stringify(decodedToken))
+    if (decodedToken.type !== "Student") {
+        return res.status(401).json({ error: 'token missing or invalid' })
+    }
+
+    const aid = decodedToken.aid;
+    const jid = req.body["postId"];
+
+    pool.getConnection((err, connection) => {
+        if (err) throw err;
+        const query = "DELETE FROM `bookmark` WHERE aid = ? AND jid = ?;";
+        connection.query(query, [
+            aid,
+            jid
+        ], (err, result) => {
+            if (err) throw err;
+        });
+
+        connection.release();
+    });
+
+    res.send("success");
 });
 
 app.listen(process.env.PORT);

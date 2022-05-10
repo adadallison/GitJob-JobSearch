@@ -30,6 +30,7 @@ const Home = () => {
     const [skill, setSkill] = useState(""); //state variable for job field  
     const [resData, setResData] = useState([]);
     const [tempPost, setTempPost] = useState({});
+    const type = window.localStorage.getItem('type');
 
     const { baseUrl } = require("../config/config.js"); // retrieves site url where POST request is sent
 
@@ -60,6 +61,21 @@ const Home = () => {
 
             });
     };
+
+    const handleBookmark = async (postId) => {
+        
+        const getJWT = async () => {
+            return window.localStorage.getItem("accessToken");
+        }
+        
+        const JWT = await getJWT();
+        
+        axios.post(baseUrl + ":3001/bookmarkPost",
+        {postId: postId},
+        {
+            headers: { "Authorization": `Bearer ${JWT}` },    
+        })
+    } 
 
     const handlePopup = (post) => {
         setButtonPopup(true);
@@ -259,16 +275,27 @@ const Home = () => {
                             </div>
 
 
-                            <div>
+                            {type === null && <div>
                                 {/*  data-id={post.name} is name of job onClick={save} data-id={post}*/}
-                                <button  >
+                                <button onClick={() => window.location.replace("/login")}>
                                     <BsIcons.BsBookmark />
                                 </button>
 
-                                <button href="">
+                                <button onClick={() => window.location.replace("/login")}>
                                     <AiIcons.AiOutlineAudit />
                                 </button>
-                            </div>
+                            </div>}
+
+                            {type === "Student" && <div>
+                                {/*  data-id={post.name} is name of job onClick={save} data-id={post}*/}
+                                <button onClick={() => handleBookmark(post["id"])}>
+                                    <BsIcons.BsBookmark />
+                                </button>
+
+                                <button>
+                                    <AiIcons.AiOutlineAudit />
+                                </button>
+                            </div>}
 
 
                         </div>
