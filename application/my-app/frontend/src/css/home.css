@@ -250,3 +250,9 @@
   white-space: pre-wrap;
   overflow-y: auto;
 }
+
+/* select fields in home.jsx */
+select{
+  height: 40px;
+  font-size: 17px;
+}
