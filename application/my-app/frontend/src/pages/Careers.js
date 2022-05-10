@@ -41,7 +41,6 @@ const Careers = () => {
                         <div className="overlay">
                             <p className="faqtext">
                             Machine learning engineers are the designers of self-running software that brings machines the ability to automate models that are predictive. They work with data scientists to take information and feed curated data into the models that they've uncovered or discovered. They use theoretical models within the data science sphere and build them out to scale as functioning and productive units or models that handle terabytes of real-time data.
-                            Machine learning engineers also function as a bridge or intersection for software engineering and data science. They use the available big data tools to improve programming frameworks and to gather raw data from pipelines. They redefine raw data into data science models that are ready to scale. Some machine learning engineers design the software programs that control technological tools, including computers or robots. They can develop algorithms that allow machines to identify trends or patterns in their programming data and as a self-contained unit, and a machine can then teach itself to understand commands, or even to think for itself. Machine learning engineers need a minimum of a bachelor’s degree in computer science or related fields.
                             </p>
                         </div>
                     </div>
