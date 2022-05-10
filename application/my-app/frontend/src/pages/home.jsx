@@ -12,8 +12,6 @@ import * as BsIcons from 'react-icons/bs';
 import { useNotification } from "./Notifications/NotificationProvider";
 import Popup from '../components/PopUp';
 
-
-
 const Home = () => {
 
 
@@ -230,10 +228,10 @@ const Home = () => {
 
                             <div key={post.toString()} className='jobInfo'>
                                 {/* <div>Job ID: {post["id"]}</div> */}
-                               
+
                                 <div className='jobName'>{post["job name"]}</div>
-                                <div className='jobLocation'>{post["company"]+ " • "+ post["job location"]}</div> 
-                                
+                                <div className='jobLocation'>{post["company"] + " • " + post["job location"]}</div>
+
                                 <br></br>
                                 <div>Job Field: {post["job field"]}</div>
                                 <div>Job Skills: {post["job skills"]}</div>
