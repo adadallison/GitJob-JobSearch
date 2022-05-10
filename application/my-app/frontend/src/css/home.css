@@ -86,6 +86,10 @@
 .jobLocation {
   color: slategray;
 }
+.jobDate {
+  color: slategray;
+  font-size: 16px;
+}
 
 .jobImage {
   display: flex;

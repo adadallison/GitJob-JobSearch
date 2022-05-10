@@ -63,19 +63,19 @@ const Home = () => {
     };
 
     const handleBookmark = async (postId) => {
-        
+
         const getJWT = async () => {
             return window.localStorage.getItem("accessToken");
         }
-        
+
         const JWT = await getJWT();
-        
+
         axios.post(baseUrl + ":3001/bookmarkPost",
-        {postId: postId},
-        {
-            headers: { "Authorization": `Bearer ${JWT}` },    
-        })
-    } 
+            { postId: postId },
+            {
+                headers: { "Authorization": `Bearer ${JWT}` },
+            })
+    }
 
     const handlePopup = (post) => {
         setButtonPopup(true);
@@ -247,30 +247,18 @@ const Home = () => {
 
                                 <div className='jobName'>{post["job name"]}</div>
                                 <div className='jobLocation'>{post["company"] + " • " + post["job location"]}</div>
-
+                                <br></br>
+                                <div className='jobDate' >{post["date posted"]}</div>
+                                
                                 <br></br>
                                 <div>Job Field: {post["job field"]}</div>
                                 <div>Job Skills: {post["job skills"]}</div>
-                                <div>${post["job salary"]}</div>
-                                <div>Date Posted: {post["date posted"]}</div>
-                                {/* <div>Job Des: {post["job desc."]}</div> */}
-                                {/* <div>Job Skills: {post["job skills"]}</div> */}
-                                <br></br>
+                                <div>Salary: ${post["job salary"]}</div>
+                              
+                               <br></br>
                                 <div className="plusButton" onClick={() => handlePopup(post)} >
                                     <CgIcons.CgMoreO size={28} />
                                 </div>
-
-                                {/* <div className='faqcontainer1'>
-                                <div onClick={popUp} >
-                                <AiIcons.AiOutlinePlusCircle />
-                                </div>
-                                 
-                                    <div class='overlay1'>
-                                        <div className='faqtext1'>
-                                            {post["job desc."]}
-                                        </div>
-                                    </div>
-                                </div> */}
 
                             </div>
 
@@ -293,7 +281,10 @@ const Home = () => {
                                 </button>
 
                                 <button>
-                                    <AiIcons.AiOutlineAudit />
+                                    <a href='https://docs.google.com/forms/d/e/1FAIpQLSdQ2LHw5wSgrGGh6pZzV53IAFZ4eSg4fwCvEGk6SfCVPmBfrg/viewform?usp=sf_link'>
+                                        <AiIcons.AiOutlineAudit />
+                                    </a>
+
                                 </button>
                             </div>}
 
