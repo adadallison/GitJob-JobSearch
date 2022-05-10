@@ -2,8 +2,14 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import Sidebar from '../components/Sidebar'
 import "../css/myjobs.css";
+import "../css/home.css";
 import NavBar from '../components/Navbar';
 import axios from 'axios';
+import * as AiIcons from 'react-icons/ai';
+import * as CgIcons from 'react-icons/cg';
+import * as BsIcons from 'react-icons/bs';
+import { useNotification } from "./Notifications/NotificationProvider";
+import Popup from '../components/PopUp';
 
 const MyJobs = () => {
 
@@ -71,13 +77,21 @@ const MyJobs = () => {
 
 
                             <div key={post["id"]} className='jobInfo'>
-                                <div className='jobName'>Job Name: {post["job name"]}</div>
+
+                                <div className='jobName'>{post["job name"]}</div>
+                                <div className='jobLocation'>{post["company"] + " • " + post["job location"]}</div>
+                                <br></br>
+                                <div className='jobDate' >{post["date posted"]}</div>
+
+                                <br></br>
                                 <div>Job Field: {post["job field"]}</div>
-                                <div>Date Posted: {post["date posted"]}</div>
-                                <div>Job Location: {post["job location"]}</div>
-                                <div>Job Description: {post["job desc."]}</div>
-                                <div>Job Salary: {post["job salary"]}</div>
                                 <div>Job Skills: {post["job skills"]}</div>
+                                <div>Salary: ${post["job salary"]}</div>
+
+                                <br></br>
+                                <div className="plusButton" onClick={() => handlePopup(post)} >
+                                    <CgIcons.CgMoreO size={28} />
+                                </div>
                             </div>
 
                             <div>
