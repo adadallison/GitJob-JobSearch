@@ -22,12 +22,11 @@ function Login() {
 
             //accesses local storage variables from SQL data base
             window.localStorage.setItem('accessToken', response.data.token);
-            window.localStorage.setItem('name', response.data.name); 
-            window.localStorage.setItem('type', response.data.type); 
-            window.localStorage.setItem('email', response.data.email); 
+            window.localStorage.setItem('name', response.data.name);
+            window.localStorage.setItem('type', response.data.type);
+            window.localStorage.setItem('email', response.data.email);
 
-           
-
+            console.log(response.data);
 
             //login redirection of student to home page s
             if (window.localStorage.getItem('type') === 'Student') {
@@ -70,7 +69,7 @@ function Login() {
                     <button type="submit">Log In</button>
                     <a className="question">?
                         <span className="questionText">
-                            Login in to view more details<br/>
+                            Login in to view more details<br />
 
                         </span>
                     </a>

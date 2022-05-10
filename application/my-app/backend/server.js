@@ -175,8 +175,9 @@ app.post("/login", async (req, res) => {
 
     const infoForToken = {
         aid: user.aid,
+        type: user.type,
         email: email,
-        type: user.type
+        name: user.name
     };
 
     // creates jwt token
@@ -206,9 +207,10 @@ app.post("/jobPost", (req, res) => {
         return res.status(401).json({ error: 'token missing or invalid' })
     }
 
-    const company = req.body.formData.company; //company
-    const jobDesc = req.body.formData.jobdescription;
     const accountId = +decodedToken.aid;
+    const company = decodedToken.name; //company
+
+    const jobDesc = req.body.formData.jobdescription;
     const jobTitle = req.body.formData.jobtitle;
     const jobField = req.body.formData.jobs;
     const jobSalary = req.body.formData.pay;
@@ -219,17 +221,17 @@ app.post("/jobPost", (req, res) => {
         replace(/T/, ' ').      // replace T with a space
         replace(/\..+/, '');     // delete the dot and everything after
 
-    console.log(jobDesc, " ", +accountId, " ", jobTimeStamp, " ", jobTitle, " ", jobField, " ", jobSalary, " ", jobSkills, company, " ");//company
+    console.log(jobDesc, " ", +accountId, " ", jobTimeStamp, " ", jobTitle, " ", jobField, " ", jobSalary, " ", jobSkills, " ", company);//company
     console.log("Type of accountId: ", typeof(accountId)) 
+    
     // mysql query
-    let query = "INSERT INTO `job posts` (`job desc.`, `aid` , `date posted`, `job name`, `job field`, `company`" //company
-        query += " `job salary`, `job skills`, `job location`) VALUES ( ? , ?, ? , ? , ? , ? , ?, ?, ?)";
+    let query = "INSERT INTO `job posts` (`job desc.`, `aid` , `date posted`, `job name`, `job field`, " //company
+        query += "`job salary`, `job skills`, `job location`, `company`) VALUES ( ? , ?, ? , ? , ? , ? , ?, ?, ?)";
 
     pool.getConnection((err, connection) => {
         if (err) throw err;
 
         connection.query(query, [
-            company, //company
             jobDesc,
             accountId,
             jobTimeStamp,
@@ -237,7 +239,8 @@ app.post("/jobPost", (req, res) => {
             jobField,
             jobSalary,
             jobSkills,
-            jobLocation
+            jobLocation,
+            company
         ], (err, result) => {
             if (err) throw err;
         });
