@@ -220,8 +220,8 @@ const Home = () => {
                                     <BsIcons.BsBookmark />
                                 </button>
 
-                                <button>
-                                    <a href='https://docs.google.com/forms/d/e/1FAIpQLSdQ2LHw5wSgrGGh6pZzV53IAFZ4eSg4fwCvEGk6SfCVPmBfrg/viewform?usp=sf_link'>
+                                <button onClick={() => window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdQ2LHw5wSgrGGh6pZzV53IAFZ4eSg4fwCvEGk6SfCVPmBfrg/viewform?usp=sf_link'}>
+                                    <a>
                                         <AiIcons.AiOutlineAudit />
                                     </a>
 
