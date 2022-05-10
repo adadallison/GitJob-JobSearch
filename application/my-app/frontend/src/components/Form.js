@@ -12,7 +12,6 @@ const formReducer = (state, event) => {
             jobtitle: '',
             pay: '',
             jobdescription: '',
-            company: '',
             skills: '',
             location: '',
         }
@@ -89,10 +88,10 @@ function Form() {
                     <form onSubmit={handleSubmit}>
 
                         <fieldset className='fieldset'>
-                            <label>
+                            {/* <label>
                                 <p className='jobForm'>Company</p>
                                 <input className='input-search' placeholder='Enter company name' name="company" onChange={handleChange} value={formData.company || ''} />
-                            </label>
+                            </label> */}
                             <label>
                                 <p className='jobForm'>Job Title</p>
                                 <input className='input-search' placeholder='Enter postion title' name="jobtitle" onChange={handleChange} value={formData.jobtitle || ''} />

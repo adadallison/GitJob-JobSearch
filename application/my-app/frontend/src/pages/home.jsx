@@ -25,6 +25,7 @@ const Home = () => {
 
     const [buttonPopup, setButtonPopup] = useState(false);
 
+    const [company, setCompany] = useState(""); //state variable for job title 
     const [title, setTitle] = useState(""); //state variable for job title 
     const [field, setField] = useState(""); //state variable for job field
     const [location, setLocation] = useState(""); //state variable for job field 
@@ -42,7 +43,7 @@ const Home = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         axios.post(baseUrl + ":3001/search",
-            { title, field, location, skill }) //created POST request to send data to URL
+            { company, title, field, location, skill }) //created POST request to send data to URL
             .then(res => {
                 console.log(res.data.result);
                 console.log(res.data)
@@ -229,9 +230,10 @@ const Home = () => {
 
                             <div key={post.toString()} className='jobInfo'>
                                 {/* <div>Job ID: {post["id"]}</div> */}
-                                <div className='jobName'>{post["company"]}</div>
+                               
                                 <div className='jobName'>{post["job name"]}</div>
-                                <div className='jobLocation'>{post["job location"]}</div>
+                                <div className='jobLocation'>{post["company"]+ " • "+ post["job location"]}</div> 
+                                
                                 <br></br>
                                 <div>Job Field: {post["job field"]}</div>
                                 <div>Job Skills: {post["job skills"]}</div>
