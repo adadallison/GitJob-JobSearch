@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { useState, useEffect } from 'react';
 import Sidebar from '../components/Sidebar'
+import Map from '../components/Map';
 import "../css/home.css";
 import "../css/careers.css";
 import NavBar from '../components/Navbar';
@@ -171,9 +172,9 @@ const Home = () => {
                                     <option value="Seattle, WA">Seattle, WA</option>
                                     <option value="Austin, TX">Austin, TX</option>
                                     <option value="New York, NY">New York, NY</option>
-                                    <option value="Atlanta, FL">Atlanta, FL</option>
+                                    <option value="Atlanta, GA">Atlanta, GA</option>
                                     <option value="Orlando, FL">Orlando, FL</option>
-                                    <option value="Tampa">Tampa, Florida</option>
+                                    <option value="Tampa, FL">Tampa, Florida</option>
                                     <option value="Alexandria, VA">Alexandria, VA</option>
                                     <option value="Washington, D.C.">Washington, D.C.</option>
                                     <option value="Portland, OR">Portland, OR</option>
@@ -286,7 +287,8 @@ const Home = () => {
                             </p>
 
                         </div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172139.4161662446!2d-122.48214752341369!3d47.61294318323425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490102c93e83355%3A0x102565466944d59a!2sSeattle%2C%20WA!5e0!3m2!1sen!2sus!4v1652137186026!5m2!1sen!2sus" width="600" height="600" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <Map address={tempPost["job location"]}>
+                        </Map>
                     </Popup>
 
                 </div>
