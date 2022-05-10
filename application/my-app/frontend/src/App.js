@@ -12,7 +12,6 @@ import Form4resume from './components/Form4resume';
 import Resume from './pages/Resume';
 import AdminDelete from './pages/AdminDelete';
 import CompanyDelete from './pages/CompanyDelete';
-
 const App = () => {
   return (
     <div className="App">
@@ -30,7 +29,6 @@ const App = () => {
           <Route path="/JobPosting3" element={<Form4resume />} />
           <Route path="/AdminDelete" element={<AdminDelete />} />
           <Route path="/CompanyDelete" element={<CompanyDelete />} />
-
 
         </Routes>
         

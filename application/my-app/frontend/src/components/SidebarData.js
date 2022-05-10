@@ -115,10 +115,10 @@ export const adminSidebar = [
         cName: 'nav-text'
     },
     {
-        title: 'Delete Post',
+        title: 'Admin',
         path: '/AdminDelete',
         icon: <AiIcons.AiFillHome />,
         cName: 'nav-text'
     },
-
+   
 ]

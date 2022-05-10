@@ -6,6 +6,7 @@ import "../css/form.css";
 import axios from 'axios';
 
 function CompanyDelete() {
+    
     const [resData, setResData] = useState();
 
     const { baseUrl } = require("../config/config.js");

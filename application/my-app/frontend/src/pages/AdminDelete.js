@@ -4,8 +4,21 @@ import Sidebar from '../components/Sidebar';
 import "../css/home.css";
 import "../css/form.css";
 import axios from 'axios';
-
+import {useNotification} from "./Notifications/NotificationProvider";
 function AdminDelete() {
+
+  //NOTIFICATION
+  const [inputVal, setInputVal] = useState("");
+  const dispatch = useNotification();
+   
+  const handleNewNotification = () => {
+    dispatch({
+      type: "SUCCESS",
+      message: inputVal,
+      title: "Successful Request"})
+    }
+
+
   const [resData, setResData] = useState();
 
   const { baseUrl } = require("../config/config.js");
@@ -63,6 +76,11 @@ function AdminDelete() {
           </Sidebar>
 
         </div>
+        <div class="center-scroll">
+                    <div><div className="App">
+      <input type="text" value={inputVal} onChange={e => setInputVal(e.target.value)}/>
+      <button onClick={handleNewNotification}>Add Notification</button>
+    </div>
 
         <div className="center-scroll">
           {resData && resData.map(post => (
@@ -91,7 +109,7 @@ function AdminDelete() {
             </div>
           ))}
         </div>
-      </div>
+      </div></div></div>
     </div>
   )
 }
