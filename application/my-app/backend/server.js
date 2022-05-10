@@ -206,6 +206,7 @@ app.post("/jobPost", (req, res) => {
         return res.status(401).json({ error: 'token missing or invalid' })
     }
 
+    const company = req.body.formData.company; //company
     const jobDesc = req.body.formData.jobdescription;
     const accountId = +decodedToken.aid;
     const jobTitle = req.body.formData.jobtitle;
@@ -218,16 +219,17 @@ app.post("/jobPost", (req, res) => {
         replace(/T/, ' ').      // replace T with a space
         replace(/\..+/, '');     // delete the dot and everything after
 
-    console.log(jobDesc, " ", +accountId, " ", jobTimeStamp, " ", jobTitle, " ", jobField, " ", jobSalary, " ", jobSkills);
-    console.log("Type of accountId: ", typeof(accountId))
+    console.log(jobDesc, " ", +accountId, " ", jobTimeStamp, " ", jobTitle, " ", jobField, " ", jobSalary, " ", jobSkills, company, " ");//company
+    console.log("Type of accountId: ", typeof(accountId)) 
     // mysql query
-    let query = "INSERT INTO `job posts` (`job desc.`, `aid` , `date posted`, `job name`, `job field`,"
-        query += " `job salary`, `job skills`, `job location`) VALUES ( ? , ?, ? , ? , ? , ? , ?, ?)";
+    let query = "INSERT INTO `job posts` (`job desc.`, `aid` , `date posted`, `job name`, `job field`, `company`" //company
+        query += " `job salary`, `job skills`, `job location`) VALUES ( ? , ?, ? , ? , ? , ? , ?, ?, ?)";
 
     pool.getConnection((err, connection) => {
         if (err) throw err;
 
         connection.query(query, [
+            company, //company
             jobDesc,
             accountId,
             jobTimeStamp,
