@@ -9,7 +9,6 @@ import NavBar from '../components/Navbar';
 import * as AiIcons from 'react-icons/ai';
 import * as CgIcons from 'react-icons/cg';
 import * as BsIcons from 'react-icons/bs';
-import { useNotification } from "./Notifications/NotificationProvider";
 import Popup from '../components/PopUp';
 
 const Home = () => {
