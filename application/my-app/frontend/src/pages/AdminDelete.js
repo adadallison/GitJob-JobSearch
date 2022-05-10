@@ -3,8 +3,11 @@ import NavBar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 import "../css/home.css";
 import "../css/form.css";
+import "../css/home.css";
 import axios from 'axios';
 import { useNotification } from "./Notifications/NotificationProvider";
+import Popup from '../components/PopUp';
+
 function AdminDelete() {
 
   //NOTIFICATION
@@ -97,9 +100,10 @@ function AdminDelete() {
                     <div>Job Field: {post["job field"]}</div>
                     <div>Date Posted: {post["date posted"]}</div>
                     <div>Job Location: {post["job location"]}</div>
-                    <div>Job Description: {post["job desc."]}</div>
                     <div>Job Salary: {post["job salary"]}</div>
                     <div>Job Skills: {post["job skills"]}</div>
+
+                    
                   </div>
 
                   <div>
