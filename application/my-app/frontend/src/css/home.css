@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  
+  position: relative;
 }
 
 /* make the center item scrollable somehow like twitter, and the side nav is just sticky */
@@ -55,7 +55,7 @@
   border-style: solid;
   height: 36px;
   font-size: 25px;
-  width: 320px;
+  width: 300px;
   margin: 10px;
 }
 
@@ -252,6 +252,6 @@
 
 /* select fields in home.jsx */
 select{
-  height: 40px;
-  font-size: 17px;
+  height: 35px;
+  font-size: 15px;
 }
