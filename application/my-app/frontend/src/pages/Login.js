@@ -69,10 +69,12 @@ function Login() {
                     <button type="submit">Log In</button>
                     <a className="question">?
                         <span className="questionText">
-                            Login in to view more details<br />
-
+                            Login in to view more details<br/>
                         </span>
                     </a>
+                    <div className='registerRef'>
+                    Don't have an account? <a href='/register'>Register</a>
+                    </div>
                 </form>
             </div>
             <Footer />
