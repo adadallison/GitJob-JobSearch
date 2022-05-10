@@ -140,9 +140,9 @@ function Form() {
                                     <option value="Seattle, WA">Seattle, WA</option>
                                     <option value="Austin, TX">Austin, TX</option>
                                     <option value="New York, NY">New York, NY</option>
-                                    <option value="Atlanta, FL">Atlanta, FL</option>
+                                    <option value="Atlanta, GA">Atlanta, GA</option>
                                     <option value="Orlando, FL">Orlando, FL</option>
-                                    <option value="Tampa">Tampa, Florida</option>
+                                    <option value="Tampa, FL">Tampa, Florida</option>
                                     <option value="Alexandria, VA">Alexandria, VA</option>
                                     <option value="Washington, D.C.">Washington, D.C.</option>
                                     <option value="Portland, OR">Portland, OR</option>
