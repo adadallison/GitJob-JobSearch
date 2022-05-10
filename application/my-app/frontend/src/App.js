@@ -32,7 +32,7 @@ const App = () => {
           <Route path="/CompanyDelete" element={<CompanyDelete />} />
 
         </Routes>
-        
+
       </BrowserRouter>
     </div>
   );
