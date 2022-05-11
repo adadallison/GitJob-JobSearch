@@ -122,7 +122,7 @@ function Form() {
                                     <option value="Robotic Process Automation">Robotic Process Automation</option>
                                     <option value="Internet of Things">Internet Of Things</option>
                                     <option value="5G">5G</option>
-                                    <option value="Virtual Augmented Reality">Virtual Augmented Reality</option>
+                                    <option value="Virtual Reality and Augmented Reality">Virtual Reality and Augmented Reality</option>
                                     <option value="Blockchain">Blockchain</option>
                                     <option value="Quantum Computing">Quantum Computing</option>
                                     <option value="Edge Computing">Edge Computing</option>

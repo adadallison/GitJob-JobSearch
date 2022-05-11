@@ -99,13 +99,7 @@ function AdminDelete() {
 
 
                   <div key={post["id"]} className='jobInfo'>
-                    {/* <div className='jobName'>Job Name: {post["job name"]}</div>
-                    <div>Job Field: {post["job field"]}</div>
-                    <div>Date Posted: {post["date posted"]}</div>
-                    <div>Job Location: {post["job location"]}</div>
-                    <div>Job Description: {post["job desc."]}</div>
-                    <div>Job Salary: {post["job salary"]}</div>
-                    <div>Job Skills: {post["job skills"]}</div> */}
+                  
                     <div className='jobName'>{post["job name"]}</div>
                     <div className='jobLocation'>{post["company"] + " • " + post["job location"]}</div>
                     <br></br>
