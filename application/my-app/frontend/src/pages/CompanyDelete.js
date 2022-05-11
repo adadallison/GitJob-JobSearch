@@ -3,6 +3,8 @@ import NavBar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 import "../css/home.css";
 import "../css/form.css";
+import "../css/careers.css";
+
 import axios from 'axios';
 
 //Contains the functionality that allows company accounts to delete their own posts
@@ -69,7 +71,7 @@ function CompanyDelete() {
 
                 </div>
 
-                <div style={{ paddingTop: "50px" }} className="center-scroll">
+                <div style={{ paddingTop: "10px" }} className="center-scroll">
                     {resData && resData.map(post => (
 
                         <div className='search-results-container'>
@@ -77,7 +79,6 @@ function CompanyDelete() {
                             <div className='jobImage'>
                                 <img className='actualImage' src={post["job photo"]} />
                             </div>
-
 
 
                             <div key={post["id"]} className='jobInfo'>
