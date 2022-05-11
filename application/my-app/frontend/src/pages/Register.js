@@ -59,7 +59,7 @@ function Register() {
                 </form>
                 
                     <div className='registerRef'>
-                    Don't have an account? <a href='/login'>Login</a>
+                    Have an account? <a href='/login'>Login</a>
                     </div>
             </div>
             <Footer />
