@@ -237,7 +237,7 @@ const Home = () => {
 
                     <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
                         <div>
-                            <h4>Description</h4>
+                            <h4>{tempPost["job name"]} Description</h4> 
                             <div>{tempPost["job location"]}</div> <br></br>
 
                             <p className='descriptionScroll'>

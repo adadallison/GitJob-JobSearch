@@ -100,6 +100,7 @@ function AdminDelete() {
                     <div>Job Field: {post["job field"]}</div>
                     <div>Date Posted: {post["date posted"]}</div>
                     <div>Job Location: {post["job location"]}</div>
+                    <div>Job Description: {post["job desc."]}</div>
                     <div>Job Salary: {post["job salary"]}</div>
                     <div>Job Skills: {post["job skills"]}</div>
 
