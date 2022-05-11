@@ -7,6 +7,8 @@ import "../css/home.css";
 import axios from 'axios';
 import { useNotification } from "./Notifications/NotificationProvider";
 import Popup from '../components/PopUp';
+import * as CgIcons from 'react-icons/cg';
+
 
 //Contains admin functionality that allows the deleting of ay post
 function AdminDelete() {
@@ -97,15 +99,23 @@ function AdminDelete() {
 
 
                   <div key={post["id"]} className='jobInfo'>
-                    <div className='jobName'>Job Name: {post["job name"]}</div>
+                    {/* <div className='jobName'>Job Name: {post["job name"]}</div>
                     <div>Job Field: {post["job field"]}</div>
                     <div>Date Posted: {post["date posted"]}</div>
                     <div>Job Location: {post["job location"]}</div>
                     <div>Job Description: {post["job desc."]}</div>
                     <div>Job Salary: {post["job salary"]}</div>
-                    <div>Job Skills: {post["job skills"]}</div>
+                    <div>Job Skills: {post["job skills"]}</div> */}
+                    <div className='jobName'>{post["job name"]}</div>
+                    <div className='jobLocation'>{post["company"] + " • " + post["job location"]}</div>
+                    <br></br>
+                    <div className='jobDate' >{post["date posted"]}</div>
 
-                    
+                    <br></br>
+                    <div>Job Field: {post["job field"]}</div>
+                    <div>Job Skills: {post["job skills"]}</div>
+                    <div>Salary: ${post["job salary"]}</div>
+
                   </div>
 
                   <div>

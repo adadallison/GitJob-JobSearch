@@ -79,12 +79,15 @@ function Form() {
 
                 <div className="JobPosting2">
                     {submitting &&
-                        <div>You are submitting the following:
-                            <ul>
+                        <div >Successfully Submitted!
+                            <div className='submittedJob'>
                                 {Object.entries(formData).map(([name, value]) => (
-                                    <li key={name}><strong>{name}</strong>:{value.toString()}</li>
+                                    <div key={name}>
+                                        <strong>{name}
+                                        </strong>:{value.toString()}
+                                    </div>
                                 ))}
-                            </ul>
+                            </div>
                         </div>
                     }
 

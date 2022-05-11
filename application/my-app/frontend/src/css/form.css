@@ -70,4 +70,18 @@ button{
     border-radius: 4px;
   }
 
+  .submittedJob{
+      padding: 50px;
+      text-align: left;
+      font-size: 20px;
+      display: block;
+      position: relative;
+      height: 100%;
+      width: 70%;
+      border-style: solid;
+      border-color: #4CAF50;
+      border-radius: 19px;
+      overflow-x: none;
+      word-wrap: break-word;
+  }
 
