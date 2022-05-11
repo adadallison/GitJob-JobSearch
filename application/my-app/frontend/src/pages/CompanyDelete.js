@@ -5,6 +5,7 @@ import "../css/home.css";
 import "../css/form.css";
 import axios from 'axios';
 
+//Contains the functionality that allows company accounts to delete their own posts
 function CompanyDelete() {
 
     const [resData, setResData] = useState();
@@ -68,7 +69,7 @@ function CompanyDelete() {
 
                 </div>
 
-                <div style={{paddingTop: "50px"}} className="center-scroll">
+                <div style={{ paddingTop: "50px" }} className="center-scroll">
                     {resData && resData.map(post => (
 
                         <div className='search-results-container'>

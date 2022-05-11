@@ -7,7 +7,7 @@ export const StudentButtons = () => {
         <button>
             <BsIcons.BsBookmark />
         </button>
-        
+
         <button>
             <AiIcons.AiOutlineAudit />
         </button>
@@ -19,7 +19,7 @@ export const NotLoginButtons = (props) => {
         <button>
             <BsIcons.BsBookmark />
         </button>
-        
+
         <button>
             <AiIcons.AiOutlineAudit />
         </button>

@@ -43,12 +43,6 @@ function Login() {
         });
     }
 
-    // useEffect(() => {
-    //     axios.get('http://localhost:3001/login').then(({data}) => {
-    //       setLoginStatus(data);
-    //     })
-    //   }, [])
-
     return (
 
 
@@ -69,11 +63,11 @@ function Login() {
                     <button type="submit">Log In</button>
                     <a className="question">?
                         <span className="questionText">
-                            Login in to view more details<br/>
+                            Login in to view more details<br />
                         </span>
                     </a>
                     <div className='registerRef'>
-                    Don't have an account? <a href='/register'>Register</a>
+                        Don't have an account? <a href='/register'>Register</a>
                     </div>
                 </form>
             </div>

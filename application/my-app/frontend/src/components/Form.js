@@ -28,6 +28,7 @@ function Form() {
     const [formData, setFormData] = useReducer(formReducer, {});
     const [submitting, setSubmitting] = useState(false);
 
+    //processes the submitting of the job form post
     const handleSubmit = async (event) => {
         event.preventDefault();
         setSubmitting(true);
@@ -35,11 +36,11 @@ function Form() {
         const getJWT = async () => {
             return window.localStorage.getItem("accessToken");
         }
-        
+
         const JWT = await getJWT();
         console.log(JWT);
-        axios.post(baseUrl + ":3001/jobPost", { 
-            formData 
+        axios.post(baseUrl + ":3001/jobPost", {
+            formData
         }, {
             headers: { "Authorization": `Bearer ${JWT}` },
         });
@@ -65,6 +66,7 @@ function Form() {
         window.location.replace("/");
     }
 
+    //renders the job posting form
     return (
 
         <div>
@@ -82,7 +84,8 @@ function Form() {
                                 {Object.entries(formData).map(([name, value]) => (
                                     <li key={name}><strong>{name}</strong>:{value.toString()}</li>
                                 ))}
-                            </ul></div>
+                            </ul>
+                        </div>
                     }
 
                     <form onSubmit={handleSubmit}>

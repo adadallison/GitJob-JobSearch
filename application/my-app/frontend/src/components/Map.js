@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+//contains map data that renders correct map given location data
 const Map = (props) => {
     const [mapSrc, setMapSrc] = useState("");
 

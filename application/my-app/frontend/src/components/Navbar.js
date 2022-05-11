@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import { IconContext } from 'react-icons';
 import "../css/Navbar.css";
 
-
+//Component at the top of the page with the logo and "SFSU Software Egineering..." text
 function NavBar() {
     const [navbar, setNavbar] = useState(true);
-    //const showSidebar = () => setSidebar(!sidebar);
 
     const gitjob = () => {
         window.location.replace("/");

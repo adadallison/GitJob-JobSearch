@@ -4,7 +4,7 @@ import Sidebar from '../components/Sidebar';
 import "../css/careers.css";
 import NavBar from '../components/Navbar';
 
-
+//Renders the careers page with info about each field
 const Careers = () => {
 
     return (
@@ -40,12 +40,12 @@ const Careers = () => {
 
                         <div className="overlay">
                             <p className="faqtext">
-                            Machine learning is a subfield of artificial intelligence,
-                             which is broadly defined as the capability of a machine to 
-                             imitate intelligent human behavior. Artificial intelligence 
-                             systems are used to perform complex tasks in a way that is similar
-                            to how humans solve problems.]<br></br>
-                            ~ MIT
+                                Machine learning is a subfield of artificial intelligence,
+                                which is broadly defined as the capability of a machine to
+                                imitate intelligent human behavior. Artificial intelligence
+                                systems are used to perform complex tasks in a way that is similar
+                                to how humans solve problems.]<br></br>
+                                ~ MIT
                             </p>
                         </div>
                     </div>
@@ -57,15 +57,15 @@ const Careers = () => {
 
                         <div className="overlay">
                             <p className="faqtext">
-                            Robotic process automation (RPA), also known as software robotics, 
-                            uses automation technologies to mimic back-office tasks of human workers,
-                             such as extracting data, filling in forms, moving files, et cetera. It 
-                             combines APIs and user interface (UI) interactions to integrate and perform 
-                             repetitive tasks between enterprise and productivity applications. By deploying 
-                             scripts which emulate human processes, RPA tools complete autonomous execution of
-                              various activities and transactions across unrelated software systems.
-                              <br></br>
-                              ~ IBM
+                                Robotic process automation (RPA), also known as software robotics,
+                                uses automation technologies to mimic back-office tasks of human workers,
+                                such as extracting data, filling in forms, moving files, et cetera. It
+                                combines APIs and user interface (UI) interactions to integrate and perform
+                                repetitive tasks between enterprise and productivity applications. By deploying
+                                scripts which emulate human processes, RPA tools complete autonomous execution of
+                                various activities and transactions across unrelated software systems.
+                                <br></br>
+                                ~ IBM
                             </p>
                         </div>
                     </div>
@@ -77,13 +77,13 @@ const Careers = () => {
 
                         <div className="overlay">
                             <p className="faqtext">
-                            Edge computing is a distributed computing framework that brings
-                             enterprise applications closer to data sources such as IoT devices 
-                             or local edge servers. This proximity to data at its source can deliver
-                              strong business benefits, including faster insights, improved response 
-                              times and better bandwidth availability.
-                              <br></br>
-                              ~ IBM
+                                Edge computing is a distributed computing framework that brings
+                                enterprise applications closer to data sources such as IoT devices
+                                or local edge servers. This proximity to data at its source can deliver
+                                strong business benefits, including faster insights, improved response
+                                times and better bandwidth availability.
+                                <br></br>
+                                ~ IBM
                             </p>
                         </div>
                     </div>
@@ -95,11 +95,11 @@ const Careers = () => {
 
                         <div className="overlay">
                             <p className="faqtext">
-                            Quantum computers harness the unique behavior of quantum physics—such as 
-                            superposition, entanglement, and quantum interference—and apply it to computing. 
-                            This introduces new concepts to traditional programming methods.
-                            <br></br>
-                            ~ Microsoft
+                                Quantum computers harness the unique behavior of quantum physics—such as
+                                superposition, entanglement, and quantum interference—and apply it to computing.
+                                This introduces new concepts to traditional programming methods.
+                                <br></br>
+                                ~ Microsoft
                             </p>
                         </div>
                     </div>
@@ -112,9 +112,14 @@ const Careers = () => {
 
                         <div className="overlay">
                             <p className="faqtext">
-                                Augmented reality (AR) and Virtual Reality (VR) bridge the digital and physical worlds. They allow you to take in information and content visually, in the same way you take in the world. AR dramatically expands the ways our devices can help with everyday activities like searching for information, shopping, and expressing yourself. VR lets you experience what it's like to go anywhere — from the front row of a concert to distant planets in outer space.
-                            <br></br>
-                            ~ Google
+                                Augmented reality (AR) and Virtual Reality (VR) bridge the digital and physical worlds.
+                                They allow you to take in information and content visually, in the same way you take in
+                                the world. AR dramatically expands the ways our devices can help with everyday activities
+                                like searching for information, shopping, and expressing yourself. VR lets you experience
+                                what it's like to go anywhere — from the front row of a concert to distant planets in outer
+                                space.
+                                <br></br>
+                                ~ Google
 
                             </p>
                         </div>
@@ -127,14 +132,14 @@ const Careers = () => {
 
                         <div className="overlay">
                             <p className="faqtext">
-                            Blockchain is a shared, immutable ledger that facilitates
-                             the process of recording transactions and tracking assets 
-                             in a business network. An asset can be tangible (a house, 
-                             car, cash, land) or intangible (intellectual property, patents, 
-                             copyrights, branding). Virtually anything of value can be tracked 
-                             and traded on a blockchain network, reducing risk and cutting costs
-                            for all involved.
-                            <br></br> ~ IBM
+                                Blockchain is a shared, immutable ledger that facilitates
+                                the process of recording transactions and tracking assets
+                                in a business network. An asset can be tangible (a house,
+                                car, cash, land) or intangible (intellectual property, patents,
+                                copyrights, branding). Virtually anything of value can be tracked
+                                and traded on a blockchain network, reducing risk and cutting costs
+                                for all involved.
+                                <br></br> ~ IBM
 
                             </p>
                         </div>
@@ -147,14 +152,14 @@ const Careers = () => {
 
                         <div className="overlay">
                             <p className="faqtext">
-                            The Internet of Things (IoT) describes the network of physical 
-                            objects—“things”—that are embedded with sensors, software, and 
-                            other technologies for the purpose of connecting and exchanging 
-                            data with other devices and systems over the internet. These devices
-                             range from ordinary household objects to sophisticated industrial tools.
-                              With more than 7 billion connected IoT devices today, experts are expecting 
-                              this number to grow to 10 billion by 2020 and 22 billion by 2025. 
-                              <br></br> ~ Oracle
+                                The Internet of Things (IoT) describes the network of physical
+                                objects—“things”—that are embedded with sensors, software, and
+                                other technologies for the purpose of connecting and exchanging
+                                data with other devices and systems over the internet. These devices
+                                range from ordinary household objects to sophisticated industrial tools.
+                                With more than 7 billion connected IoT devices today, experts are expecting
+                                this number to grow to 10 billion by 2020 and 22 billion by 2025.
+                                <br></br> ~ Oracle
                             </p>
                         </div>
                     </div>
@@ -166,16 +171,16 @@ const Careers = () => {
 
                         <div className="overlay">
                             <p className="faqtext">
-                            5G at its peak potential could be instrumental for 
-                            developing revolutionary applications unlike anything
-                             that exists today outside a wired environment. These
-                              applications are varied, but there is predicted growth 
-                              in fields like autonomous driving, virtual reality, and 
-                              augmented reality. Beyond speed and latency, 5G standards 
-                              will have a much higher connection density, allowing networks 
-                              to handle immense numbers of connected devices. 
-                            <br></br>
-                            ~ IBM
+                                5G at its peak potential could be instrumental for
+                                developing revolutionary applications unlike anything
+                                that exists today outside a wired environment. These
+                                applications are varied, but there is predicted growth
+                                in fields like autonomous driving, virtual reality, and
+                                augmented reality. Beyond speed and latency, 5G standards
+                                will have a much higher connection density, allowing networks
+                                to handle immense numbers of connected devices.
+                                <br></br>
+                                ~ IBM
                             </p>
                         </div>
                     </div>

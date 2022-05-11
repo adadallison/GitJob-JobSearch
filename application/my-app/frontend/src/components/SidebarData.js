@@ -3,11 +3,12 @@ import * as AiIcons from 'react-icons/ai';
 import * as BsIcons from 'react-icons/bs';
 import * as BiIcons from 'react-icons/bi';
 
-
+//contains data for sidebar icons
 export const SidebarData = [
 
     ]
     
+//Not logged in (general) sidebar
 export const NotLoggedIn = [
     {
         title: 'Home',
@@ -97,6 +98,7 @@ export const companySidebar = [
 
 ]
 
+//Admin sidebar
 export const adminSidebar = [
 
     {

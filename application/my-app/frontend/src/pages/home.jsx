@@ -11,17 +11,12 @@ import * as CgIcons from 'react-icons/cg';
 import * as BsIcons from 'react-icons/bs';
 import Popup from '../components/PopUp';
 
+//renders the main page and handles the search button push as well as 
 const Home = () => {
-
-
-
     var arrayJobs = [];
     var arraySavedJobs = [];
     const [savedJob, setsavedJob] = useState("");
-
-
     const [buttonPopup, setButtonPopup] = useState(false);
-
     const [company, setCompany] = useState(""); //state variable for job title 
     const [title, setTitle] = useState(""); //state variable for job title 
     const [field, setField] = useState(""); //state variable for job field
@@ -46,21 +41,10 @@ const Home = () => {
                 console.log(res.data.result);
                 console.log(res.data)
                 setResData(res.data.result); // sets value
-
-                // console.log(typeof (res.data.result))
-                // console.log(typeof (res.data))
-                // console.log(res.data)
-
-                // console.log(res.data.result); //displays object 'results' that has array of 31 objects
-                // console.log(res.data.result[0]); //displays first item in array of objects w full description
-
-                // console.log(Object.keys(res.data.result).length);
-
-                //window.localStorage.getItem('id');
-
             });
     };
 
+    //handles logic for bookmarking a job
     const handleBookmark = async (postId) => {
 
         const getJWT = async () => {
@@ -188,13 +172,13 @@ const Home = () => {
                                 <div className='jobLocation'>{post["company"] + " • " + post["job location"]}</div>
                                 <br></br>
                                 <div className='jobDate' >{post["date posted"]}</div>
-                                
+
                                 <br></br>
                                 <div>Job Field: {post["job field"]}</div>
                                 <div>Job Skills: {post["job skills"]}</div>
                                 <div>Salary: ${post["job salary"]}</div>
-                              
-                               <br></br>
+
+                                <br></br>
                                 <div className="plusButton" onClick={() => handlePopup(post)} >
                                     <CgIcons.CgMoreO size={28} />
                                 </div>
@@ -219,7 +203,7 @@ const Home = () => {
                                     <BsIcons.BsBookmark />
                                 </button>
 
-                                <button onClick={() => window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdQ2LHw5wSgrGGh6pZzV53IAFZ4eSg4fwCvEGk6SfCVPmBfrg/viewform?usp=sf_link'}>
+                                <button onClick={() => window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdQ2LHw5wSgrGGh6pZzV53IAFZ4eSg4fwCvEGk6SfCVPmBfrg/viewform?usp=sf_link'}>
                                     <a>
                                         <AiIcons.AiOutlineAudit />
                                     </a>
