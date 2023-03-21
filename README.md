@@ -1,8 +1,6 @@
 # GitJob Repository
 
-## Please when ready add your teams application URL or IP to the repository description. This will help with grading. Teams are expected to keep this value up to date.
-
-Team project that used Javascript, React, MySQL, and HTML/CSS. This purpose of this web app is to help SFSU students find job openings in tech, as well as recruiters from tech companies post job openings. The student or recruits can register, sign in, save listed jobs, and learn about different fields in tech. Their name, login info, and saved jobs are stored in a SQL data base.
+Team project for Software Engineering that used Javascript, React, MySQL, and HTML/CSS. This purpose of this web app is to help SFSU students find job openings in tech, as well as recruiters from tech companies post job openings. The student or recruiters can register, sign in, save listed jobs, and learn about different fields in tech. Their name, login info, and saved jobs are stored in a SQL data base.
 
 
 | Student Name     | Student Email          | GitHub Username |
