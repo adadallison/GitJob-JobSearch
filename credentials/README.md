@@ -31,9 +31,9 @@
 3. SSH password or key: DevKey.pem
 4. Database IP and port: 127.0.0.1 and 3306
 5. Database username: databaseUser
-6. Database password: password
+6. Database password: 
 7. team6dev
-8. Open MySQL Workbench > MySQL Connections > "+" > Input information below (the password is literally "password"): 
+8. Open MySQL Workbench > MySQL Connections > "+" > Input information below 
 
 <img width="875" alt="Screen Shot 2022-03-17 at 12 23 25 AM" src="https://user-images.githubusercontent.com/42702624/158757675-f31e8f70-0585-4a9b-8536-9ecfe8c75517.png">
 
